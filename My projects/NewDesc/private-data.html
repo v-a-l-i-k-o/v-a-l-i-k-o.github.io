@@ -1,0 +1,223 @@
+<!doctype html>
+<html class="no-js html-private-data" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HelpDesc</title>
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="css/styles.min.css">
+        <script src="js/libs/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body class="private-data">
+    	<a href="#" class="to-main">На главную</a>
+    	<div class="private-table">
+    		<div class="wrapper-user-data">
+    			<section class="user-data">
+    				<div class="container clearfix">
+    					<div class="avatar">
+    						<img src="img/avatar.png" alt="avatar">
+    						<div class="set-avatar">
+    							<div>Допускаются следующие типы<br>файлов:
+    								<span>jpeg,</span>
+    								<span>gif,</span>
+    								<span>png</span>
+    							</div>
+    							<a data-open-modal="upload" href="#" class="change">Изменить</a>
+    						</div>
+    					</div>
+    					<form action="post" class="personal-data clearfix">
+    						<div class="form-group form-group_private">
+    							<div class="wrapper-group">
+    								<h2>Личные данные</h2>
+    								<label data-tooltip-targetAttachmentPoint="middle left" data-tooltip-tooltipAttachmentPoint="middle left" data-tooltip-offset="0 -70px" data-open-tooltip="private_data_form_tip_name" for="name" class="name">Имя
+    									<div data-tooltip="private_data_form_tip_name" class="form-reg_public">Публичные данные</div>
+    								</label>
+    								<input type="text" id="name">
+    								<label data-tooltip-targetAttachmentPoint="middle left" data-tooltip-tooltipAttachmentPoint="middle left" data-tooltip-offset="0 -100px" data-open-tooltip="private_data_form_tip_sname" for="surname" class="sname">Фамилия
+    									<div data-tooltip="private_data_form_tip_sname" class="form-reg_public">Публичные данные</div>
+    								</label>
+    								<input type="text" id="surname">
+    								<label for="email">Почта</label>
+    								<input type="email" id="email">
+    							</div>
+    							<div class="input_phone">
+    								<label for="phone">Телефон</label>
+    								<input type="text" id="phone">
+    							</div>
+    							<div class="input_skype">
+    								<label for="skype">Skype</label>
+    								<input type="text" id="skype">
+    							</div>
+    						</div>
+    					 	<div class="form-group form-group_pass">
+    							<h2>Пароль</h2>
+    							<div class="input_change-pass">
+    								<label for="password">Сменить пароль</label>
+    								<input type="password" id="password">
+    							</div>
+    							<div class="input_confirm-pass">
+    								<label for="confirm-pass">Подтвердить пароль</label>
+    								<input type="password" id="confirm-pass">
+    							</div>
+    						</div>
+    					 	<div class="form-group form-group_location">
+    							<h2 class="h2">Местонахождение</h2>
+    							<div class="input_country">
+    								<label for="country">Страна</label>
+    								<input name="country" id="country">
+    							</div>
+    							<div class="input_city">
+    								<label for="city">Город</label>
+    								<input name="city" id="city">
+    							</div>
+    						</div>
+    						<div class="about-youself">
+    							<h2 data-tooltip-targetAttachmentPoint="middle left" data-tooltip-tooltipAttachmentPoint="middle left" data-tooltip-offset="0 -90px" data-open-tooltip="private_data_form_tip_about_youself">О себе
+									<div data-tooltip="private_data_form_tip_about_youself" class="form-reg_public">Публичные данные</div>
+    							</h2>
+    							<textarea name="about-youself"></textarea>
+    							<button>Отправить</button>
+    						</div>
+    					</form>
+    					<label for="check6" class="checkbox checkbox-moderation">
+    						<input type="checkbox" name="6" id="check6">
+    						<span>На модерацию</span>
+    					</label>
+    				</div>
+    			</section>
+    		</div>
+    		
+    		<div class="wrapper-both-sect">
+    			<div class="wrapper-delivery">
+    				<a href="#" class="mailing"><span>Рассылки</span></a>
+    				<section class="delivery">
+    					<div class="container">
+    						<p>Вы отслеживаете следующие темы:</p>
+    						<ul class="themes">
+    							<li class="checkbox">
+    								<label for="check1">
+    									<input type="checkbox" name="1" id="check1">
+    									<span>Конвенция о защите прав человека</span>
+    								</label>
+    							</li>
+    							<li class="checkbox">
+    								<label for="check2">
+    									<input type="checkbox" name="2" id="check2">
+    									<span>Европейская конвенция по правам человека</span>
+    								</label>
+    							</li>
+    							<li class="checkbox">
+    								<label for="check3">
+    									<input type="checkbox" name="3" id="check3">
+    									<span>Европейский суд</span>
+    								</label>
+    							</li>
+    						</ul>
+    					</div>
+    				</section>
+    			
+    				<section class="get-info">
+    					<div class="container">
+    						<ul class="subs">
+    							<li class="checkbox">
+    								<label for="check4">
+    									<input type="checkbox" name="4" id="check4">
+    									<span>Получать информационные сообщения о новых темах в вашем регионе</span>
+    								</label>
+    							</li>
+    							<li class="checkbox">
+    								<label for="check5">
+    									<input type="checkbox" name="5" id="check5">
+    									<span>Получать прочие информационные сообщения</span>
+    								</label>
+    							</li>
+    						</ul>
+    					</div>	
+    				</section>
+    				
+    				<div class="container wrapper">
+    					<button>Применить</button>
+    				</div>
+    			</div>
+    			
+    			<div class="wrapper-messages">
+    				<a href="" onclick="return false" class="message-list"><span>Список всех сообщений</span></a>
+    				<section class="messages">
+    					<ul class="message-items">
+    						<li class="message-item">
+    							<div class="message-item_avatar"><img src="img/user-avatar.png" alt="user-avatar"></div>
+    							<div class="message-item_info">
+    								<h3>Евгений Коптев</h3>
+    								<p>Конвенция о защите прав человека</p>
+    								<ul class="date">
+    									<li>25.06.2015</li>
+    									<li>15:36</li>
+    								</ul>
+    							</div>
+    						</li><!--
+    					 --><li class="message-item">
+    							<div class="message-item_avatar"><img src="img/user-avatar.png" alt="user-avatar"></div>
+    							<div class="message-item_info">
+    								<h3>Евгений Коптев</h3>
+    								<p>Конвенция о защите прав человека</p>
+    								<ul class="date">
+    									<li>25.06.2015</li>
+    									<li>15:36</li>
+    								</ul>
+    							</div>
+    						</li><!--
+    					 --><li class="message-item">
+    							<div class="message-item_avatar"><img src="img/user-avatar.png" alt="user-avatar"></div>
+    							<div class="message-item_info">
+    								<h3>Евгений Коптев</h3>
+    								<p>Конвенция о защите прав человека</p>
+    								<ul class="date">
+    									<li>25.06.2015</li>
+    									<li>15:36</li>
+    								</ul>
+    							</div>
+    						</li><!--
+    					 --><li class="message-item">
+    							<div class="message-item_avatar"><img src="img/user-avatar.png" alt="user-avatar"></div>
+    							<div class="message-item_info">
+    								<h3>Евгений Коптев</h3>
+    								<p>Конвенция о защите прав человека</p>
+    								<ul class="date">
+    									<li>25.06.2015</li>
+    									<li>15:36</li>
+    								</ul>
+    							</div>
+    						</li>
+    					</ul>
+    				</section>
+    			</div>
+    		</div>
+    	</div>
+<!-- scripts -->
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>')</script>
+        <!-- <script src="js/bootstrap.min.js"></script> -->
+        <script src="js/plugins.js"></script>
+        <script src="js/scripts.js"></script>
+
+        <div data-modal="upload" class="modal download-photo mfp-hide white-popup">
+            <span class="close"></span>
+            <div class="photo-area">
+                <h2>Выбор фотографии</h2>
+                <div class="photo">
+                    <img alt="photo" src="img/photo.png">
+                    <button class="choose-photo">Выберите фото на компьютере</button>
+                </div>
+            </div>
+            <div class="container clearfix">
+                <div class="buttons">
+                    <button class="send" data-type="submit">Отправить</button>
+                    <button class="cancel" data-type="cancel">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- contact me: elfimov-val@yandex.ua -->
+</html>
