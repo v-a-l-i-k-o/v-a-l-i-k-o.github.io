@@ -1,0 +1,416 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HelpDesc</title>
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/libs/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body class="modals">
+    	<div class="modal form__create-message" data-modal="pm">
+    		<div class="container">
+    			<span class="close"></span>
+    			<h2 class="h2">Создать личное сообщение</h2>
+				<div class="form-person">
+					<div class="form-avatar">
+						<img src="img/user-avatar.png" alt="user-avatar">
+					</div>
+					<h3>Евгений Коптев</h3>
+				</div>
+    			<form action="post" name="pm" class="clearfix">
+    				<label for="theme-request1">Тема заявки</label>
+    				<input name="subject" type="text" id="theme-request1">
+    				<textarea data-rule="required" name="message" placeholder="Написать сообщение"></textarea>
+    				<div class="buttons">
+    					<button data-type="submit" class="send">Отправить</button>
+    					<button data-type="cancel" class="cancel">Отмена</button>
+    				</div>
+    				<div class="appeal">
+    					<a href="#">Пожаловаться</a>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+
+    	<div class="separate"></div>
+
+    	<div class="modal form__report" data-modal="reply2req">
+    		<div class="container clearfix">
+    			<span class="close"></span>
+    			<h2>Ответить на заявку</h2>
+    			<form action="post" name="reply2req">
+    				<textarea data-rule="required" name="message" placeholder="Написать сообщение"></textarea>
+    				<div class="buttons">
+    					<button data-type="submit" class="send">Отправить</button>
+    					<button data-type="cancel" class="cancel">Отмена</button>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+
+    	<div class="separate"></div>
+
+    	<div class="modal form__create-request" data-modal="req">
+    		<div class="container">
+    			<span class="close"></span>
+    			<h2>Создать новую заявку</h2>
+    			<form action="post" class="clearfix" name="req">
+    				<div class="form-group-wrapper clearfix">
+    					<div class="form-group form-group1">
+    						<label for="country3">Страна</label>
+    						<input name="country" id="country3" type="text"></input>
+    						<label for="city3">Город</label>
+    						<input name="city" id="city3" type="text"></input>
+    					</div>
+    					<div class="form-group form-group2">
+    						<label for="status3">Статус</label>
+    						<select name="status" id="status3">
+                                <option value="">Статус заявки</option>
+                                <option value="new">Новый</option>
+                                <option value="in_progress">В работе</option>
+                                <option value="complete">Завершено</option>
+                            </select>
+    						<label for="theme3">Тема</label>
+    						<select name="subject" id="theme3">
+                                <option value="">Тема обращения</option>
+                                <option value="jurisp_a">Юриспруденция</option>
+                                <option value="jurisp_b">Юриспруденция</option>
+                                <option value="jurisp_c">Юриспруденция</option>
+                                <option value="jurisp_d">Юриспруденция</option>
+                                <option value="jurisp_f">Юриспруденция</option>
+                                <option value="jurisp_g">Юриспруденция</option>
+                                <option value="jurisp_h">Юриспруденция</option>
+                                <option value="jurisp_e">Юриспруденция</option>
+                                <option value="jurisp_k">Юриспруденция</option>
+                                <option value="jurisp_l">Юриспруденция</option>
+                                <option value="jurisp_m">Юриспруденция</option>
+                                <option value="jurisp_n">Юриспруденция</option>                  
+                            </select>
+    					</div>
+    				</div>
+    				<div class="form-group">
+    					<label for="theme-request">Тема заявки</label>
+    					<input name="theme" type="text" id="theme-request">
+    				</div>
+    				<textarea name="message" data-rule="required" placeholder="Написать сообщение"></textarea>
+    				<div class="buttons">
+    					<button data-type="submit" class="send">Отправить</button>
+    					<button data-type="cancel" class="cancel">Отмена</button>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+		
+    	<div class="separate"></div>
+
+    	<div class="modal form__registration" data-modal="reg">
+    		<div class="container">
+    			<span class="close"></span>
+    			<h2>Регистрация</h2>
+    			<!-- <div class="attantion">
+    				<span>Вы не заполнили следующие поля:</span>
+    			</div> -->
+    			<form action="post" class="clearfix" name="reg">
+    				<div class="form-group form-group1">
+    					<label for="sname" class="sname">Фамилия*
+    					</label>
+						<div class="form-reg_public">Публичные данные</div>
+    					<input required data-name="Фамилия" type="text" name="sname" id="sname" class="">
+    					<label class="name" for="name1">Имя*
+    					</label>
+						<div class="form-reg_public">Публичные данные</div>
+    					<input required data-name="Имя" type="text" name="name" id="name1" class="">
+                    </div>
+                    <div class="form-group form-group2">
+    					<label for="email1">E-mail*</label>
+    					<input required data-rule="valid_email" data-name="E-mail" type="email" name="email" id="email1" class="">
+    					<label for="phone1">Телефон</label>
+    					<input type="text" name="phone" id="phone1">
+    					<label for="skype1">Skype</label>
+    					<input type="text" name="skype" id="skype1">
+    				</div>
+    			 	<div class="form-group form-group3">
+    					<label for="password1">Пароль*</label>
+    					<input type="password" data-rule="min_length[5]" required data-name="Пароль" name="pass[a]" id="password1" class="">
+    					<label for="repeat-pass">Повторить пароль*</label>
+    					<input data-rule="required|matches[pass[a]]" type="password" name="pass[b]" id="repeat-pass" class="">
+    				</div>
+    			 	<p>Поля, обязательные для заполнения</p>
+    				<div class="form-group form-group4">
+						<label class="clearfix" for="check5">
+							<input data-rule="required" type="checkbox" name="agreement" id="check5">
+							<span>Я принимаю условия Пользовательского Соглашения и Политики Конфиденциальности</span>
+						</label>
+					</div>
+					<div class="buttons">
+						<button data-type="submit" class="reg">Регистрация</button>
+						<button data-type="cancel" class="cancel">Отмена</button>
+					</div>
+    			</form>
+    		</div>
+    	</div>
+		
+    	<div class="separate"></div>
+
+    	<div class="modal form__authorization" data-modal="signin">
+    		<div class="container">
+    			<span class="close"></span>
+    			<h2>Авторизация</h2>
+    			<form action="post" name="signin">
+    				<div class="form-group">
+    					<label for="login">Логин</label>
+    					<input required type="text" name="login" id="login">
+    					<label for="password5">Пароль</label>
+    					<input required type="text" name="pass" id="password5">
+    				</div>
+    				<a href="#">Забыли пароль?</a>
+    			</form>
+    		</div>
+    		<div class="warning">
+				<div class="warning_text">Ваш аккаунт временно заблокирован
+				-повторите попытку через 30 мин.
+				</div>
+			</div>
+			<div class="container">
+    			<div class="buttons">
+    				<button data-type="submit" class="log-in">Войти</button>
+    				<button data-type="cancel" class="cancel">Отмена</button>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div class="separate"></div>
+
+    	<div class="modal avatar-moder" data-modal="avamod">
+    		<div class="container">
+    			<span class="close"></span>
+    			<h2>Модерация Аватарок</h2>
+				<a href="#" class="moder__up"></a>
+    			<div class="table table1">
+    				<div class="th">
+    					<div class="tc tc1"></div>
+    					<div class="tc tc2">Имя Фамилия</div>
+    					<div class="tc tc3">Старая аватарка</div>
+    					<div class="tc tc4">Новая аватарка</div>
+    				</div>
+    			</div>
+    			<div class="table-wrapper" data-scrollbox data-scroll-length="85" data-scroll-duration="300">
+    				<div class="table">
+    					<div class="tr">
+    						<div class="tc tc1">
+    							<input type="checkbox" name="#" id="#">
+    						</div>
+    						<div class="tc tc2">Евгений Коптев</div>
+    						<div class="tc tc3">
+    							<img src="img/user-avatar.png" alt="old-avatar">
+    						</div>
+    						<div class="tc tc4">
+    							<img src="img/user-avatar.png" alt="new-avatar">
+    						</div>
+    					</div>
+    					<div class="tr">
+    						<div class="tc tc1">
+    							<input type="checkbox" name="#" id="#">
+    						</div>
+    						<div class="tc tc2">Евгений Коптев</div>
+    						<div class="tc tc3">
+    							<img src="img/user-avatar.png" alt="old-avatar">
+    						</div>
+    						<div class="tc tc4">
+    							<img src="img/user-avatar.png" alt="new-avatar">
+    						</div>
+    					</div>
+    					<div class="tr">
+    						<div class="tc tc1">
+    							<input type="checkbox" name="#" id="#">
+    						</div>
+    						<div class="tc tc2">Евгений Коптев</div>
+    						<div class="tc tc3">
+    							<img src="img/user-avatar.png" alt="old-avatar">
+    						</div>
+    						<div class="tc tc4">
+    							<img src="img/user-avatar.png" alt="new-avatar">
+    						</div>
+    					</div>
+    					<div class="tr">
+    						<div class="tc tc1">
+    							<input type="checkbox" name="#" id="#">
+    						</div>
+    						<div class="tc tc2">Евгений Коптев</div>
+    						<div class="tc tc3">
+    							<img src="img/user-avatar.png" alt="old-avatar">
+    						</div>
+    						<div class="tc tc4">
+    							<img src="img/user-avatar.png" alt="new-avatar">
+    						</div>
+    					</div>
+    					<div class="tr">
+    						<div class="tc tc1">
+    							<input type="checkbox" name="#" id="#">
+    						</div>
+    						<div class="tc tc2">Евгений Коптев</div>
+    						<div class="tc tc3">
+    							<img src="img/user-avatar.png" alt="old-avatar">
+    						</div>
+    						<div class="tc tc4">
+    							<img src="img/user-avatar.png" alt="new-avatar">
+    						</div>
+    					</div>
+    					<div class="tr">
+    						<div class="tc tc1">
+    							<input type="checkbox" name="#" id="#">
+    						</div>
+    						<div class="tc tc2">Евгений Коптев</div>
+    						<div class="tc tc3">
+    							<img src="img/user-avatar.png" alt="old-avatar">
+    						</div>
+    						<div class="tc tc4">
+    							<img src="img/user-avatar.png" alt="new-avatar">
+    						</div>
+    					</div>
+    					<div class="tr">
+    						<div class="tc tc1">
+    							<input type="checkbox" name="#" id="#">
+    						</div>
+    						<div class="tc tc2">Евгений Коптев</div>
+    						<div class="tc tc3">
+    							<img src="img/user-avatar.png" alt="old-avatar">
+    						</div>
+    						<div class="tc tc4">
+    							<img src="img/user-avatar.png" alt="new-avatar">
+    						</div>
+    					</div>
+    					<div class="tr">
+    						<div class="tc tc1">
+    							<input type="checkbox" name="#" id="#">
+    						</div>
+    						<div class="tc tc2">Евгений Коптев</div>
+    						<div class="tc tc3">
+    							<img src="img/user-avatar.png" alt="old-avatar">
+    						</div>
+    						<div class="tc tc4">
+    							<img src="img/user-avatar.png" alt="new-avatar">
+    						</div>
+    					</div>
+    					<div class="tr">
+    						<div class="tc tc1">
+    							<input type="checkbox" name="#" id="#">
+    						</div>
+    						<div class="tc tc2">Евгений Коптев</div>
+    						<div class="tc tc3">
+    							<img src="img/user-avatar.png" alt="old-avatar">
+    						</div>
+    						<div class="tc tc4">
+    							<img src="img/user-avatar.png" alt="new-avatar">
+    						</div>
+    					</div>
+    					<div class="tr">
+    						<div class="tc tc1">
+    							<input type="checkbox" name="#" id="#">
+    						</div>
+    						<div class="tc tc2">Евгений Коптев</div>
+    						<div class="tc tc3">
+    							<img src="img/user-avatar.png" alt="old-avatar">
+    						</div>
+    						<div class="tc tc4">
+    							<img src="img/user-avatar.png" alt="new-avatar">
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<a href="#" class="moder__down"></a>
+    			<div class="buttons">
+    				<button data-type="submit" >Применить</button>
+    				<button data-type="cancel" >Отказать</button>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div class="separate"></div>
+
+    	<div class="modal form__post-reply" data-modal="msgs">
+    		<div class="container">
+    			<span class="close"></span>
+    			<h2>Европейская Конвенция по правам человека</h2>
+    			<div class="table">
+    				<div class="tr companion1">
+    					<div class="tc tc1">
+    						<img src="img/user-avatar.png" alt="old-avatar">
+    					</div>
+    					<div class="tc tc2">
+    						<h3>Сергей Авдишев</h3>
+    						<p>Европейский суд рассматривает не любые нарушения наших с вами прав, а только те, которые 
+    						предусмотрены Конвенцией о защите прав человека и основных свобод, которую еще называют 
+    						Европейской конвенцией по правам человека.
+    						</p>
+    					</div>
+    					<div class="r-date">25.07.2015</div>
+    				</div>
+    				<div class="tr companion2">
+    					<div class="tc tc1">
+    						<img src="img/user-avatar.png" alt="old-avatar">
+    					</div>
+    					<div class="tc tc2">
+    						<h3>Евгений Коптев</h3>
+    						<p>Европейский суд рассматривает не любые нарушения наших с вами прав, а только те, которые 
+    						предусмотрены Конвенцией о защите прав человека и основных свобод, которую еще называют 
+    						Европейской конвенцией по правам человека.
+    						</p>
+    						<p>Европейский суд рассматривает не любые нарушения наших с вами прав, а только те, которые 
+    						предусмотрены Конвенцией о защите прав человека и основных свобод, которую еще называют 
+    						Европейской конвенцией по правам человека.Европейский суд рассматривает не любые нарушения 
+    						наших с вами прав.
+    						</p>
+    					</div>
+    					<div class="r-date">25.07.2015</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="form-wrapper">
+    			<form action="post" name="msgs">
+    				<div class="container clearfix">
+    					<textarea data-rule="required" name="message" placeholder="Написать сообщение"></textarea>
+    					<a href="#">Пожаловаться</a>
+    					<div class="buttons">
+    						<button data-type="submit" class="send">Отправить</button>
+    						<button data-type="cancel" class="cancel">Отмена</button>
+    					</div>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+
+    	<div class="separate"></div>
+
+    	<div class="modal download-photo" data-modal="upload">
+    		<span class="close"></span>
+    		<div class="photo-area">
+    			<h2>Выбор фотографии</h2>
+    			<div class="photo">
+    				<img src="img/photo.png" alt="photo">
+    				<button class="choose-photo">Выберите фото на компьютере</button>
+    			</div>
+    		</div>
+    		<div class="container clearfix">
+    			<div class="buttons">
+    				<button data-type="submit" class="send">Отправить</button>
+    				<button data-type="cancel" class="cancel">Отмена</button>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div class="separate"></div>
+
+<!-- scripts -->
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>')</script>
+        <!-- <script src="js/bootstrap.min.js"></script> -->
+        <script src="js/plugins.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+    <!-- contact me: elfimov-val@yandex.ua -->
+</html>
