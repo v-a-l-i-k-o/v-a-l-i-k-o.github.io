@@ -104,12 +104,45 @@ var scale = $("#process").waypoint(function (direction) {
 
 /* ----- hover-pop-up ----- */
 
-$("#process").on("mouseover", "img", function(){
-  $(this).closest(".process-item").find(".pop-up-process").fadeIn(300);
-});
+$.mediaquery("bind", "mq-popUp", "(min-width: 800px)", {
+	enter: function() {
+		$("#process").on("mouseover", "img", function(){
+		  $(this).closest(".process-item").find(".pop-up-process").fadeIn(300);
+		});
 
-$("#process").on("mouseout", ".pop-up-process", function(){
-  $(this).fadeOut(300);
+		$("#process").on("mouseout", ".pop-up-process", function(){
+		  $(this).fadeOut(300);
+		});
+
+		$("#process").off("click", "img");
+		$("#process").off("click", ".pop-up_close");
+	},
+
+	leave: function() {
+		var place;
+		$("#process").off("mouseover", "img");
+		$("#process").off("mouseout", ".pop-up-process");
+
+		$("#process").on("click", "img", function(event) {
+			event.preventDefault();
+			place = $(this).closest(".process-item");
+			var popUp = $(this).closest(".process-item").find('.pop-up-process');
+			popUp.appendTo($(this).closest('.process'));
+			$(".overlay").fadeIn(400);
+			popUp.fadeIn(300);
+		});
+
+		$("#process").on("click", ".pop-up_close", function(event) {
+			event.preventDefault();
+			var popUp = $(this).closest(".pop-up-process");
+			popUp.fadeOut(300);
+			$(".overlay").fadeOut(400);
+			function func() {
+				popUp.appendTo(place);
+			};
+			setTimeout(func, 500);
+		});
+	}
 });
 
 // -------------------------------------------------------------------------------------

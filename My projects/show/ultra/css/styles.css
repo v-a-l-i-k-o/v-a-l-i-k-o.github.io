@@ -2115,6 +2115,7 @@ footer {
   /* ----- SECTION process ----- */
   .process {
     height: 51.8rem;
+    position: relative;
     padding-top: .5rem;
     margin-top: 4.2rem;
     min-height: 51.8rem;
@@ -2151,6 +2152,7 @@ footer {
   .process-item img {
     left: 3.5rem;
     width: 5.7rem;
+    cursor: pointer;
     position: absolute;
   }
   .process-item p {
@@ -2182,6 +2184,52 @@ footer {
     padding-left: 2rem;
     margin: 2rem auto 0;
     text-transform: none;
+  }
+  .pop-up-process {
+    z-index: 3;
+    display: none;
+    width: 28.9rem;
+    height: 28rem;
+    text-align: center;
+    padding: 4rem 1.2rem;
+    top: 1rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .pop-up-process h5 {
+    margin-bottom: 2.5rem;
+  }
+  .pop-up-process p {
+    padding: 0 .5rem;
+  }
+  .pop-up__analysis {
+    padding-top: 4rem;
+  }
+  .overlay {
+    z-index: 2;
+    opacity: .3;
+    display: none;
+    position: absolute;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .pop-up_close {
+    width: 2.8rem;
+    height: 2.8rem;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-image: url('../img/close.png');
   }
   /* ----- SECTION contacts ----- */
   .contacts {
