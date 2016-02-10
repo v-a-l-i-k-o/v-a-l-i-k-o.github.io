@@ -54,14 +54,22 @@ $('.slider__prices').slick({
 /* ----- counter ----- */
 
 var counter = $("#feedback").waypoint(function (direction) {
-	if ($(this).data("complete") == undefined) {
+	if ($(this.element).data("complete") == "") {
 		$(".counter-digit").countTo();
-		$(this).data("complete", "done");
+		$(this.element).data("complete", "done");
 	} else {
 		return;
 	}
 }, {
   offset: 42
+});
+
+/* ----- slicknav ----- */
+
+$('#menu').slicknav({
+	closeOnClick: true,
+  label: "Ultramarine",
+  prependTo: ".nav"
 });
 
 /* ===== CUSTOM CODE: ===== */
@@ -80,6 +88,28 @@ $(".scroll-down").on("click", function (event) {
 	var id = $(this).attr("href"),
 		  top = $(id).offset().top;
 	$("body, html").animate({scrollTop: top - 41}, 500);
+});
+
+/* ----- scale ----- */
+
+var scale = $("#process").waypoint(function (direction) {
+	if (!$(this.element).hasClass("scale")) {
+		$(this.element).addClass("scale");
+	} else {
+		return;
+	}
+}, {
+  offset: 46
+});
+
+/* ----- hover-pop-up ----- */
+
+$("#process").on("mouseover", "img", function(){
+  $(this).closest(".process-item").find(".pop-up-process").fadeIn(300);
+});
+
+$("#process").on("mouseout", ".pop-up-process", function(){
+  $(this).fadeOut(300);
 });
 
 // -------------------------------------------------------------------------------------
