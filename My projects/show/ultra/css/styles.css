@@ -813,17 +813,17 @@ body:after {
   src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
 }
 /* ----- general rules ----- */
+html {
+  margin-top: 1px;
+}
 html,
 body {
   font-family: 'Roboto';
+  background-color: #fff;
 }
-body {
+.section_wrapper {
   margin: 0 auto;
   max-width: 125.6rem;
-  background-color: #fff;
-}
-html {
-  background-color: #fff;
 }
 h2 {
   color: black;
@@ -847,15 +847,19 @@ button {
   background-repeat: no-repeat;
   background-image: url('../img/btn-bg.png');
 }
-/* ----- HEADER ----- */
-header {
+.delimiter {
+  width: 100%;
+  height: 40px;
+}
+/* ----- SECTION header ----- */
+.header {
   min-height: 90rem;
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-image: url('../img/header-bg.png');
 }
-header h2 {
+.header h2 {
   position: relative;
   line-height: 6.5rem;
   display: inline-block;
@@ -880,8 +884,9 @@ nav:after {
   top: 3.5rem;
   left: 23.7rem;
 }
-.logo h1 {
+.logo a {
   color: #006;
+  display: block;
   font-size: 4.8em;
   font-weight: 700;
   line-height: 6rem;
@@ -898,7 +903,7 @@ nav:after {
 }
 .menu {
   float: right;
-  padding-top: .8rem;
+  padding-top: .4rem;
   margin-right: 5.8rem;
   text-decoration: none;
 }
@@ -925,7 +930,7 @@ nav:after {
 .fixed-nav nav .logo {
   position: static;
 }
-.fixed-nav nav .logo h1 {
+.fixed-nav nav .logo a {
   font-size: 2.8em;
   line-height: 4rem;
   padding-left: 4.5rem;
@@ -946,7 +951,7 @@ nav:after {
   border-radius: 50%;
   position: absolute;
   background-size: contain;
-  bottom: 2.7rem;
+  bottom: 4.5rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -955,7 +960,6 @@ nav:after {
 }
 /* ----- SECTION about-us ----- */
 .about-us {
-  margin-top: 42px;
   padding: 5rem 0 7.2rem;
   background-color: #eee;
 }
@@ -1028,7 +1032,6 @@ nav:after {
 /* ----- SECTION our-projects ----- */
 .our-projects {
   text-align: right;
-  margin-top: 42px;
   padding-top: 2.7rem;
   padding-bottom: 6.5rem;
 }
@@ -1048,7 +1051,6 @@ nav:after {
   position: relative;
   text-align: center;
   padding-top: 10rem;
-  margin-top: 42px;
   padding-bottom: 6.5rem;
 }
 .prices h2 {
@@ -1082,7 +1084,6 @@ nav:after {
 /* ----- SECTION feedback ----- */
 .feedback {
   text-align: right;
-  margin-top: 42px;
   padding-top: 6.5rem;
   padding-bottom: 9.3rem;
 }
@@ -1203,7 +1204,6 @@ nav:after {
 /* ----- SECTION process ----- */
 .process {
   text-align: right;
-  margin-top: 42px;
   padding-top: 1.7rem;
   min-height: 86.3rem;
   background-size: cover;
@@ -1426,7 +1426,6 @@ nav:after {
 }
 /* ----- SECTION contacts ----- */
 .contacts {
-  margin-top: 42px;
   padding-top: 6rem;
 }
 .contacts h2 {
@@ -1505,10 +1504,10 @@ footer {
   text-align: center;
 }
 .slider__projects .slide {
-  text-align: left;
-  padding-left: 2rem;
+  text-align: center;
 }
 .slider__projects img {
+  display: inline-block;
   margin-bottom: 1.5rem;
 }
 .slider__projects .slick-prev {
@@ -1535,8 +1534,8 @@ footer {
   float: left;
   *display: inline;
   padding: 0 0%;
-  width: 21.66666667%;
-  *width: 21.61458333%;
+  width: 29.16666667%;
+  *width: 29.11458333%;
   font-size: 1.8em;
   font-weight: 700;
   text-align: right;
@@ -1741,22 +1740,16 @@ footer {
 }
 /* ===== #MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
 /* ----- DESKTOP VERSION ----- */
-@media screen and (min-width: 1281px) {
-  /* ----- SECTION feedback ----- */
-  .our-profit {
-    background-position: 5rem 50%;
-  }
-}
 @media screen and (min-width: 800px) and (max-width: 1250px) {
   html {
     font-size: 45%;
   }
-  /* ----- HEADER ----- */
-  header {
+  /* ----- SECTION header ----- */
+  .header {
     min-height: 72rem;
     background-size: contain;
   }
-  header h2 {
+  .header h2 {
     left: 57rem;
     top: 29rem;
   }
@@ -1881,13 +1874,13 @@ footer {
     background-image: url('../img/btn-bg__mobile.png');
   }
   /* ----- HEADER ----- */
-  header {
+  .header {
     min-height: 55rem;
     position: relative;
     background-position: 0 5.5rem;
     background-image: url('../img/header-bg__mobile.png');
   }
-  header h2 {
+  .header h2 {
     width: 17rem;
     font-size: 2.8rem;
     line-height: 4rem;
