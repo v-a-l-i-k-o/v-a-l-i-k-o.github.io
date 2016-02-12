@@ -813,9 +813,6 @@ body:after {
   src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
 }
 /* ----- general rules ----- */
-html {
-  margin-top: 1px;
-}
 html,
 body {
   font-family: 'Roboto';
@@ -1004,6 +1001,9 @@ nav:after {
   font-weight: 700;
   display: inline-block;
   text-transform: uppercase;
+}
+.pop-up-about {
+  display: none;
 }
 .btn-wrapper {
   *zoom: 1;
@@ -1688,7 +1688,7 @@ footer {
   margin: 0 auto 0;
   position: relative;
   line-height: 1.125em;
-  padding: .7rem 4.2rem;
+  padding: .6rem 4.2rem;
   text-decoration: none;
   background-color: #fff;
   vertical-align: middle;
@@ -1912,7 +1912,6 @@ footer {
   }
   /* ----- SECTION about-us ----- */
   .about-us {
-    margin-top: 4.2rem;
     text-align: center;
     padding: 0  1.5rem 1.5rem;
   }
@@ -1953,6 +1952,48 @@ footer {
     width: 90%;
     font-size: 1.4em;
     line-height: 1.7rem;
+  }
+  .pop-up-about {
+    z-index: 5;
+    display: none;
+    width: 16rem;
+    height: 16rem;
+    position: absolute;
+    border-radius: 50%;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .pop-up-about p {
+    width: 90%;
+    color: #fff;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 1.2rem;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .pop-up-about_close {
+    width: 2.8rem;
+    height: 2.8rem;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 0rem;
+    right: -0.5rem;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image: url('../img/close__black.png');
   }
   .read-us__mobile {
     color: #000068;
@@ -2110,7 +2151,6 @@ footer {
     height: 51.8rem;
     position: relative;
     padding-top: .5rem;
-    margin-top: 4.2rem;
     min-height: 51.8rem;
     background-image: url('../img/process-bg__mobile.png');
   }
@@ -2226,7 +2266,7 @@ footer {
   }
   /* ----- SECTION contacts ----- */
   .contacts {
-    padding-top: 1rem;
+    padding-top: 2rem;
   }
   .contacts h2 {
     margin-bottom: 0;
