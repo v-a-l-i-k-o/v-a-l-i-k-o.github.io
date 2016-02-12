@@ -5,16 +5,18 @@ $(document).ready(function() {
 
 /* ----- waypoint scroll ----- */
 
-var waypoints = $("section").waypoint(function (direction) {
-	var id = "#"+ this.element.id;
-	console.log(id);
-	$("#menu li").each(function(index, el) {
-		$(this).removeClass('current');
-	});
-	$('a[href="'+ id +'"]').closest("li").addClass('current');
-}, {
-  offset: 40
-});
+$("section").waypoint(waypoint_callback, {offset: 39 }); //down
+$("section").waypoint(waypoint_callback, {offset: 41 }); // up
+
+function waypoint_callback(direction) {
+	if (direction == 'up' && this.options.offset < 40 || direction == 'down' && this.options.offset > 40){
+		var id = "#"+ this.element.id;
+		$("#menu li").each(function(index, el) {
+			$(this).removeClass('current');
+		});
+		$('a[href="'+ id +'"]').closest("li").addClass('current');
+	}
+}
 
 /* ----- sticky ----- */
 $(window).scroll(function () {
@@ -50,13 +52,12 @@ $('.slider__prices').slick({
 
 /* ----- counter ----- */
 
-$("#feedback").waypoint(feedback_start_callback, {offset: 40});
+$("#feedback").waypoint(feedback_start_callback, {offset: 41});
+$("#feedback").waypoint(feedback_start_callback, {offset: 39});
 $("#feedback").waypoint(feedback_clear_callback, {offset: $(window).height()});
 $("#feedback").waypoint(feedback_clear_callback, {offset: -$(window).height()});
 
 function feedback_clear_callback(direction){
-	console.log(direction);
-	console.log(this.options.offset);
 	var section = $(this.element);
 	var clear = function(){
 		section.data("complete", "");
@@ -69,18 +70,18 @@ function feedback_clear_callback(direction){
 		if (direction == 'down' && this.options.offset < 0) clear();
 		if (direction == 'up' && this.options.offset > 0) clear();
 	}
-	console.log(section.find(".counter-digit1").data('countTo'));
 }
 function feedback_start_callback(direction){
-	var section = $(this.element);
-	if ( section.data("complete") !== "done" ) {
+	if (direction == 'up' && this.options.offset < 40 || direction == 'down' && this.options.offset > 40){
+		var section = $(this.element);
+		if ( section.data("complete") !== "done" ) {
 			section.find('[data-from]').each(function(index, el) {
 				if ($(el).data("countTo") === undefined) $(el).countTo();
 				else $(el).countTo('start');
 			});
 			section.data("complete", "done");
+		}
 	}
-	console.log(section.find(".counter-digit1").data('countTo'));
 }
 
 /* ----- slicknav ----- */
@@ -97,14 +98,14 @@ $('#menu').slicknav({
 
 $("#nav").on("click","a", function (event) {
 	event.preventDefault();
-	var	id = $(this).attr("href"),
+	var	href = $(this).attr("href"),
 			top,
-			ashki = $(this).closest('ul').find("a"),
-			lishki = $(this).closest('ul').find("li"),
+			lishki = $(this).closest('ul').find("li:not(:last-child)"),
+			ashki = lishki.find("a"),
 			currentIndx,
 			currentActive;
 	ashki.each(function(index, el) {
-		if ($(el).attr("href") == id) {
+		if ($(el).attr("href") == href) {
 			currentIndx = index;
 		}
 	});
@@ -114,18 +115,20 @@ $("#nav").on("click","a", function (event) {
 		}
 	});
 	if ( currentActive === undefined || currentIndx > currentActive) {
-		top = $(id).offset().top - 39;
-	} else {
-		( currentIndx == 0 )? top = $(id).offset().top - 41 : top = $(id).offset().top - 40;
+		top = $(href).offset().top - 40; //39
+	} else if ( currentIndx == 0 ) {
+		top = $(href).offset().top - 40; //41
+	} else if ( currentIndx < currentActive ) {
+		top = $(href).offset().top - 40; //41
 	};
-	$("body, html").animate({scrollTop: top}, 1000);
+	if ( top !== undefined ) $("body, html").animate({scrollTop: top}, 1000);
 });
 
 $(".scroll-down").on("click", function (event) {
 	event.preventDefault();
 	var id = $(this).attr("href"),
 		  top = $(id).offset().top;
-	$("body, html").animate({scrollTop: top - 39}, 500);
+	$("body, html").animate({scrollTop: top - 40}, 500); //39
 });
 
 $("a[href='#ultramarine']").on("click", function (event) {
@@ -151,24 +154,34 @@ var scale = $("#process").waypoint(function (direction) {
 
 $.mediaquery("bind", "mq-popUp", "(min-width: 800px)", {
 	enter: function() {
-		$("#process").on("mouseover", "img", function(){
+		$("#process").on("mouseenter", "img", function(){
 		  $(this).closest(".process-item").find(".pop-up-process").fadeIn(300);
 		});
 
-		$("#process").on("mouseout", ".pop-up-process", function(){
+		$("#process").on("mouseleave", ".pop-up-process", function(){
+		  $(this).fadeOut(300);
+		});
+
+		$("#about-us").on("mouseenter", "img", function(){
+		  $(this).closest(".about-us_item").find(".pop-up-about").fadeIn(300);
+		});
+
+		$("#about-us").on("mouseleave", ".pop-up-about", function(){
 		  $(this).fadeOut(300);
 		});
 
 		$("#process").off("click", "img");
 		$("#process").off("click", ".pop-up_close");
+		$("#about-us").off("click", "img");
+		$("#about-us").off("click", ".pop-up-about_close");
 	},
 
 	leave: function() {
 		var place;
-		$("#about-us").off("click", "img");
-		$("#process").off("mouseover", "img");
-		$("#process").off("mouseout", ".pop-up-process");
-		$("#about-us").off("click", ".pop-up-about_close");
+		$("#process").off("mouseenter", "img");
+		$("#process").off("mouseleave", ".pop-up-process");
+		$("#about-us").off("mouseenter", "img");
+		$("#about-us").off("mouseleave", ".pop-up-about");
 
 		$("#process").on("click", "img", function(event) {
 			event.preventDefault();
@@ -206,5 +219,51 @@ $.mediaquery("bind", "mq-popUp", "(min-width: 800px)", {
 	}
 });
 
-// -------------------------------------------------------------------------------------
-});
+/* ----- yandex map ----- */
+
+
+$.scrollify({
+        section : "[data-section]",
+        sectionName : "section",
+        easing: "easeOutExpo",
+        scrollSpeed: 1000,
+        offset : -40,//-41
+        scrollbars: true,
+        // standardScrollElements: "#contacts",
+        // before:function(index,elements) {console.log(index,elements)},
+        after:function() {},
+        afterResize:function() {},
+        afterRender:function() {}
+    });
+
+
+
+}); // -------jQuery.ready()------------------------------------------------------------------------------
+
+/* ----- yandex map ----- */
+
+ymaps.ready(init);
+
+function init () {
+  var myMap = new ymaps.Map("map", {
+    center: [55.7958,37.8038],
+    zoom: 16
+  }),
+
+  // Создаем метку с помощью вспомогательного класса.
+  myPlacemark = new ymaps.Placemark([55.7958,37.8038], {
+    // Свойства.
+    // Содержимое иконки, балуна и хинта.
+    balloonContent: 'ULTRAMARIN<br/> WEB - СТУДИЯ',
+    hintContent: 'ул. Средняя Первомайская, д.3'
+  }, {
+	  // Опции.
+	  // Стандартная иконка.
+	  preset: 'twirl#greyDotIcon',
+    balloonOffset: [0, 0]
+  });
+    
+  myMap.controls.add('smallZoomControl');
+  // Добавляем все метки на карту.
+  myMap.geoObjects.add(myPlacemark);
+};
