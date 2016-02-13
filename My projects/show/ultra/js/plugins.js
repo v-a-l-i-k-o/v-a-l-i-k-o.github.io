@@ -554,7 +554,7 @@ var Formstone=window.Formstone=function(a,b,c,d){"use strict";function e(a){n.Pl
         current = elements[0];
         current.index = 0;
       } else return;
-      console.log(anchor, 'current: ', current, current.index, 'next: ', next, index);
+      // console.log(anchor, 'current: ', current, current.index, 'next: ', next, index);
       
       if (index == 0) top = 0;
       else if ( index > current.index)
@@ -938,13 +938,18 @@ var Formstone=window.Formstone=function(a,b,c,d){"use strict";function e(a){n.Pl
 
     function sizePanels() {
       $(settings.section).each(function(i) {
-        if($(this).css("height","auto").outerHeight()<$(window).height()) {
-          // $(this).css({"height":$(window).height()});
-          // overflow[i] = false;
-          $(this).css({"height":$(this).outerHeight()});
-          overflow[i] = true;
+        var height = $(this).css("height","auto").outerHeight();
+        var vh     = $(window).height();
+        if ($(this).attr('id') == 'contacts') return $(this).css({"height":height}), overflow[i] = true;
+        if(height <= vh) {
+          $(this).css({"height":vh});
+          overflow[i] = false;
         } else {
-          $(this).css({"height":$(this).outerHeight()});
+          if (height-vh < vh/5) height += Math.floor(vh/5);
+          else if (height-vh < vh/4) height += Math.floor(vh/4);
+          else if (height-vh < vh/3) height += Math.floor(vh/3);
+          else if (height-vh < vh/2) height += Math.floor(vh/2);
+          $(this).css({"height":height});
           overflow[i] = true;
         }
       });
