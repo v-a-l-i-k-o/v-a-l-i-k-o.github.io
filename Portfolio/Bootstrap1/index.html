@@ -1,0 +1,391 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Bootstrap2</title>
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="css/styles.min.css">
+        <script src="js/libs/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <div class="panel my-panel my-panel__insurance container">
+            <div class="row my-panel_heading">
+                <div class="my-insurance col-xs-12 col-sm-4">
+                    <span class="calendar-icon calendar-icon__insurance hidden-xs hidden-sm"></span>
+                    <h3 class="my-panel_title my-panel_title__insurance">My insurance</h3>
+                </div>
+                <div class="col-sm-8 hidden-xs">
+                    <div class="col-sm-4 insurance-info"><span class="coverage">Insurance coverage</span></div>
+                    <div class="col-sm-2 insurance-info"><span class="price">Price</span></div>
+                    <div class="col-sm-3 insurance-info"><span class="days-left">Days left</span></div>
+                </div>
+            </div>
+            <div class="row my-panel_data-insurance">
+                <div class="data-info data-info__insurance">
+                    <h4>Title insurance</h4>
+                </div>
+                <div class="data-info-values col-xs-12 col-sm-8">
+                    <div class="col-xs-5 col-md-3 col-sm-4 data-info data-info__coverage">
+                        <div class="visible-xs"><span class="info-coverage">Insurance coverage</span></div>
+                        <span><b>1.000.000</b><span class="cent">.00</span> usd</span>
+                    </div>
+                    <div class="col-xs-4 col-md-3 col-sm-3 data-info data-info__price">
+                        <div class="visible-xs"><span class="info-price">Price</span></div>
+                        <span><b>160.00 usd</b></span>
+                    </div>
+                    <div class="col-xs-3 col-md-2 col-sm-1 data-info data-info__days-left">
+                        <div class="visible-xs"><span class="info-days-left">Days left</span></div>
+                        <span>14</span>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-sm-3 data-info data-info__policy">
+                        <button type="submit" class="btn btn__policy" data-toggle="modal" data-target="#view-contract">View policy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-panel_insurance-type">
+                <div class="data-info data-info__insurance-type hidden-xs">
+                    <h4>Insurance type</h4>
+                </div>
+                <form action="post" class="form-health col-sm-3">
+                    <div class="form-group form-group__health">
+                        <label for="health" class="visible-xs">Insurance type</label>
+                        <select id="health" class="form-control">
+                            <option>Health</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="insurance-slide col-sm-6 col-md-5 col-md-offset-1">
+                    <p>Insurance coverage</p>
+                    <div>
+                        <span class="slider-left-info">30.000 USD</span>
+                        <span class="slider-right-info">3.000.000 USD</span>
+                        <div id="slider"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-panel_title-list">
+                <span class="calendar-icon calendar-icon__insurance hidden-xs hidden-sm" data-toggle="modal" data-target="#cancelation"></span>
+                <h3 class="my-panel_title my-panel_title__insurance">insurance</h3>
+            </div>
+            <div class="row panel-body panel-list panel-list__insurance">
+                <div class="col-xs-12 col-sm-6 col-md-4 list-item">
+                    <div class="list-content">
+                        <h5>Title insurance</h5>
+                        <p>Under 8s free</p>
+                        <p>Free services: visits, cleaning and fluoration, amongst others</p>
+                    </div>
+                    <span class="money-range">From 500 USD to 20.000 USD</span>
+                    <span class="time-range">From 6 monthes to 24 monthes</span>
+                    <button class="btn" data-toggle="modal" data-target=".new-contr">Request</button>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 list-item">
+                    <div class="list-content">
+                        <h5>Title insurance</h5>
+                        <p>Under 8s free</p>
+                        <p>Free services: visits, cleaning and fluoration, amongst others</p>
+                    </div>
+                    <span class="money-range">From 500 USD to 20.000 USD</span>
+                    <span class="time-range">From 6 monthes to 24 monthes</span>
+                    <button class="btn btn__insurance" data-toggle="modal" data-target=".new-contr">Request</button>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 list-item">
+                    <div class="list-content">
+                        <h5>Title insurance</h5>
+                        <p>Under 8s free</p>
+                        <p>Free services: visits, cleaning and fluoration, amongst others</p>
+                    </div>
+                    <span class="money-range">From 500 USD to 20.000 USD</span>
+                    <span class="time-range">From 6 monthes to 24 monthes</span>
+                    <button class="btn" data-toggle="modal" data-target=".new-contr">Request</button>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 list-item">
+                    <div class="list-content">
+                        <h5>Title insurance</h5>
+                        <p>Healthcare insurance from €49/month per assured under 54 years of age
+                        More than 40,000 professionals and over 1,100 healthcare centres
+                        </p>
+                    </div>
+                    <span class="money-range">From 500 USD to 20.000 USD</span>
+                    <span class="time-range">From 6 monthes to 24 monthes</span>
+                    <button class="btn" data-toggle="modal" data-target=".new-contr">Request</button>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 list-item">
+                    <div class="list-content">
+                        <h5>Title insurance</h5>
+                        <p>Healthcare insurance from €49/month per assured under 54 years of age
+                        More than 40,000 professionals and over 1,100 healthcare centres
+                        </p>
+                    </div>
+                    <span class="money-range">From 500 USD to 20.000 USD</span>
+                    <span class="time-range">From 6 monthes to 24 monthes</span>
+                    <button class="btn" data-toggle="modal" data-target=".new-contr">Request</button>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 list-item">
+                    <div class="list-content">
+                        <h5>Title insurance</h5>
+                        <p>Healthcare insurance from €49/month per assured under 54 years of age
+                        More than 40,000 professionals and over 1,100 healthcare centres
+                        </p>
+                    </div>
+                    <span class="money-range">From 500 USD to 20.000 USD</span>
+                    <span class="time-range">From 6 monthes to 24 monthes</span>
+                    <button class="btn" data-toggle="modal" data-target=".new-contr">Request</button>
+                </div>
+            </div>
+            <div class="row btn-row-insurance visible-xs">
+                <button type="submit" class="btn__show-more btn-insurance-show">Show more</button>
+            </div>
+        </div>
+
+        <div class="fade modal" id="cancelation" tabindex="-1" role="dialog">
+            <div class="panel panel-insurance panel-insurance__cancel container modal-dialog" role="document">
+                <span class="close panel_close panel-insurance_close" data-dismiss="modal" aria-label="Close"></span>
+                <div class="panel-heading panel-insurance-heading">
+                    <h3 class="panel-title panel-insurance-title">Request cancellation of the insurance contract</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row panel-body_condition">
+                        <div class="panel-body_data">
+                            <div class="data-indicator data-indicator-insurance"></div>
+                            <span>DATA</span>
+                        </div>
+                        <div class="panel-body_success">
+                            <div class="success-indicator success-indicator-insurance"></div>
+                            <span>SUCCESS</span>
+                        </div>
+                    </div>
+                    <h3>I request to cancel insurance contract<br/><span>contract 1234567</span></h3>
+                    <form class="row modal-form modal-form-insurance modal-form-insurance__cancel">
+                        <div class="row">
+                            <div class="form-group form-group__send-money">
+                                <label for="send-money">Return to my bank account</label>
+                                <select id="send-money" class="form-control">
+                                    <option>123 456 789</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row_btn">
+                            <button type="submit" class="btn">Request cancelation</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="fade modal" id="view-contract" tabindex="-1" role="dialog">
+            <div class="panel panel-insurance panel-insurance__view-contract container modal-dialog" role="document">
+                <span class="close panel_close panel-insurance_close" data-dismiss="modal" aria-label="Close"></span>
+                <div class="panel-heading panel-insurance-heading">
+                    <h3 class="panel-title panel-insurance-title">View insurance policy</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row panel-body_condition hidden-sm hidden-md hidden-lg">
+                        <div class="panel-body_data">
+                            <div class="data-indicator data-indicator-insurance"></div>
+                            <span>DATA</span>
+                        </div>
+                        <div class="panel-body_success">
+                            <div class="success-indicator success-indicator-insurance"></div>
+                            <span>SUCCESS</span>
+                        </div>
+                    </div>
+                    <div class="row panel-body_insurance-policy">
+                        <div class="policy-describe-name col-xs-6 col-sm-6 col-md-5">
+                            <span class="insurance-name">Type of insurance:</span>
+                            <span class="contract-name">Contract period:</span>
+                            <span class="from-to-name">From-to:</span>
+                            <span class="coverage-name">Insurance coverage:</span>
+                        </div>
+                        <div class="policy-describe-value col-xs-6 col-sm-6 col-md-7">
+                            <span class="insurance-value">Life insurance</span>
+                            <span class="contract-value">1 year</span>
+                            <span class="from-to-value">31.12.2015 - 31.12.2015</span>
+                            <span class="coverage-value">1.000.000 usd</span>
+                        </div>
+                    </div>
+                    <div class="row panel-body_insurance-details">
+                        <p class="insurance-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                        culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error 
+                        sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+                        veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas 
+                        sit aspernatur aut odit aut
+                        </p>
+                    </div>
+                    <div class="row row-btns">
+                        <div class="row-btns_wrapper">
+                            <button type="submit" class="btn btn__print-policy">Print policy</button>
+                            <button type="submit" class="btn btn__save-in">Save in pdf</button>
+                            <span>Or</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fade modal new-contr" tabindex="-1" role="dialog">
+            <div class="panel panel-insurance panel-insurance__new-contract container modal-dialog" role="document">
+                <span class="close panel_close panel-insurance_close" data-dismiss="modal" aria-label="Close"></span>
+                <div class="panel-heading panel-insurance-heading">
+                    <h3 class="panel-title panel-insurance-title">New insurance contract</h3>
+                    <p>Title of insurance</p>
+                </div>
+                <div class="panel-body">
+                    <div class="row panel-body_condition">
+                        <div class="panel-body_data">
+                            <div class="data-indicator data-indicator-insurance"></div>
+                            <span>DATA</span>
+                        </div>
+                        <div class="panel-body_success">
+                            <div class="success-indicator success-indicator-insurance"></div>
+                            <span>SUCCESS</span>
+                        </div>
+                    </div>
+                    <form class="row modal-form modal-form-insurance modal-form-insurance__new-contract">
+                        <div class="row">
+                            <div class="form-group form-group__persons col-sm-4 col-xs-12">
+                                <label for="persons">Persons insured</label>
+                                <select id="persons" class="form-control">
+                                    <option>2</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-group__period col-sm-4 col-xs-12">
+                                <label for="period">Period</label>
+                                <select id="period" class="form-control">
+                                    <option>unspecified</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-group__payment col-sm-4 col-xs-12">
+                                <label for="method">Payment method</label>
+                                <select id="method" class="form-control">
+                                    <option>Monthly</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row row-gender-male">
+                            <div class="form-group form-group__gender col-sm-4 col-xs-12">
+                                <label for="gender">Gender</label>
+                                <select id="gender" class="form-control">
+                                    <option>Male</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-8 col-xs-12">
+                                <div class="row form-group__triple">
+                                    <label for="date-of-birth">Date of birth</label>
+                                    <div class="form-group form-group__date-of-birth col-sm-4 col-xs-12">
+                                        <select id="date-of-birth" class="form-control">
+                                            <option>Day</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group form-group__month col-sm-4 col-xs-12">
+                                        <select id="month" class="form-control">
+                                            <option>Month</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group form-group__year col-sm-4 col-xs-12">
+                                        <select id="year" class="form-control">
+                                            <option>Year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-group__first-name col-sm-6 col-xs-12">
+                                <label for="first-name">First name(s)</label>
+                                <input type="text" class="form-control" id="first-name" placeholder="Anna">
+                            </div>
+                            <div class="form-group form-group__second-name col-sm-6 col-xs-12">
+                                <label for="second-name">Second name(s)</label>
+                                <input type="text" class="form-control" id="second-name" placeholder="Tee">
+                            </div>
+                        </div>
+                        <div class="row row-gender-female">
+                            <div class="form-group form-group__gender col-sm-4 col-xs-12">
+                                <label for="gender">Gender</label>
+                                <select id="gender" class="form-control">
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-8 col-xs-12">
+                                <div class="row form-group__triple">
+                                    <label for="date-of-birth">Date of birth</label>
+                                    <div class="form-group form-group__date-of-birth col-sm-4 col-xs-12">
+                                        <select id="date-of-birth" class="form-control">
+                                            <option>Day</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group form-group__month col-sm-4 col-xs-12">
+                                        <select id="month" class="form-control">
+                                            <option>Month</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group form-group__year col-sm-4 col-xs-12">
+                                        <select id="year" class="form-control">
+                                            <option>Year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-group__first-name col-sm-6 col-xs-12">
+                                <label for="first-name">First name(s)</label>
+                                <input type="text" class="form-control" id="first-name" placeholder="John">
+                            </div>
+                            <div class="form-group form-group__second-name col-sm-6 col-xs-12">
+                                <label for="second-name">Second name(s)</label>
+                                <input type="text" class="form-control" id="second-name" placeholder="Tee">
+                            </div>
+                        </div>
+                        <div class="row row-pay">
+                            <div class="form-group form-group__pay-from col-sm-5 col-xs-12">
+                                <label for="pay-from">Pay from account</label>
+                                <select id="pay-from" class="form-control">
+                                    <option>123 456 789</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-group__curren col-sm-3 col-xs-12">
+                                <label for="curren">Currency</label>
+                                <select id="curren" class="form-control">
+                                    <option>Usd</option>
+                                </select>
+                            </div>
+                            <div class="available-balance col-sm-4 col-xs-12">
+                                <p class="available-balance_name">Available balance</p>
+                                <span class="available-balance_value">5.806<span class="small">,21</span></span>
+                            </div>
+                        </div>
+                        <div class="row row-period">
+                            <div class="month-period month-period__monthly col-sm-4 col-xs-12">
+                                <p class="month-period_name">Monthly</p>
+                                <span class="month-period_value">156<span class="small">,21</span></span>
+                                <span class="month-period_paper">Usd</span>
+                            </div>
+                            <div class="month-period month-period__quarterly col-sm-4 col-xs-12">
+                                <p class="month-period_name">Quarterly</p>
+                                <span class="month-period_value">483<span class="small">,85</span></span>
+                                <span class="month-period_paper">Usd</span>
+                            </div>
+                            <div class="month-period month-period__yearly col-sm-4 col-xs-12">
+                                <p class="month-period_name">Yearly</p>
+                                <span class="month-period_value">5.806<span class="small">,21</span></span>
+                                <span class="month-period_paper">Usd</span>
+                            </div>
+                        </div>
+                        <div class="row_btn">
+                            <button type="submit" class="btn">New contract</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+<!-- scripts -->
+        <script src="js/libs/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
