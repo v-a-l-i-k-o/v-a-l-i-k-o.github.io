@@ -1,0 +1,543 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Planet</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <script src="js/libs/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <!-- Modals -->
+    <div class="modal fade modal-log" id="modalLog" role="dialog" tabindex="-1">
+      <button type="button" class="close" data-dismiss="modal"></button>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p class="modal-log_title">
+              <a class="modal-log_title-in" href="#">Вход</a>
+              и
+              <a class="modal-log_title-reg" href="#">Регистрация</a>
+            </p>
+            <span class="modal-log_note modal-log_note__in">Введите ваши данные от личного кабинета Е-Planet</span>
+            <span class="modal-log_note modal-log_note__reg">Регистрация займет не более минуты и позволит вам управлять 
+              всеми заказываемыми услугами E-Planet
+            </span>
+            <form role="form" class="modal-form modal-form__log">
+              <div class="form-group form-group__email">
+                <input type="email" class="form-control" id="emailLog" placeholder="Электронная почта" required>
+              </div>
+              <div class="form-group form-group__pass">
+                <input type="password" class="form-control" id="passwordLog" placeholder="Пароль" required>
+              </div>
+              <div class="form-group form-group__name">
+                <input type="text" class="form-control" id="name" placeholder="Фамилия Имя Отчество" required>
+              </div>
+              <div class="modal-log_submit">
+                <button type="submit" class="btn modal-log_btn modal-log_btn__reg">Зарегистрироваться</button>
+                <button type="submit" class="btn modal-log_btn modal-log_btn__in">Войти</button>
+                <a href="#" class="modal-log_link-restore">Восстановление пароля</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade modal-call" id="modalCall" role="dialog" tabindex="-1">
+      <button type="button" class="close" data-dismiss="modal"></button>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p class="modal-call_title">Хотите мы позвоним?</p>
+            <span class="modal-call_note">Тогда просто сообщите Ваш номер телефона</span>
+            <form role="form" class="modal-form modal-form__call">
+              <div class="form-group form-group__phone">
+                <input type="text" class="form-control" id="phoneCall" placeholder="+7 (___) ___-__-__" required>
+              </div>
+              <div class="modal-call_submit">
+                <button type="submit" class="btn modal-call_btn">Перезвоните мне</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- /Modals -->
+
+    <header class="header">
+      <nav class="navbar">
+        <div class="wrapper wrapper__navbar">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="navbar-header col-xs-5th-3 col-xs-5th-push-1 col-sm-5th-1 col-sm-5th-push-2 col-md-5th-push-0">
+                <a class="navbar-brand" href="#">
+                  <img alt="Brand" src="img/logo__desktop.png">
+                </a>
+              </div>
+              <div class="navbar-text col-md-5th-1">
+                <p class="navbar-text_city">Москва</p>
+                <p class="navbar-text_tel">+7 (499) 703-20-43</p>
+              </div>
+              <div class="navbar-text col-md-5th-1">
+                <p class="navbar-text_city">Санкт-Петербург</p>
+                <p class="navbar-text_tel">+7 (812) 703-20-52</p>
+              </div>
+              <div class="navbar-text col-md-5th-1">
+                <a href="#" class="navbar-text_link callback-link">Обратный звонок</a>
+              </div>
+              <div class="btn-group" role="group" aria-label="Sign">
+                <ul class="navbar-sign">
+                  <button type="button" class="btn navbar-sign_btn navbar-sign_btn__reg">Регистрация</button>
+                  <button type="button" class="btn navbar-sign_btn navbar-sign_btn__in">Войти</button>
+                  <li class="navbar-sign_user visible-xs-block visible-sm-block"></li>
+                </ul>
+              </div>
+              <ul class="nav navbar-nav col-md-10 col-lg-9">
+                <li class="navbar-nav_item">
+                  <div class="menu-btn">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </div>
+                </li>
+                <li class="navbar-nav_item"><a href="#">VPS виртуальные серверы</a></li>
+                <li class="navbar-nav_item"><a href="#">Виртуальный хостинг</a></li>
+                <li class="navbar-nav_item"><a href="#">Хостинг WordPress</a></li>
+                <li class="navbar-nav_item"><a href="#">Физические серверы</a></li>
+                <li class="navbar-nav_item"><a href="#">Регистрация доменов</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <h1 class="title title__h1">12 лет предоставляем быстрый хостинг тысячам довольных клиентов</h1>
+    </header>
+
+    <section class="offers">
+      <div class="wrapper wrapper__offers">
+        <div class="container-fluid">
+          <h2 class="title title__h2">Выгодные предложения</h2>
+          <div class="row row__offers">
+            <div class="offers-item col-sm-4">
+              <div class="offers-item_figure">
+                <div class="offers-item_pic offers-item_pic__virtual"></div>
+                <div class="offers-item_caption">Виртуальный хостинг</div>
+              </div>
+              <div class="offers-item_price">от <b class="big">120 р</b><b class="up">/ месяц</b></div>
+              <div class="offers-item_discribe">Хостинг на операционной системе CloudLinux. Обеспечивает полную изоляцию
+                аккаунтов, аналогично VPS, гибкость и проивзодительность.
+              </div>
+              <button class="btn offers-item_btn-order">Заказать</button>
+            </div>
+            <div class="offers-item col-sm-4">
+              <div class="offers-item_figure">
+                <div class="offers-item_pic offers-item_pic__wp"></div>
+                <div class="offers-item_caption">Хостинг WordPress</div>
+              </div>
+              <div class="offers-item_price">от <b class="big">240 р</b><b class="up">/ месяц</b></div>
+              <div class="offers-item_discribe">Мощные сервера, SSD хранилище и специально оптимизированная система для 
+                WordPress обеспечивает высокую скорость работы сайта даже при больших нагрузках.
+              </div>
+              <button class="btn offers-item_btn-order">Заказать</button>
+            </div>
+            <div class="offers-item col-sm-4">
+              <div class="offers-item_figure">
+                <div class="offers-item_pic offers-item_pic__vps"></div>
+                <div class="offers-item_caption">Хостинг VPS</div>
+              </div>
+              <div class="offers-item_price">от <b class="big">300 р</b><b class="up">/ месяц</b></div>
+              <div class="offers-item_discribe">Виртуальные выделенные серверы (VPS) работающие по технологии виртуализации 
+                OpenVZ для сложных проектов требующих гибкой настройки.
+              </div>
+              <button class="btn offers-item_btn-order">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="achievements">
+      <div class="wrapper wrapper__achievements">
+        <div class="container-fluid">
+          <div class="row row__achievments">
+            <div class="col-sm-6 col-sm-push-6">
+              <div class="achievments-img achievments-img__host"></div>
+            </div>
+            <div class="col-sm-6 col-sm-pull-6">
+              <div class="achievments-confirm">
+                <h3 class="title title__h3">E-PLANET 12 лет на рынке хостинга</h3>
+                <p class="achivment-confirm_txt">E-PLANET — реально существующая, официально зарегистрированная компания,
+                  обладающая всеми правами на предоставление услуг хостинга. Наши отношения с Клиентами строго
+                  регламентированы договором, предусматривающим наши обязанности и ответственность за их исполнение.
+                  При работе с юридическими лицами мы предоставляем все необходимые документы для бухгалтерской отчетности
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row row__achievments">
+            <div class="col-sm-6">
+              <div class="achievments-img achievments-img__control-panel"></div>
+            </div>
+            <div class="col-sm-6">
+              <div class="achievments-confirm">
+                <h3 class="title title__h3">Удобные панели управления</h3>
+                <p class="achivment-confirm_txt">E-PLANET — реально существующая, официально зарегистрированная компания,
+                  обладающая всеми правами на предоставление услуг хостинга.
+                </p>
+                <p class="achivment-confirm_txt">Наши отношения с Клиентами строго регламентированы договором,
+                  предусматривающим наши обязанности и ответственность за их исполнение. При работе с юридическими лицами
+                  мы предоставляем все необходимые документы для бухгалтерской отчетности.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row row__achievments">
+            <div class="col-sm-6 col-sm-push-6">
+              <div class="achievments-img achievments-img__support"></div>
+            </div>
+            <div class="col-sm-6 col-sm-pull-6">
+              <div class="achievments-confirm">
+                <h3 class="title title__h3">Оперативная техническая поддержка</h3>
+                <p class="achivment-confirm_txt">Предоставляем дружелюбную и профессиональную техническую поддержку все 
+                  24 часа в сутки. Дежурный специалист примет ваш сигнал по телефону, электронной почте или через Личный 
+                  кабинет и максимально оперативно даст квалифицированный ответ. Мы не отписываемся от своих Клиентов, 
+                  а действительно приходим им на помощь.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row row__achievments">
+            <div class="col-sm-6">
+              <div class="achievments-img achievments-img__servers"></div>
+            </div>
+            <div class="col-sm-6">
+              <div class="achievments-confirm">
+                <h3 class="title title__h3">Быстрые сервера и <br/> каналы связи</h3>
+                <p class="achivment-confirm_txt">Мы предоставляем хостинг на высокопроизводительных промышленных серверах, 
+                  имеющих двухпроцессорную конфигурацию на базе процессора Intel® Xeon™. Это технология последнего поколения, 
+                  в которой каждый процессор имеет от двух до восьми ядер с большим объемом кэш памяти, что повышает их 
+                  быстродействие. Серверы оснащены высокоскоростными жесткими дискам SAS и SSD — самыми надежными в своем 
+                  сегменте, до 64 Гб оперативной памяти каждый сервер.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo">
+      <div class="wrapper wrapper__promo">
+        <div class="container-fluid">
+          <h2 class="title title__h2">Акции и бонусы</h2>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="promo-item">
+                <div class="promo-item_pic">
+                  <img src="img/transfer.png" alt="pic">
+                </div>
+                <div class="promo-item_caption">Бесплатный перенос сайтов</div>
+                <p class="promo-item_discribe">При переходу с другого хостинга мы бесплатно поможем перенести ваши сайты,
+                  оптимизировать сервер для их работы
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="promo-item">
+                <div class="promo-item_pic">
+                  <img src="img/domains.png" alt="pic">
+                </div>
+                <div class="promo-item_caption">Бесплатные домены</div>
+                <p class="promo-item_discribe">При оплате любого тарифа на 1 год Вы получаете бесплатно 1 домено в зоне .ru,
+                  при оплате тарифа на 2 года, вы получаете 2 домена в зоне .ru!
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="promo-item">
+                <div class="promo-item_pic">
+                  <img src="img/promo.png" alt="pic">
+                </div>
+                <div class="promo-item_caption">Скидки при оплате хостинга</div>
+                <p class="promo-item_discribe">При оплате хостинга на 6 месяцев вы получате 5%, при оплате на 1 год уже 10%, 
+                  а при оплате на 2 года 20%. И не забывайте про бесплатные домены.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slider">
+      <div class="wrapper wrapper__slider">
+        <div class="container-fluid">
+          <h4 class="title title__h4">Более 5000 клиентов получили прописку на E-Planet</h4>
+          <div class="flexslider">
+            <ul class="slides">
+              <li>
+                <span class="slider_caption">Василий Ашков. <i class="small">www.honda.co.ru</i></span>
+                <p class="slider_txt">Пользуемся услугами компании около 11 лет. Тогда только начинали свой путь в мир 
+                  интернет-проектов, понадобился хороший платный хостинг. Пересмотрели много разных вариантов аренды и решили 
+                  остановиться на «загадочных инопланетянах», присутствовавших в то время в фирменном стиле. Со временем 
+                  появились новые домены, увеличивалось количество баз данных, расширялось дисковое пространство – наконец 
+                  решили купить максимальный тариф (для того момента), а потом и вовсе переехали на виртуальный выделенный. 
+                  Были мысли и о смене хостера. Все ищут пути минимизации затрат, оптимальную стоимость аренды. Но перспектива 
+                  остаться без такой качественной техподдержки решила все. По специфике своей деятельности приходится решать 
+                  нестандартные задачи – сопряжение технологического оборудования и данных на сайте, домен перенести или 
+                  зарегистрировать, обмен информацией между локальными и глобальными базами, подгрузка большого количества 
+                  картинок из ftp-хранилищ и т.д. Во всех этих ситуациях нам помогали специалисты E-PLANET – советом, настройкой 
+                  сервера, проверкой. Не бывает лучших хостингов, бывают хостинги надежные и проверенные, как друзья детства!
+                </p>
+                <cite class="slider_cite">Источник отзыва hostobzor.ru</cite>
+              </li>
+              <li>
+                <span class="slider_caption">Василий Ашков. <i class="small">www.honda.co.ru</i></span>
+                <p class="slider_txt">Пользуемся услугами компании около 11 лет. Тогда только начинали свой путь в мир 
+                  интернет-проектов, понадобился хороший платный хостинг. Пересмотрели много разных вариантов аренды и решили 
+                  остановиться на «загадочных инопланетянах», присутствовавших в то время в фирменном стиле. Со временем 
+                  появились новые домены, увеличивалось количество баз данных, расширялось дисковое пространство – наконец 
+                  решили купить максимальный тариф (для того момента), а потом и вовсе переехали на виртуальный выделенный. 
+                  Были мысли и о смене хостера. Все ищут пути минимизации затрат, оптимальную стоимость аренды. Но перспектива 
+                  остаться без такой качественной техподдержки решила все. По специфике своей деятельности приходится решать 
+                  нестандартные задачи – сопряжение технологического оборудования и данных на сайте, домен перенести или 
+                  зарегистрировать, обмен информацией между локальными и глобальными базами, подгрузка большого количества 
+                  картинок из ftp-хранилищ и т.д. Во всех этих ситуациях нам помогали специалисты E-PLANET – советом, настройкой 
+                  сервера, проверкой. Не бывает лучших хостингов, бывают хостинги надежные и проверенные, как друзья детства!
+                </p>
+                <cite class="slider_cite">Источник отзыва hostobzor.ru</cite>
+              </li>
+              <li>
+                <span class="slider_caption">Василий Ашков. <i class="small">www.honda.co.ru</i></span>
+                <p class="slider_txt">Пользуемся услугами компании около 11 лет. Тогда только начинали свой путь в мир 
+                  интернет-проектов, понадобился хороший платный хостинг. Пересмотрели много разных вариантов аренды и решили 
+                  остановиться на «загадочных инопланетянах», присутствовавших в то время в фирменном стиле. Со временем 
+                  появились новые домены, увеличивалось количество баз данных, расширялось дисковое пространство – наконец 
+                  решили купить максимальный тариф (для того момента), а потом и вовсе переехали на виртуальный выделенный. 
+                  Были мысли и о смене хостера. Все ищут пути минимизации затрат, оптимальную стоимость аренды. Но перспектива 
+                  остаться без такой качественной техподдержки решила все. По специфике своей деятельности приходится решать 
+                  нестандартные задачи – сопряжение технологического оборудования и данных на сайте, домен перенести или 
+                  зарегистрировать, обмен информацией между локальными и глобальными базами, подгрузка большого количества 
+                  картинок из ftp-хранилищ и т.д. Во всех этих ситуациях нам помогали специалисты E-PLANET – советом, настройкой 
+                  сервера, проверкой. Не бывает лучших хостингов, бывают хостинги надежные и проверенные, как друзья детства!
+                </p>
+                <cite class="slider_cite">Источник отзыва hostobzor.ru</cite>
+              </li>
+              <li>
+                <span class="slider_caption">Василий Ашков. <i class="small">www.honda.co.ru</i></span>
+                <p class="slider_txt">Пользуемся услугами компании около 11 лет. Тогда только начинали свой путь в мир 
+                  интернет-проектов, понадобился хороший платный хостинг. Пересмотрели много разных вариантов аренды и решили 
+                  остановиться на «загадочных инопланетянах», присутствовавших в то время в фирменном стиле. Со временем 
+                  появились новые домены, увеличивалось количество баз данных, расширялось дисковое пространство – наконец 
+                  решили купить максимальный тариф (для того момента), а потом и вовсе переехали на виртуальный выделенный. 
+                  Были мысли и о смене хостера. Все ищут пути минимизации затрат, оптимальную стоимость аренды. Но перспектива 
+                  остаться без такой качественной техподдержки решила все. По специфике своей деятельности приходится решать 
+                  нестандартные задачи – сопряжение технологического оборудования и данных на сайте, домен перенести или 
+                  зарегистрировать, обмен информацией между локальными и глобальными базами, подгрузка большого количества 
+                  картинок из ftp-хранилищ и т.д. Во всех этих ситуациях нам помогали специалисты E-PLANET – советом, настройкой 
+                  сервера, проверкой. Не бывает лучших хостингов, бывают хостинги надежные и проверенные, как друзья детства!
+                </p>
+                <cite class="slider_cite">Источник отзыва hostobzor.ru</cite>
+              </li>
+            </ul>
+            <div class="custom-navigation">
+              <a href="#" class="flex-prev"></a>
+              <a href="#" class="flex-next"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners">
+      <div class="wrapper wrapper__partners">
+        <div class="container-fluid">
+          <p class="title-partners">Нас выбирают банки,ведущие вузы и известные компании в Москве и по всей стране</p>
+          <div class="row">
+            <div class="col-sm-5th-1 col-xs-4">
+              <div class="partners-item partner-item__honda"></div>
+            </div>
+            <div class="col-sm-5th-1 col-xs-4">
+              <div class="partners-item partner-item__zic"></div>
+            </div>
+            <div class="col-sm-5th-1 col-xs-4">
+              <div class="partners-item partner-item__infinity"></div>
+            </div>
+            <div class="col-sm-5th-1 col-xs-5 col-xs-offset-1 col-sm-offset-0">
+              <div class="partners-item partner-item__lenovo"></div>
+            </div>
+            <div class="col-sm-5th-1 col-xs-5">
+              <div class="partners-item partner-item__head"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrapper wrapper__footer">
+        <div class="container-fluid">
+          <div class="row row__footer">
+            <div class="col-md-3">
+              <div class="footer-soc">
+                <img src="img/logo__footer.png" alt="logo" class="logo__footer">
+                <p class="footer-soc_title">Мы в социальных сетях</p>
+                <ul class="footer-soc_socNet">
+                  <li class="footer-soc_icon footer-soc_icon__vk">
+                    <a href="#"><img src="img/vk-logo.png" alt="vk"></a>
+                  </li>
+                  <li class="footer-soc_icon footer-soc_icon__f">
+                    <a href="#"><img src="img/facebook-logo.png" alt="facebook"></a>
+                  </li>
+                  <li class="footer-soc_icon footer-soc_icon__tw">
+                    <a href="#"><img src="img/twitter-logo.png" alt="twitter"></a>
+                  </li>
+                  <li class="footer-soc_icon footer-soc_icon__g">
+                    <a href="#"><img src="img/google-logo.png" alt="google"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4">
+              <ul class="nav nav-stacked footer-nav">
+                <li><a href="#">Виртуальный хостинг</a></li>
+                <li><a href="#">Хостинг WordPress</a></li>
+                <li><a href="#">VPS виртуальный сервер</a></li>
+                <li><a href="#">Физический сервер</a></li>
+                <li><a href="#">Регистрация доменов</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-4">
+              <ul class="nav nav-stacked footer-nav">
+                <li><a href="#">Способы оплаты</a></li>
+                <li><a href="#">Техническая поддержка</a></li>
+                <li><a href="#">Партнерская программа</a></li>
+                <li><a href="#">Дополнительные услуги</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-4">
+              <ul class="nav nav-stacked footer-nav">
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">Акции и новости</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row row__footer">
+            <div class="col-md-3 hidden-sm hidden-xs">
+              <div class="copyright">© 2004 — 2016 ООО «Е-Планет». Лицензия Роскомнадзор №126608 ОГРН: 1047796266825</div>
+            </div>
+            <div class="col-md-6 col-sm-8 col-xs-12 vbottom">
+              <div class="footer-contacts">
+                <div class="row">
+                  <div class="col-sm-6"><p>Москва</p></div>
+                  <div class="col-sm-6"><p>+7 (499) 703-20-43</p></div>
+                  <div class="col-sm-6"><p>Санкт-Петербург</p></div>
+                  <div class="col-sm-6"><p>+7 (812) 309-20-43</p></div>
+                  <div class="col-sm-6"><a href="mailto:#">info@e-planet.ru</a></div>
+                  <div class="col-sm-6"><a href="#" class="callback-link">Заказать звонок</a></div>
+                </div>
+              </div>
+            </div><!--
+         --><div class="col-md-3 col-sm-4 vbottom">
+              <div class="footer-design">
+                <p>Разработка сайта <a href="#">Хорошего дизайна</a>, 2016</p>
+              </div>
+            </div>
+            <div class="col-md-3 visible-sm-block">
+              <div class="copyright">© 2004 — 2016 ООО «Е-Планет». Лицензия Роскомнадзор №126608 ОГРН: 1047796266825</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Pushy Menu -->
+    <nav class="pushy pushy-left">
+      <div class="menu-btn"></div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="btn-group col-xs-12" role="group" aria-label="Sign">
+            <ul class="navbar-sign">
+              <button type="button" class="btn navbar-sign_btn navbar-sign_btn__reg pushy-link">Регистрация</button>
+              <button type="button" class="btn navbar-sign_btn navbar-sign_btn__in pushy-link">Войти</button>
+              <li class="navbar-sign_user visible-xs-block visible-sm-block"></li>
+            </ul>
+          </div>
+          <div class="col-xs-12">
+            <ul class="nav nav-stacked footer-nav">
+              <li><a href="#" class="pushy-link">VPS виртуальныe серверы</a></li>
+              <li><a href="#" class="pushy-link">Виртуальный хостинг</a></li>
+              <li><a href="#" class="pushy-link">Хостинг WordPress</a></li>
+              <li><a href="#" class="pushy-link">Физические серверы</a></li>
+              <li><a href="#" class="pushy-link">Регистрация доменов</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12">
+            <ul class="nav nav-stacked footer-nav">
+              <li><a href="#" class="pushy-link">Дополнительные услуги</a></li>
+              <li><a href="#" class="pushy-link">Способы оплаты</a></li>
+              <li><a href="#" class="pushy-link">Техническая поддержка</a></li>
+              <li><a href="#" class="pushy-link">Партнерская программа</a></li>
+              <li><a href="#" class="pushy-link">Акции и новости</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12">
+            <ul class="nav nav-stacked footer-nav">
+              <li><a href="#" class="pushy-link">О нас</a></li>
+              <li><a href="#" class="pushy-link">Блог</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="footer-contacts">
+              <div class="row">
+                <div class="col-xs-12"><p class="city">Москва</p></div>
+                <div class="col-xs-12"><p class="tel">+7 (499) 703-20-43</p></div>
+                <div class="col-xs-12"><p class="city">Санкт-Петербург</p></div>
+                <div class="col-xs-12"><p class="tel">+7 (812) 309-20-43</p></div>
+                <div class="col-xs-12"><a href="#" class="pushy-link callback-link">Обратный звонок</a></div>
+                <div class="col-xs-12"><a href="#" class="pushy-link">Написать нам</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="footer-soc">
+              <ul class="footer-soc_socNet">
+                <li class="footer-soc_icon footer-soc_icon__vk">
+                  <a href="#" class="pushy-link"><img src="img/vk-logo.png" alt="vk"></a>
+                </li>
+                <li class="footer-soc_icon footer-soc_icon__f">
+                  <a href="#" class="pushy-link"><img src="img/facebook-logo.png" alt="facebook"></a>
+                </li>
+                <li class="footer-soc_icon footer-soc_icon__tw">
+                  <a href="#" class="pushy-link"><img src="img/twitter-logo.png" alt="twitter"></a>
+                </li>
+                <li class="footer-soc_icon footer-soc_icon__g">
+                  <a href="#" class="pushy-link"><img src="img/google-logo.png" alt="google"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+
+<!-- scripts -->
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+  <!-- contact me: elfimov-val@yandex.ua -->
+</html>
