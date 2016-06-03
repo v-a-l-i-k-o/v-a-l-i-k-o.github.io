@@ -10,7 +10,7 @@ $('.flexslider').flexslider({
   controlNav: false,
   directionNav: false,
   slideshowSpeed: 3000,
-  initDelay: 2000
+  initDelay: 6000
 });
 
 /* ----- vertical limit ----- */
