@@ -13,82 +13,95 @@
   </head>
   <body>
     <div class="wrapper__for-bg">
-      <header>
-        <nav class="navbar">
-          <div class="navbar-top">
-            <div class="wrapper wrapper__header">
-              <div class="navbar-brand">
-                <a href="#" class="logo">
-                  <h1 class="title navbar-brand_title">Пансионат Александровский</h1>
-                  <span class="navbar-brand_specify">частный дом престарелых</span>
-                </a>
-              </div><!--
-           --><div class="navbar-weather">
-                <!-- <div class="navbar-weather_title">
-                  <span class="navbar-weather_contry">Россия</span>
-                  <span class="navbar-weather_city">Санкт-Петербург</span>
-                </div> -->
-                <div class="navbar-weather_info">
-                  <a href="https://clck.yandex.ru/redir/dtype=stred/pid=7/cid=1228/*https://pogoda.yandex.ru/2" target="_blank">
-                    <img src="//info.weather.yandex.net/2/2_white.ru.png?domain=ru" border="0" alt="Яндекс.Погода"/>
-                    <img width="auto" height="auto" src="https://clck.yandex.ru/click/dtype=stred/pid=7/cid=1227/*https://img.yandex.ru/i/pix.gif" alt="" border="0"/>
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="img/slide1.png" />
+          </li>
+          <li>
+            <img src="img/slide2.png" />
+          </li>
+          <li>
+            <img src="img/slide3.png" />
+          </li>
+        </ul>
+        <header>
+          <nav class="navbar">
+            <div class="navbar-top">
+              <div class="wrapper wrapper__header">
+                <div class="navbar-brand">
+                  <a href="#" class="logo">
+                    <h1 class="title navbar-brand_title">Пансионат Александровский</h1>
+                    <span class="navbar-brand_specify">частный дом престарелых</span>
                   </a>
+                </div><!--
+             --><div class="navbar-weather">
+                  <!-- <div class="navbar-weather_title">
+                    <span class="navbar-weather_contry">Россия</span>
+                    <span class="navbar-weather_city">Санкт-Петербург</span>
+                  </div> -->
+                  <div class="navbar-weather_info">
+                    <a href="https://clck.yandex.ru/redir/dtype=stred/pid=7/cid=1228/*https://pogoda.yandex.ru/2" target="_blank">
+                      <img src="//info.weather.yandex.net/2/2_white.ru.png?domain=ru" border="0" alt="Яндекс.Погода"/>
+                      <img width="auto" height="auto" src="https://clck.yandex.ru/click/dtype=stred/pid=7/cid=1227/*https://img.yandex.ru/i/pix.gif" alt="" border="0"/>
+                    </a>
+                  </div>
+                  <!-- <a href="#" class="navbar-weather_forecast">прогноз на 10 дней</a> -->
+                </div><!--
+             --><div class="navbar-contacts">
+                  <span class="navbar-contacts_tel">8 (921)389-80-74</span>
+                  <span class="navbar-contacts_tel">8 (911)232-49-59</span>
+                  <p class="navbar-contacts_address">Санкт-Петербург, Пушкинский р-он, поселок Александровская, 5 линия, д 6</p>
                 </div>
-                <!-- <a href="#" class="navbar-weather_forecast">прогноз на 10 дней</a> -->
-              </div><!--
-           --><div class="navbar-contacts">
-                <span class="navbar-contacts_tel">8 (921)389-80-74</span>
-                <span class="navbar-contacts_tel">8 (911)232-49-59</span>
+              </div>
+              <a href="#" class="navbar-nav-close">
+                <span class="icon-bar move move-down"></span>
+                <span class="icon-bar rotate"></span>
+                <span class="icon-bar rotate rotate-reverse"></span>
+                <span class="icon-bar move move-up"></span>
+              </a>
+            </div>
+            <div class="navbar-nav">
+              <ul class="navbar-menu">
+                <li><a href="#">О пансионате</a></li>
+                <li><a href="#">Перечень услуг</a></li>
+                <li><a href="#">Отзывы о нашей работе</a></li>
+                <li><a href="#">Фотогалерея</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Вакансии</a></li>
+              </ul>
+              <div class="navbar-contacts">
+                <span class="navbar-contacts_tel navbar-contacts_tel__left">8 (921)389-80-74</span>
+                <span class="navbar-contacts_tel navbar-contacts_tel__right">8 (911)232-49-59</span>
                 <p class="navbar-contacts_address">Санкт-Петербург, Пушкинский р-он, поселок Александровская, 5 линия, д 6</p>
               </div>
             </div>
-            <a href="#" class="navbar-nav-close">
-              <span class="icon-bar move move-down"></span>
-              <span class="icon-bar rotate"></span>
-              <span class="icon-bar rotate rotate-reverse"></span>
-              <span class="icon-bar move move-up"></span>
-            </a>
-          </div>
-          <div class="navbar-nav">
-            <ul class="navbar-menu">
-              <li><a href="#">О пансионате</a></li>
-              <li><a href="#">Перечень услуг</a></li>
-              <li><a href="#">Отзывы о нашей работе</a></li>
-              <li><a href="#">Фотогалерея</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><a href="#">Вакансии</a></li>
-            </ul>
-            <div class="navbar-contacts">
-              <span class="navbar-contacts_tel navbar-contacts_tel__left">8 (921)389-80-74</span>
-              <span class="navbar-contacts_tel navbar-contacts_tel__right">8 (911)232-49-59</span>
-              <p class="navbar-contacts_address">Санкт-Петербург, Пушкинский р-он, поселок Александровская, 5 линия, д 6</p>
+          </nav>
+        </header>
+
+        <section class="callback">
+          <div class="callback-form">
+            <p class="callback-form_title">Оставьте заявку,<span class="small">Мы позвоним Вам в течении 15 минут</span></p>
+            <form action="#" method="post" class="form form__callback">
+              <div class="form-group form-group__name">
+                <input type="text" id="name" placeholder="Ваше имя" required>
+              </div>
+              <div class="form-group form-group__phone">
+                <input type="text" id="phone" placeholder="Ваш телефон" required>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn form-btn form-btn__submit">Отправить</button>
+              </div>
+              <p class="form_cite">данные не будут переданы третьим лицам</p>
+            </form>
+            <div class="callback-calendar">
+              <a href="http://calendar.yuretz.ru" title="Календари на любой год - Календарь.Юрец.Ру">
+                <img border="0" src="http://i.calendar.yuretz.ru/informer/grey.png">
+              </a>
             </div>
           </div>
-        </nav>
-      </header>
-      
-      <section class="callback">
-        <div class="callback-form">
-          <p class="callback-form_title">Оставьте заявку,<span class="small">Мы позвоним Вам в течении 15 минут</span></p>
-          <form action="#" method="post" class="form form__callback">
-            <div class="form-group form-group__name">
-              <input type="text" id="name" placeholder="Ваше имя" required>
-            </div>
-            <div class="form-group form-group__phone">
-              <input type="text" id="phone" placeholder="Ваш телефон" required>
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn form-btn form-btn__submit">Отправить</button>
-            </div>
-            <p class="form_cite">данные не будут переданы третьим лицам</p>
-          </form>
-          <div class="callback-calendar">
-            <a href="http://calendar.yuretz.ru" title="Календари на любой год - Календарь.Юрец.Ру">
-              <img border="0" src="http://i.calendar.yuretz.ru/informer/grey.png">
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
 
     <section class="describe">

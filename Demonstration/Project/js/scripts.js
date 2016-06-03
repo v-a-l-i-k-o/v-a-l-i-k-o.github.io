@@ -3,7 +3,18 @@ $(document).ready(function() {
   
 /* ===== INITIALIZATION OF THE PLUGINS: ===== */
 
-/* ----- name of the plugin ----- */
+/* ----- flexSlider ----- */
+
+$('.flexslider').flexslider({
+  animation: "slide",
+  controlNav: false,
+  directionNav: false,
+  slideshowSpeed: 3000
+});
+
+/* ----- vertical limit ----- */
+
+$('.describe-news_txt p').cutText();
 
 /* ===== CUSTOM CODE: ===== */
   
@@ -15,9 +26,21 @@ $('.navbar-nav-close').on('click', function(event) {
 	$(this).toggleClass('is-open');
 });
 
-/* ----- vertical limit ----- */
+/* ----- form position ----- */
 
-$('.describe-news_txt p').cutText();
+if ($(window).width() > 819) {
+	$('.callback-form').css({
+		top: $('header').height()
+	});
+} else {
+	$('.callback-form').css({
+		top: $('.navbar').height()
+	});
+
+	$('.callback').css({
+		top: 0
+	});
+}
 
 // -------------------------------------------------------------------------------------
 });
