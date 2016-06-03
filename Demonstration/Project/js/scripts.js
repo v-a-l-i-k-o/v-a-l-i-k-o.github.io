@@ -15,5 +15,9 @@ $('.navbar-nav-close').on('click', function(event) {
 	$(this).toggleClass('is-open');
 });
 
+/* ----- vertical limit ----- */
+
+$('.describe-news_txt p').cutText();
+
 // -------------------------------------------------------------------------------------
 });

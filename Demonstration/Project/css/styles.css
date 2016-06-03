@@ -662,23 +662,12 @@ h4 {
   *width: 16.61458333%;
   text-align: center;
 }
-.navbar-weather_title {
-  color: #039119;
-  line-height: 1.2;
-}
-.navbar-weather_title span {
+.navbar-weather_info {
+  width: 18rem;
+  height: 5rem;
   display: block;
-}
-.navbar-weather_contry {
-  font-size: 1.4rem;
-}
-.navbar-weather_city {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-.navbar-weather_forecast {
-  font-size: 1.4rem;
-  text-decoration: underline;
+  margin: 0 auto;
+  background-color: #000;
 }
 .navbar-contacts {
   *display: inline;
@@ -788,11 +777,15 @@ input[type="text"] {
   line-height: 1.8rem;
 }
 .callback-calendar {
+  height: 25rem;
+  width: 25rem;
   display: block;
   margin: 0 auto;
-  width: 25.2rem;
-  height: 25.6rem;
+  border-radius: 2rem;
   background-color: #fff;
+}
+.callback-calendar img {
+  width: 100%;
 }
 /* ----- SECTION describe ----- */
 .describe {
@@ -977,10 +970,9 @@ span.describe-suggest_txt {
   display: inline-block;
 }
 .describe-news_txt p {
+  height: 14rem;
   text-align: left;
-  overflow: hidden;
-  max-height: 13rem;
-  margin-bottom: 5.5rem;
+  margin-bottom: 4.5rem;
 }
 .learn-more {
   color: #403e3e;
@@ -1064,15 +1056,13 @@ footer {
 .footer-menu a:hover {
   text-decoration: underline;
 }
-.footer-vk {
+.vk {
   *display: inline;
   vertical-align: top;
   display: inline-block;
   padding: 0 0%;
   width: 16.66666667%;
   *width: 16.61458333%;
-  height: 34.4rem;
-  background-color: #fff;
 }
 .copyright {
   color: white;
@@ -1125,6 +1115,12 @@ footer {
   }
   .navbar-menu li {
     font-size: 2.5em;
+  }
+  .vk {
+    display: none;
+  }
+  .copyright {
+    margin-top: 2rem;
   }
 }
 /* ----- MOBILE VERSION ----- */
@@ -1446,9 +1442,6 @@ footer {
   }
   .footer-menu a {
     font-size: 2.4em;
-  }
-  .footer-vk {
-    display: none;
   }
   .copyright {
     font-size: 1.7em;
