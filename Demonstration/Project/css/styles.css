@@ -81,9 +81,9 @@ header {
   margin-top: .5rem;
 }
 .navbar-brand {
-  width: 85%;
   padding: 0;
   float: none;
+  width: 25rem;
   color: #3c3c3b;
   font-size: 1.3em;
   font-weight: 400;
@@ -102,23 +102,24 @@ header {
   display: inline-block;
 }
 .navbar-tel {
+  float: right;
   color: #3c3c3b;
   font-size: 3em;
   font-weight: 400;
   font-family: Calibri;
   display: inline-block;
-  vertical-align: middle;
   text-transform: uppercase;
 }
 .btn__callback {
+  float: right;
   color: #3c3c3b;
   font-size: 1em;
   font-weight: 400;
   border-radius: 0;
+  margin-top: 1rem;
   margin-left: 1rem;
   padding: .3em .7em;
   display: inline-block;
-  vertical-align: middle;
   border: .1px solid red;
   text-transform: uppercase;
   font-family: UbuntuCondensed;
@@ -174,8 +175,9 @@ header {
 /* ----- SECTION targets ----- */
 .targets {
   text-align: center;
+  padding-bottom: 2.5rem;
 }
-.title__h2 .highlight {
+.title .highlight {
   color: red;
 }
 .targets-achivments {
@@ -198,12 +200,25 @@ header {
   padding: .5rem 0;
   background-color: #e0dfe0;
 }
+.targets-tabs li a {
+  padding: 0;
+  color: #000;
+  border: none;
+  margin-bottom: .3rem;
+  display: inline-block;
+}
+.targets-tabs li a:hover {
+  background-color: transparent;
+}
 .targets-tabs li + li {
   margin-left: .2rem;
 }
 .targets-tabs li.current {
   color: #fff;
   background-color: #e30413;
+}
+.targets-tabs li.current a {
+  color: #fff;
 }
 .targets-tabs_item {
   cursor: pointer;
@@ -229,10 +244,28 @@ header {
 .row__targets {
   margin: 0 -0.5rem 0;
 }
+.tab-content {
+  background-color: #fff;
+}
 .targets-item {
+  overflow: hidden;
+  position: relative;
   padding: 0 .5rem 0;
   margin-bottom: 2.5rem;
   background: url('../img/gray-dot.png') repeat content-box;
+}
+.targets-item:after {
+  z-index: 2;
+  content: '';
+  width: 105%;
+  height: 3.5rem;
+  position: absolute;
+  background-color: #fff;
+  -webkit-transform: rotate(-7deg);
+  -ms-transform: rotate(-7deg);
+  transform: rotate(-7deg);
+  left: -0.5rem;
+  bottom: -1.7rem;
 }
 .targets-item_unit {
   height: 0;
@@ -259,6 +292,54 @@ header {
 }
 .targets-item_unit__6 {
   background-image: url('../img/sport.png');
+}
+/* ----- SECTION promo ----- */
+.promo {
+  min-height: 32rem;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: contain;
+  background-image: url('../img/promo-bg.png');
+}
+/* ----- SECTION clients ----- */
+.clients {
+  padding: 4rem 0 6rem;
+}
+.clients-logo {
+  min-height: 21rem;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-image: url('../img/clients-logo.png');
+}
+.title__clients {
+  margin-bottom: 2.5rem;
+}
+/* ----- SECTION consult ----- */
+.consult {
+  min-height: 33rem;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-image: url('../img/consult-bg.png');
+}
+/* ----- SECTION leaders ----- */
+/* ----- SECTION achivment ----- */
+.achivment {
+  min-height: 58.5rem;
+}
+/* ----- SECTION steps ----- */
+.steps {
+  min-height: 60rem;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: contain;
+  background-image: url('../img/steps-bg.png');
+}
+/* ----- SECTION footer ----- */
+footer {
+  padding: 2.5rem 0;
+  background-color: #555457;
 }
 /* ===== #MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
 /* ----- DESKTOP VERSION ----- */
