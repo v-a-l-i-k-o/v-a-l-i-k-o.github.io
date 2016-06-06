@@ -12,6 +12,28 @@
     <script src="js/libs/modernizr-2.8.3.min.js"></script>
   </head>
   <body>
+
+    <!-- Modals -->
+
+    <div class="modal fade" id="modalCallback" tabindex="-1" role="dialog">
+      <button type="button" class="close" data-dismiss="modal"></button>
+      <div class="modal-dialog modal-dialog__callback">
+        <div class="modal-content modal-content__callback">
+          <div class="modal-body">
+            <form action="post" class="form form__callback">
+              <div class="form-group">
+                <input type="text" class="form-control" id="nameCall" placeholder="Имя">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="phoneCall" placeholder="Телефон">
+              </div>
+              <button type="submit" class="btn btn-form btn-form__callback">Заказать звонок</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header>
       <div class="container">
         <div class="row">
@@ -35,7 +57,7 @@
               </div>
             </div>
           </nav>
-          <div class="navbar-nav">
+          <div class="nav">
             <ul class="menu clearfix">
               <li><a href="#">Главная</a></li>
               <li><a href="#">Услуги</a></li>

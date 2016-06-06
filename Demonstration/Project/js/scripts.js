@@ -3,9 +3,15 @@ $(document).ready(function() {
   
 /* ===== INITIALIZATION OF THE PLUGINS: ===== */
 
-/* ----- name of the plugin ----- */
+/* ----- modal.js ----- */
 
+$('body').on('click', '.btn__callback', function(event) {
+	event.preventDefault();
+	$('#modalCallback').modal({
+		backdrop: 'static'
+	});
 
+});
 
 /* ===== CUSTOM CODE: ===== */
   
