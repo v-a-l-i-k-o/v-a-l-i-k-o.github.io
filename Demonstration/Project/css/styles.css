@@ -84,8 +84,14 @@ h2 {
 }
 /* ----- HEADER ----- */
 header {
-  min-height: 11rem;
+  min-height: 10rem;
   padding-top: 4rem;
+  position: relative;
+  background-color: #fff;
+}
+.navbar {
+  margin: 0;
+  z-index: 2;
   background-color: #fff;
 }
 .navbar-header {
@@ -99,6 +105,10 @@ header {
   height: 1.8rem;
   margin-right: 1rem;
   display: inline-block;
+}
+.btn-menu:focus,
+.btn-menu:active {
+  outline: none;
 }
 .icon-bar {
   height: .3rem;
@@ -151,9 +161,51 @@ header {
   text-transform: uppercase;
   background-color: transparent;
 }
+.navbar-nav {
+  float: none;
+  bottom: 3.5rem;
+  padding: 0 1.5rem;
+  position: relative;
+  background-color: #fff;
+  -webkit-transition: bottom .5s ease;
+  transition: bottom .5s ease;
+}
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu li {
+  float: left;
+  width: 16.6%;
+  text-align: center;
+}
+.menu li:hover {
+  background-color: #ccc;
+}
+.menu li a {
+  display: block;
+  color: #3c3c3b;
+  font-size: 1.3em;
+  font-weight: 400;
+  padding: 1rem 1rem;
+  line-height: 1.4rem;
+  font-family: Calibri;
+  text-transform: uppercase;
+}
+.menu li a:hover {
+  text-decoration: none;
+}
+.menu-open .navbar-nav {
+  bottom: 0;
+}
 /* ----- SECTION advs ----- */
 .advs {
+  top: -3rem;
   min-height: 40rem;
+  position: relative;
+  -webkit-transition: top .5s ease;
+  transition: top .5s ease;
   background-repeat: repeat-x;
   background-image: url('../img/advs-bg.png');
 }
@@ -172,6 +224,9 @@ header {
   background-position: 0 0;
   background-size: 100% auto;
   background-image: url('../img/line.png');
+}
+.menu-open .advs {
+  top: 0;
 }
 .advs-show {
   width: 20rem;
@@ -363,6 +418,10 @@ header {
   background-size: contain;
   background-image: url('../img/gift.png');
 }
+.promo-col__r {
+  float: right;
+  text-align: right;
+}
 .promo-advice {
   width: 29rem;
   position: relative;
@@ -425,6 +484,7 @@ header {
 .promo-form {
   width: 23.3rem;
   padding: 2rem 1.5rem;
+  display: inline-block;
   background-color: #e6e6e8;
 }
 .form__promo .form-group {

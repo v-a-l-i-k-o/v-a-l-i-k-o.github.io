@@ -9,9 +9,12 @@ $(document).ready(function() {
 
 /* ===== CUSTOM CODE: ===== */
   
-/* ----- description of your code ----- */
+/* ----- toggle menu ----- */
 
-
+$('.navbar').on('click', '.btn-menu', function(event) {
+	event.preventDefault();
+	$('body').toggleClass('menu-open');
+});
 
 // -------------------------------------------------------------------------------------
 });
