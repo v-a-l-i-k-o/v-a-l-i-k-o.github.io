@@ -54,6 +54,34 @@ h2 {
   line-height: 2.9rem;
   text-transform: uppercase;
 }
+.form-control {
+  border: 0;
+  color: #3c3c3b;
+  font-size: 1.3em;
+  font-weight: 300;
+  box-shadow: none;
+  border-radius: 0;
+  line-height: 1.7rem;
+  padding-left: .3rem;
+  background-color: transparent;
+  border-bottom: .1rem solid #000;
+}
+.btn {
+  color: white;
+  font-size: 1.2em;
+  border-radius: 0;
+  font-weight: 500;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+  background-color: #e30413;
+  font-family: UbuntuCondensed;
+}
+.form-group {
+  margin: 0;
+}
+.form-group + .form-group {
+  margin-top: .5rem;
+}
 /* ----- HEADER ----- */
 header {
   min-height: 11rem;
@@ -115,20 +143,43 @@ header {
   color: #3c3c3b;
   font-size: 1em;
   font-weight: 400;
-  border-radius: 0;
   margin-top: 1rem;
   margin-left: 1rem;
   padding: .3em .7em;
   display: inline-block;
   border: .1px solid red;
   text-transform: uppercase;
-  font-family: UbuntuCondensed;
+  background-color: transparent;
 }
 /* ----- SECTION advs ----- */
 .advs {
   min-height: 40rem;
   background-repeat: repeat-x;
   background-image: url('../img/advs-bg.png');
+}
+.advs .container {
+  overflow: visible;
+  position: relative;
+}
+.advs .container:after {
+  content: '';
+  width: 100%;
+  height: 5.5rem;
+  position: absolute;
+  bottom: -1.7rem;
+  left: 6rem;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% auto;
+  background-image: url('../img/line.png');
+}
+.advs-show {
+  width: 20rem;
+  height: 40rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../img/advs-show-bg.png');
 }
 .advs-service {
   padding-top: 8rem;
@@ -296,10 +347,101 @@ header {
 /* ----- SECTION promo ----- */
 .promo {
   min-height: 32rem;
+  padding-top: 3rem;
   background-repeat: repeat-x;
   background-position: 0 0;
   background-size: contain;
   background-image: url('../img/promo-bg.png');
+}
+.promo-gift {
+  float: left;
+  height: 25rem;
+  width: 11rem;
+  margin-left: 2rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../img/gift.png');
+}
+.promo-advice {
+  width: 29rem;
+  position: relative;
+  text-align: center;
+  margin-top: 3rem;
+  padding-bottom: 2.5rem;
+  background-color: #fff;
+}
+.promo-advice:after {
+  width: 0;
+  height: 0;
+  content: '';
+  position: absolute;
+  left: 98%;
+  top: 1.4rem;
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  border-bottom: 1.7rem solid #873e84;
+  border-right: 4.5rem solid transparent;
+}
+.promo-advice_title {
+  color: white;
+  display: block;
+  padding: 1.5rem;
+  font-size: 2.2em;
+  font-weight: 400;
+  line-height: 1.7rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  background-color: #873e84;
+}
+.promo-advice_txt {
+  color: #333434;
+  font-size: 1.3em;
+  font-weight: 300;
+  padding: 0 2rem;
+  font-family: Ubuntu;
+  line-height: 1.5rem;
+}
+.promo-advice_discount {
+  color: #e30413;
+  display: block;
+  font-size: 1.6em;
+  font-weight: 400;
+  line-height: 1.9rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.btn__view {
+  color: #333434;
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 1.3rem;
+  padding: .8rem .7rem;
+  border-color: #e30413;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+.promo-form {
+  width: 23.3rem;
+  padding: 2rem 1.5rem;
+  background-color: #e6e6e8;
+}
+.form__promo .form-group {
+  padding: 0 .5rem;
+}
+.form_legend {
+  color: #3c3c3b;
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 1.3rem;
+}
+.btn-form {
+  width: 100%;
+  margin-top: 2.5rem;
+}
+.btn-form:hover {
+  color: #fff;
 }
 /* ----- SECTION clients ----- */
 .clients {
@@ -343,12 +485,26 @@ footer {
 }
 /* ===== #MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
 /* ----- DESKTOP VERSION ----- */
+@media screen and (max-width: 1199px) {
+  /* ----- SECTION advs ----- */
+  .advs .container:after {
+    height: 4.5rem;
+    bottom: -1.4rem;
+    left: 5rem;
+  }
+}
 /* ----- TABLET VERSION ----- */
 @media screen and (max-width: 991px) {
   /* ----- general rules ----- */
   .container {
     padding-left: 0;
     padding-right: 0;
+  }
+  /* ----- SECTION advs ----- */
+  .advs .container:after {
+    height: 4rem;
+    bottom: -1.6rem;
+    left: 3rem;
   }
 }
 /* ----- MOBILE VERSION ----- */
