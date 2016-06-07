@@ -1249,6 +1249,9 @@ footer .vk {
   height: 3.7rem;
 }
 /* MODALS */
+.modal-open .modal {
+  overflow: hidden;
+}
 .modal .close {
   z-index: 2;
   color: #000;
@@ -1353,7 +1356,54 @@ footer .vk {
   color: #1c1c1b;
 }
 .modal-content__oferta {
+  height: 90vh;
+  font-size: 1.4em;
   padding: 4rem 4rem;
+  overflow-y: scroll;
+  /* Убираем исходную нумерацию */
+  /* Инициируем счетчик */
+  /* Инициируем счетчик вложенного списка */
+  /* Инициируем счетчик вложенного списка */
+}
+.modal-content__oferta .title__h6 {
+  font-size: 2.4rem;
+}
+.modal-content__oferta .title__p {
+  font-size: 2.4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.modal-content__oferta li {
+  font-size: inherit;
+  list-style-type: none;
+}
+.modal-content__oferta ol {
+  padding: 0;
+  counter-reset: list1;
+}
+.modal-content__oferta ol li:before {
+  counter-increment: list1;
+  /* Увеличиваем значение счетчика */
+  content: counter(list1) ". ";
+  /* Выводим значение */
+}
+.modal-content__oferta ol ol {
+  counter-reset: list2;
+}
+.modal-content__oferta ol ol li:before {
+  counter-increment: list2;
+  /* Увеличиваем значение счетчика */
+  content: counter(list1) "." counter(list2) ". ";
+  /* Выводим значение типа 2.1, 2.2,... */
+}
+.modal-content__oferta ol ol ol {
+  counter-reset: list3;
+}
+.modal-content__oferta ol ol ol li:before {
+  counter-increment: list3;
+  /* Увеличиваем значение счетчика */
+  content: counter(list1) "." counter(list2) "." counter(list3) ". ";
+  /* Выводим значение типа 2.1.1, 2.1.2,... */
 }
 .modal-dialog__oferta {
   width: 64rem;
@@ -1361,8 +1411,109 @@ footer .vk {
 }
 .modal-dialog__oferta p {
   font-family: Ubuntu;
-  font-size: 1.4em;
   color: #1c1c1b;
+}
+.modal-dialog__price {
+  width: 80rem;
+}
+.modal-dialog__price .modal-body {
+  padding: 0;
+  padding-top: 1rem;
+  border-radius: 1rem;
+  background-color: #000;
+}
+.modal-dialog__price .close {
+  color: #fff;
+  top: 1rem;
+  right: 1rem;
+}
+.tab-content__modalPrice {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #c0c0c6;
+}
+.nav-tabs__modalPrice {
+  border: none;
+  background-color: transparent;
+}
+.nav-tabs__modalPrice li > a {
+  color: white;
+  border: none;
+  font-size: 1.3em;
+  font-weight: 400;
+  padding: .5rem 3rem;
+  font-family: Ubuntu;
+  text-transform: uppercase;
+}
+.nav-tabs__modalPrice li > a:focus,
+.nav-tabs__modalPrice li > a:hover {
+  outline: none;
+  background-color: transparent;
+}
+.nav-tabs__modalPrice li.active {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  background-image: url('../img/active-tab.png');
+}
+.nav-tabs__modalPrice li.active a {
+  border: none;
+  background-color: transparent;
+}
+.nav-tabs__modalPrice li.active a:focus,
+.nav-tabs__modalPrice li.active a:hover {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.modalPrice__img {
+  height: 68rem;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-image: url('../img/modalPrice-bg.png');
+}
+.btn__downloadPrice {
+  padding: 0;
+  width: 7.5rem;
+  height: 7.5rem;
+  font-size: 1.4em;
+  padding-top: 2rem;
+  position: absolute;
+  border-radius: 50%;
+  white-space: normal;
+  display: inline-block;
+  background-color: red;
+  top: 2rem;
+  right: 2rem;
+}
+.row__modalPrice {
+  margin-left: 0;
+}
+.row__modalPrice > div {
+  padding: 0;
+}
+.modalPrice_video {
+  height: 20rem;
+  margin-bottom: 1.7rem;
+  background-color: #000;
+}
+.form__modalPrice .form-group {
+  padding: 0;
+}
+.form__modalPrice .form-group + .form-group {
+  margin: 0;
+}
+.form__modalPrice .form-control {
+  float: left;
+  border: none;
+  background-color: #fff;
+}
+.btn__modalPrice {
+  float: right;
+  padding: .5rem 1.2rem;
 }
 .modal {
   text-align: center;
@@ -1483,6 +1634,7 @@ footer .vk {
   outline: none;
   text-decoration: none;
 }
+/*  */
 /* ===== #MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
 /* ----- DESKTOP VERSION ----- */
 @media screen and (max-width: 1199px) {

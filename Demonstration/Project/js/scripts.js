@@ -30,6 +30,12 @@ $('body').on('click', '.contact-link', function(event) {
 	}
 });
 
+$('.tab-content__targets').on('click', 'a', function(event) {
+	event.preventDefault();
+	$('#modalPrice').modal({
+		backdrop: 'static'
+	});
+});
 
 /* ----- flexSlider.js ----- */
 
@@ -61,6 +67,13 @@ $('#leaders-slider').flexslider({
 	controlsContainer: $(".custom-controls-container"),
 	customDirectionNav: $(".custom-navigation a"),
 	sync: "#leaders-carousel"
+});
+
+/* ----- tab.js ----- */
+
+$('.nav-tabs__modalPrice a').click(function(event) {
+	event.preventDefault();
+  $(this).tab('show');
 });
 
 /* ===== CUSTOM CODE: ===== */
