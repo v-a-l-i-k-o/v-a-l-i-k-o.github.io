@@ -80,9 +80,8 @@
     </div>
 
     <div class="modal fade modalOferta" id="modalOferta" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog__oferta">
-        <a href="#" class="close" data-dismiss="modal">X</a>
-        <div class="modal-content modal-content__oferta">
+      <div class="modal-dialog modal-dialog__oferta nano">
+        <div class="modal-content modal-content__oferta nano-content">
           <div class="modal-body">
             <div class="modal-logo">
               <img src="img/modal-logo.png" alt="logo">
@@ -319,6 +318,7 @@
             <p>Тел. (3462) 22-12-22.</p>
           </div>
         </div>
+        <a href="#" class="close" data-dismiss="modal">X</a>
       </div>
     </div>
 
@@ -380,17 +380,17 @@
                       <div class="row row__modalPrice">
                         <div class="col-xs-12">
                           <div class="modalPrice_video modalPrice_video__1">
-                            
+                            <iframe width=100% height=100% src="https://www.youtube.com/embed/TQcmwFgo-zQ" frameborder="0" allowfullscreen></iframe>
                           </div>
                         </div>
                         <div class="col-xs-12">
                           <div class="modalPrice_video modalPrice_video__2">
-                            
+                            <iframe width=100% height=100% src="https://www.youtube.com/embed/DXeKee4JGBs" frameborder="0" allowfullscreen></iframe>
                           </div>
                         </div>
                         <div class="col-xs-12">
                           <div class="modalPrice_video modalPrice_video__3">
-                            
+                            <iframe width=100% height=100% src="https://www.youtube.com/embed/tgURKxM2Q9U" frameborder="0" allowfullscreen></iframe>
                           </div>
                         </div>
                         <form action="post" class="form form__modalPrice clearfix">
@@ -416,12 +416,12 @@
                       <div class="row row__modalPrice">
                         <div class="col-xs-12">
                           <div class="modalPrice_video modalPrice_video__1">
-                            
+                            <iframe width=100% height=100% src="https://www.youtube.com/embed/DXeKee4JGBs" frameborder="0" allowfullscreen></iframe>
                           </div>
                         </div>
                         <div class="col-xs-12">
                           <div class="modalPrice_video modalPrice_video__2">
-                            
+                            <iframe width=100% height=100% src="https://www.youtube.com/embed/tgURKxM2Q9U" frameborder="0" allowfullscreen></iframe>
                           </div>
                         </div>
                         <form action="post" class="form form__modalPrice clearfix">
@@ -447,7 +447,7 @@
                       <div class="row row__modalPrice">
                         <div class="col-xs-12">
                           <div class="modalPrice_video modalPrice_video__1">
-                            
+                            <iframe width=100% height=100% src="https://www.youtube.com/embed/tgURKxM2Q9U" frameborder="0" allowfullscreen></iframe>
                           </div>
                         </div>
                         <form action="post" class="form form__modalPrice clearfix">
@@ -618,49 +618,49 @@
         </span>
         <div class="row">
           <ul class="nav nav-tabs targets-tabs">
-            <li role="presentation" class="targets-tabs_item targets-tabs_item__all current"><a href="#">Все</a></li>
-            <li role="presentation" class="targets-tabs_item targets-tabs_item__tv"><a href="#">ТВ и фильмы</a></li>
-            <li role="presentation" class="targets-tabs_item targets-tabs_item__radio"><a href="#">Радио</a></li>
-            <li role="presentation" class="targets-tabs_item targets-tabs_item__advs"><a href="#">Реклама на сайте</a></li>
-            <li role="presentation" class="targets-tabs_item targets-tabs_item__advs-out"><a href="#">Наружная реклама</a></li>
-            <li role="presentation" class="targets-tabs_item targets-tabs_item__design"><a href="#">Дизайн и полиграфия</a></li>
+            <li role="presentation" class="targets-tabs_item targets-tabs_item__all current" data-filter="*"><a href="#">Все</a></li>
+            <li role="presentation" class="targets-tabs_item targets-tabs_item__tv" data-filter=".tv"><a href="#">ТВ и фильмы</a></li>
+            <li role="presentation" class="targets-tabs_item targets-tabs_item__radio" data-filter=".rad"><a href="#">Радио</a></li>
+            <li role="presentation" class="targets-tabs_item targets-tabs_item__advs" data-filter=".advss"><a href="#">Реклама на сайте</a></li>
+            <li role="presentation" class="targets-tabs_item targets-tabs_item__advs-out" data-filter=".advs-out"><a href="#">Наружная реклама</a></li>
+            <li role="presentation" class="targets-tabs_item targets-tabs_item__design" data-filter=".design"><a href="#">Дизайн и полиграфия</a></li>
           </ul>
           <div class="tab-content tab-content__targets">
-            <div class="row row__targets">
-              <div class="col-xs-3 targets-item">
+            <div class="row row__targets grid">
+              <div class="col-xs-3 targets-item grid-item tv">
                 <a href="#"><div class="targets-item_unit targets-item_unit__1"></div></a>
               </div>
-              <div class="col-xs-3 targets-item">
+              <div class="col-xs-3 targets-item grid-item tv">
                 <a href="#"><div class="targets-item_unit targets-item_unit__2"></div></a>
               </div>
-              <div class="col-xs-3 targets-item">
+              <div class="col-xs-3 targets-item grid-item rad">
                 <a href="#"><div class="targets-item_unit targets-item_unit__3"></div></a>
               </div>
-              <div class="col-xs-3 targets-item">
+              <div class="col-xs-3 targets-item grid-item advss">
                 <a href="#"><div class="targets-item_unit targets-item_unit__4"></div></a>
               </div>
-              <div class="col-xs-3 targets-item">
+              <div class="col-xs-3 targets-item grid-item rad">
                 <a href="#"><div class="targets-item_unit targets-item_unit__5"></div></a>
               </div>
-              <div class="col-xs-3 targets-item">
+              <div class="col-xs-3 targets-item grid-item tv">
                 <a href="#"><div class="targets-item_unit targets-item_unit__6"></div></a>
               </div>
-              <div class="col-xs-3 targets-item">
+              <div class="col-xs-3 targets-item grid-item">
                 <a href="#"><div class="targets-item_unit targets-item_unit__7"></div></a>
               </div>
-              <div class="col-xs-3 targets-item">
+              <div class="col-xs-3 targets-item grid-item">
                 <a href="#"><div class="targets-item_unit targets-item_unit__8"></div></a>
               </div>
-              <div class="col-xs-3 targets-item">
+              <div class="col-xs-3 targets-item grid-item">
                 <a href="#"><div class="targets-item_unit targets-item_unit__9"></div></a>
               </div>
-              <div class="col-xs-3 targets-item">
+              <div class="col-xs-3 targets-item grid-item">
                 <a href="#"><div class="targets-item_unit targets-item_unit__10"></div></a>
               </div>
-              <div class="col-xs-3 targets-item">
+              <div class="col-xs-3 targets-item grid-item">
                 <a href="#"><div class="targets-item_unit targets-item_unit__11"></div></a>
               </div>
-              <div class="col-xs-3 targets-item">
+              <div class="col-xs-3 targets-item grid-item">
                 <a href="#"><div class="targets-item_unit targets-item_unit__12"></div></a>
               </div>
             </div>
@@ -896,39 +896,125 @@
         <div class="gallery clearfix">
           <div class="galery-col-1">
             <div class="galery-col-1_3">
-              <img class="item3" src="img/item3.png" alt="avatar">
-              <img class="item6" src="img/item6.png" alt="avatar">
-              <img class="item7" src="img/item7.png" alt="avatar">
+              <div class="wrapper__img">
+                <img class="item3" src="img/item3.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Ольга</p>
+                  <p class="capture_vacancy">дизайнер</p>
+                </div>
+              </div>
+              <div class="wrapper__img">
+                <img class="item6" src="img/item6.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Виктория</p>
+                  <p class="capture_vacancy">модельер</p>
+                </div>
+              </div>
+              <div class="wrapper__img">
+                <img class="item7" src="img/item7.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Оксана</p>
+                  <p class="capture_vacancy">менеджер</p>
+                </div>
+              </div>
             </div>
             <div class="galery-col-1_2">
-              <img class="item2" src="img/item2.png" alt="avatar">
-              <img class="item5" src="img/item5.png" alt="avatar">
+              <div class="wrapper__img">
+                <img class="item2" src="img/item2.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Алена</p>
+                  <p class="capture_vacancy">модельер</p>
+                </div>
+              </div>
+              <div class="wrapper__img">
+                <img class="item5" src="img/item5.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Юля</p>
+                  <p class="capture_vacancy">бухгалтер</p>
+                </div>
+              </div>
             </div>
             <div class="galery-col-1_1">
-              <img class="item1" src="img/item1.png" alt="avatar">
-              <img class="item4" src="img/item4.png" alt="avatar">
+              <div class="wrapper__img">
+                <img class="item1" src="img/item1.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Виктория</p>
+                  <p class="capture_vacancy">зам. директора</p>
+                </div>
+              </div>
+              <div class="wrapper__img">
+                <img class="item4" src="img/item4.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Евгений</p>
+                  <p class="capture_vacancy">пиар-менеджер</p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="galery-col-2">
-            <img class="item8" src="img/item8.png" alt="avatar">
-            <div class="capture-director">
-              <p class="capture_name">Катаев Евгений Евгеньевич,</p>
-              <p class="capture_vacancy">генеральный директор</p>
+            <div class="wrapper__img">
+              <img class="item8" src="img/item8.png" alt="avatar">
+              <div class="figure-capture">
+                <p class="capture_name">Катаев Евгений Евгеньевич,</p>
+                <p class="capture_vacancy">генеральный директор</p>
+              </div>
             </div>
           </div>
           <div class="galery-col-3">
             <div class="galery-col-3_1">
-              <img class="item9" src="img/item9.png" alt="avatar">
-              <img class="item12" src="img/item12.png" alt="avatar">
+              <div class="wrapper__img">
+                <img class="item9" src="img/item9.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Светлана</p>
+                  <p class="capture_vacancy">менеджер</p>
+                </div>
+              </div>
+              <div class="wrapper__img">
+                <img class="item12" src="img/item12.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Катя</p>
+                  <p class="capture_vacancy">бухгалтер</p>
+                </div>
+              </div>
             </div>
             <div class="galery-col-3_2">
-              <img class="item10" src="img/item10.png" alt="avatar">
-              <img class="item13" src="img/item13.png" alt="avatar">
-              <img class="item14" src="img/item14.png" alt="avatar">
+              <div class="wrapper__img">
+                <img class="item10" src="img/item10.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Аня</p>
+                  <p class="capture_vacancy">мерчендайзер</p>
+                </div>
+              </div>
+              <div class="wrapper__img">
+                <img class="item13" src="img/item13.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Женя</p>
+                  <p class="capture_vacancy">ведущий по рекламе</p>
+                </div>
+              </div>
+              <div class="wrapper__img">
+                <img class="item14" src="img/item14.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Оксана</p>
+                  <p class="capture_vacancy">менеджер</p>
+                </div>
+              </div>
             </div>
             <div class="galery-col-3_3">
-              <img class="item11" src="img/item11.png" alt="avatar">
-              <img class="item15" src="img/item15.png" alt="avatar">
+              <div class="wrapper__img">
+                <img class="item11" src="img/item11.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Оля</p>
+                  <p class="capture_vacancy">торговый агент</p>
+                </div>
+              </div>
+              <div class="wrapper__img">
+                <img class="item15" src="img/item15.png" alt="avatar">
+                <div class="figure-capture">
+                  <p class="capture_name">Игорь Викторович</p>
+                  <p class="capture_vacancy">зам. директора</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

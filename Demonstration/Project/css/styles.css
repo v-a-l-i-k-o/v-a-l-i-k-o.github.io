@@ -275,6 +275,56 @@ html[xmlns] .flexslider .slides {
   right: 10px;
 }}
 
+/** initial setup **/
+.nano {
+  position : relative;
+  width    : 100%;
+  height   : 100%;
+  overflow : hidden;
+}
+.nano > .nano-content {
+  position      : absolute;
+  overflow      : scroll;
+  overflow-x    : hidden;
+  top           : 0;
+  right         : 0;
+  bottom        : 0;
+  left          : 0;
+}
+.nano > .nano-content:focus {
+  outline: thin dotted;
+}
+.nano > .nano-content::-webkit-scrollbar {
+  display: none;
+}
+.has-scrollbar > .nano-content::-webkit-scrollbar {
+  display: block;
+}
+.nano > .nano-pane {
+  background : rgba(0,0,0,.25);
+  position   : absolute;
+  width      : 10px;
+  right      : 0;
+  top        : 0;
+  bottom     : 0;
+  visibility : hidden\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : .01;
+  -webkit-transition    : .2s;
+  transition            : .2s;
+  border-radius         : 5px;
+}
+.nano > .nano-pane > .nano-slider {
+  background: #444;
+  background: rgba(0,0,0,.5);
+  position              : relative;
+  margin                : 0 1px;
+  border-radius         : 3px;
+}
+.nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
+  visibility : visible\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : 0.99;
+}
+
 /* ===== GRID ===== */
 body {
   width: 100%;
@@ -592,7 +642,9 @@ header {
   margin-bottom: .3rem;
   display: inline-block;
 }
-.targets-tabs li a:hover {
+.targets-tabs li a:hover,
+.targets-tabs li a:focus {
+  outline: none;
   background-color: transparent;
 }
 .targets-tabs li + li {
@@ -973,7 +1025,7 @@ header {
   width: 100%;
   overflow: hidden;
   text-align: left;
-  max-height: 45rem;
+  max-height: 44.8rem;
 }
 .gallery img {
   width: 100%;
@@ -984,55 +1036,69 @@ header {
   float: left;
 }
 .galery-col-2 {
-  width: 20%;
+  width: 19.65%;
   float: left;
-  position: relative;
+}
+.galery-col-2 .capture_name,
+.galery-col-2 .capture_vacancy {
+  font-size: 1.2em;
 }
 .galery-col-3 {
   width: 40%;
   float: left;
 }
 .galery-col-1_1 {
-  width: 40.5%;
+  width: 38.5%;
   float: right;
 }
 .galery-col-1_2 {
-  width: 29.5%;
+  width: 28.6%;
   float: right;
 }
 .galery-col-3_1 {
-  width: 36.5%;
+  width: 35.45%;
   float: left;
 }
 .galery-col-1_3 {
-  width: 28.5%;
+  width: 27.1%;
   float: right;
 }
 .galery-col-3_2 {
-  width: 28.5%;
+  width: 27.4%;
   float: left;
 }
 .galery-col-3_3 {
-  width: 33.5%;
+  width: 32.5%;
   float: left;
 }
-.capture-director {
-  width: 100%;
+.wrapper__img {
+  position: relative;
+}
+.wrapper__img:hover .figure-capture {
+  bottom: 0;
+  opacity: .8;
+}
+.figure-capture {
+  opacity: 0;
   color: #fff;
-  padding: .7rem;
+  width: 99.5%;
+  height: 4rem;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -4.5rem;
   background-color: #3f3f3f;
+  padding: .9rem .7rem .8rem;
+  -webkit-transition: bottom 600ms ease, opacity 600ms ease;
+  transition: bottom 600ms ease, opacity 600ms ease;
 }
 .capture_name {
   line-height: .5;
-  font-size: 1.2em;
+  font-size: 1em;
   text-transform: uppercase;
 }
 .capture_vacancy {
   line-height: .5;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 /* ----- SECTION steps ----- */
 .steps {
@@ -1273,6 +1339,7 @@ footer .vk {
 }
 .modal-dialog {
   position: relative;
+  border-radius: 1rem;
   display: inline-block;
 }
 .modal-content {
@@ -1356,10 +1423,9 @@ footer .vk {
   color: #1c1c1b;
 }
 .modal-content__oferta {
-  height: 90vh;
+  height: auto;
   font-size: 1.4em;
   padding: 4rem 4rem;
-  overflow-y: scroll;
   /* Убираем исходную нумерацию */
   /* Инициируем счетчик */
   /* Инициируем счетчик вложенного списка */
@@ -1407,6 +1473,7 @@ footer .vk {
 }
 .modal-dialog__oferta {
   width: 64rem;
+  height: 90vh;
   text-align: left;
 }
 .modal-dialog__oferta p {
@@ -1419,7 +1486,6 @@ footer .vk {
 .modal-dialog__price .modal-body {
   padding: 0;
   padding-top: 1rem;
-  border-radius: 1rem;
   background-color: #000;
 }
 .modal-dialog__price .close {
@@ -1634,7 +1700,23 @@ footer .vk {
   outline: none;
   text-decoration: none;
 }
-/*  */
+/* NANOSCROLLER */
+.nano > .nano-pane {
+  opacity: .3;
+  width: .6rem;
+  border-radius: 0;
+  background-repeat: repeat-y;
+  background-position: 50% 0;
+  background-color: transparent;
+  top: 5rem;
+  bottom: 3rem;
+  right: 2.4rem;
+  background-image: url("../img/scroll-dot.png");
+}
+.nano > .nano-pane > .nano-slider {
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
 /* ===== #MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
 /* ----- DESKTOP VERSION ----- */
 @media screen and (max-width: 1199px) {

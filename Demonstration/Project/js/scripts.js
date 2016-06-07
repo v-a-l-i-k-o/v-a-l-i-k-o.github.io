@@ -3,6 +3,17 @@ $(document).ready(function() {
   
 /* ===== INITIALIZATION OF THE PLUGINS: ===== */
 
+/* ----- nanoscroller.js ----- */
+
+$(".nano").nanoScroller( {
+	alwaysVisible: true,
+	preventPageScrolling: true
+});
+
+$('.modal').on('shown.bs.modal', function (e) {
+	$(".nano").nanoScroller();
+});
+
 /* ----- modal.js ----- */
 
 $('body').on('click', '.btn__callback, .btn__advs-order', function(event) {
@@ -76,6 +87,22 @@ $('.nav-tabs__modalPrice a').click(function(event) {
   $(this).tab('show');
 });
 
+/* ----- isotop.js ----- */
+
+var grid = $('.grid').isotope({
+  itemSelector: '.grid-item',
+  masonry: {
+    columnWidth: 304
+  }
+});
+
+// filter items on button click
+$('.targets-tabs').on( 'click', 'li', function(e) {
+  e.preventDefault();
+  var filterValue = $(this).attr('data-filter');
+  grid.isotope({ filter: filterValue });
+});
+
 /* ===== CUSTOM CODE: ===== */
   
 /* ----- toggle menu ----- */
@@ -83,6 +110,16 @@ $('.nav-tabs__modalPrice a').click(function(event) {
 $('.navbar').on('click', '.btn-menu', function(event) {
 	event.preventDefault();
 	$('body').toggleClass('menu-open');
+});
+
+/* ----- toggle buttons ----- */
+
+$('.targets-tabs').on('click', 'li', function(event) {
+	var items = $(this).closest('.targets-tabs').find('li');
+	$(items).each(function(index, el) {
+		$(el).removeClass('current');
+	});
+	$(this).addClass('current');
 });
 
 // -------------------------------------------------------------------------------------
