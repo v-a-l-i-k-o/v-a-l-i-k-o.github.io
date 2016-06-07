@@ -5,13 +5,31 @@ $(document).ready(function() {
 
 /* ----- modal.js ----- */
 
-$('body').on('click', '.btn__callback', function(event) {
+$('body').on('click', '.btn__callback, .btn__advs-order', function(event) {
 	event.preventDefault();
 	$('#modalCallback').modal({
 		backdrop: 'static'
 	});
-
 });
+
+$('body').on('click', '.btn-form__form-order, .btn-form__consult', function(event) {
+	event.preventDefault();
+	$('#modalThanks').modal({
+		backdrop: 'static'
+	});
+});
+
+$('body').on('click', '.contact-link', function(event) {
+	event.preventDefault();
+	if ($(this).attr('href') == '#rekvisit') {
+		$('#modalRekvisit').modal({ backdrop: 'static' });
+	} else if ($(this).attr('href') == '#about') {
+		$('#modalAbout').modal({ backdrop: 'static' });
+	} else {
+		$('#modalOferta').modal({ backdrop: 'static' });
+	}
+});
+
 
 /* ----- flexSlider.js ----- */
 

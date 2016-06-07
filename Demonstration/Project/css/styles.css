@@ -316,7 +316,11 @@ body:after {
 /* ----- general rules ----- */
 html,
 body {
+  overflow-x: hidden;
   font-family: Ubuntu;
+}
+body.modal-open {
+  padding: 0 !important;
 }
 h1 {
   color: white;
@@ -1246,18 +1250,119 @@ footer .vk {
 }
 /* MODALS */
 .modal .close {
-  opacity: .8;
-  top: 7rem;
-  right: 8.5rem;
-  width: 2.7rem;
+  z-index: 2;
+  color: #000;
+  opacity: .6;
   height: 2.7rem;
+  width: 2.7rem;
+  font-size: 2rem;
+  text-align: center;
   position: absolute;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-image: url('../img/modal-close.png');
+  top: 1.5rem;
+  right: 1.5rem;
 }
 .modal .close:hover {
   opacity: 1;
+  outline: none;
+}
+.modal .form-group + .form-group {
+  margin-top: 1rem;
+}
+.modal-dialog {
+  position: relative;
+  display: inline-block;
+}
+.modal-content {
+  border-radius: 1rem;
+}
+.modal-content__callback {
+  padding: 1rem 0;
+}
+.modal-dialog__callback {
+  width: 30rem;
+  text-align: left;
+}
+.modal-dialog__thanks {
+  width: 64rem;
+  font-size: 2em;
+  text-align: center;
+}
+.modal-content__thanks {
+  padding: 3rem 8rem;
+}
+.btn-form__thanks {
+  width: 60%;
+  color: #515151;
+  font-size: 1.6em;
+  text-transform: none;
+  background-color: #00FF00;
+}
+.btn-form__thanks:focus,
+.btn-form__thanks:hover {
+  color: #515151;
+  outline: none;
+  text-decoration: none;
+}
+.modal-logo {
+  width: 8rem;
+  display: block;
+  margin: 0 auto;
+  height: 7.5rem;
+  margin-bottom: 2rem;
+}
+.title__h6 {
+  color: #d41b1a;
+  font-size: 2.4em;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+.modal-content__rekvisit {
+  padding: 4rem 4rem;
+}
+.modal-dialog__rekvisit {
+  width: 64rem;
+  text-align: left;
+}
+.modal-dialog__rekvisit p {
+  font-family: Ubuntu;
+  font-size: 1.4em;
+  color: #1c1c1b;
+}
+.modal-dialog__rekvisit span {
+  color: red;
+}
+.modal-content__about {
+  padding: 4rem 4rem;
+}
+.modal-dialog__about {
+  width: 64rem;
+  text-align: left;
+}
+.modal-dialog__about p {
+  font-family: Ubuntu;
+  font-size: 1.4em;
+  color: #1c1c1b;
+}
+.modal-dialog__about ul {
+  color: red;
+  font-size: 1.4em;
+  padding-left: 3rem;
+}
+.modal-dialog__about ul span {
+  color: #1c1c1b;
+}
+.modal-content__oferta {
+  padding: 4rem 4rem;
+}
+.modal-dialog__oferta {
+  width: 64rem;
+  text-align: left;
+}
+.modal-dialog__oferta p {
+  font-family: Ubuntu;
+  font-size: 1.4em;
+  color: #1c1c1b;
 }
 .modal {
   text-align: center;
@@ -1268,15 +1373,6 @@ footer .vk {
   display: inline-block;
   height: 100%;
   content: '';
-}
-.modal-dialog__callback {
-  width: 30rem;
-  text-align: left;
-  display: inline-block;
-  vertical-align: middle;
-}
-.modal-content__callback {
-  padding: 1rem 0;
 }
 /* FLEXSLIDER1 */
 #tv-slider {
