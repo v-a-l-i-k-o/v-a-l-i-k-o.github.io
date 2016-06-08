@@ -92,7 +92,9 @@ $('.nav-tabs__modalPrice a').click(function(event) {
 var grid = $('.grid').isotope({
   itemSelector: '.grid-item',
   masonry: {
-    columnWidth: 304
+    columnWidth: (function() {
+    	return $('.grid').width()/4
+    })()
   }
 });
 
