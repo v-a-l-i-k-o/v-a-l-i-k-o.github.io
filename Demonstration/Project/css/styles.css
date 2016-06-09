@@ -1087,6 +1087,9 @@ header {
   width: 19.8%;
   float: left;
 }
+.galery-col-2 img {
+  height: 44.8rem;
+}
 .galery-col-2 .capture_name,
 .galery-col-2 .capture_vacancy {
   font-size: 1.2em;

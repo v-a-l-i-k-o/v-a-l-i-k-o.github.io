@@ -170,4 +170,20 @@ function init () {
   myMap.controls.add('smallZoomControl');
   // Добавляем все метки на карту.
   myMap.geoObjects.add(myPlacemark);
+
+// ymaps.route([ [63.254623,71.425984],[61.254623,73.425984] ], {
+//     mapStateAutoApply: false
+// }).then(function (route) {
+//     route.getPaths().options.set({
+//         // в балуне выводим только информацию о времени движения с учетом пробок
+//         balloonContentLayout: ymaps.templateLayoutFactory.createClass('{{ properties.humanJamsTime }}'),
+//         // можно выставить настройки графики маршруту
+//         strokeColor: '0000ffff',
+//         opacity: 0.9
+//     });
+//     // добавляем маршрут на карту
+//     myMap.geoObjects.add(route);
+// });
+
+
 };
