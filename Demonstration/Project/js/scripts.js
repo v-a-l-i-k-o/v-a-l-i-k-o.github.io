@@ -16,37 +16,55 @@ $('.modal').on('shown.bs.modal', function (e) {
 
 /* ----- modal.js ----- */
 
-$('body').on('click', '.btn__callback, .btn__advs-order', function(event) {
+$('body').on('click', '.btn__callback, .btn__advs-order, .btn__step', function(event) {
 	event.preventDefault();
-	$('#modalCallback').modal({
-		backdrop: 'static'
-	});
+	$('#modalCallback').modal();
 });
 
 $('body').on('click', '.btn-form__form-order, .btn-form__consult', function(event) {
 	event.preventDefault();
-	$('#modalThanks').modal({
-		backdrop: 'static'
-	});
+	$('#modalThanks').modal();
 });
 
 $('body').on('click', '.contact-link', function(event) {
 	event.preventDefault();
 	if ($(this).attr('href') == '#rekvisit') {
-		$('#modalRekvisit').modal({ backdrop: 'static' });
+		$('#modalRekvisit').modal();
 	} else if ($(this).attr('href') == '#about') {
-		$('#modalAbout').modal({ backdrop: 'static' });
+		$('#modalAbout').modal();
 	} else {
-		$('#modalOferta').modal({ backdrop: 'static' });
+		$('#modalOferta').modal();
 	}
 });
 
-$('.tab-content__targets').on('click', 'a', function(event) {
+$('.tab-content__targets').on('click', 'a[href="#4"]', function(event) {
 	event.preventDefault();
-	$('#modalPrice').modal({
-		backdrop: 'static'
-	});
+	$('#modalPrice1').modal();
 });
+
+$('.tab-content__targets').on('click', 'a[href="#3"]', function(event) {
+	event.preventDefault();
+	$('#modalPrice2').modal();
+});
+
+$('.tab-content__targets').on('click', 'a[href="#2"]', function(event) {
+	event.preventDefault();
+	$('#modalPrice3').modal();
+});
+
+$('.tab-content__targets').on('click', 'a[href="#1"]', function(event) {
+	event.preventDefault();
+	$('#modalPrice4').modal();
+});
+
+$('body').on('click', '.btn__downloadPrice, .overlayGetPrice', function(event) {
+	event.preventDefault();
+	$('#modalGetPrice').modal();
+});
+
+$('#modalGetPrice').on('hidden.bs.modal', function (e) {
+  $('body').addClass('modal-open');
+})
 
 /* ----- flexSlider.js ----- */
 
