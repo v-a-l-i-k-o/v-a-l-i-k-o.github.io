@@ -21,6 +21,11 @@ $('body').on('click', '.btn__callback, .btn__advs-order, .btn__step', function(e
 	$('#modalCallback').modal();
 });
 
+$('body').on('click', '.btn__view', function(event) {
+	event.preventDefault();
+	$('#modalView').modal();
+});
+
 $('body').on('click', '.btn-form__form-order, .btn-form__consult', function(event) {
 	event.preventDefault();
 	$('#modalThanks').modal();
@@ -154,7 +159,6 @@ function init () {
     center: [61.254623,73.425984],
     zoom: 16
   });
-
   // Создаем метку с помощью вспомогательного класса.
   var myPlacemark = new ymaps.Placemark([61.254623,73.425984], {
     // Свойства.
@@ -163,27 +167,23 @@ function init () {
     hintContent: 'ул. 30 лет Победы, 27/2'
   });
  	// иконка
-  myPlacemark.options.set('iconImageHref', '../img/balloon.png');
+  myPlacemark.options.set('iconImageHref', './img/balloon.png');
   myPlacemark.options.set('iconImageOffset', [-45, -130]);
-  myPlacemark.options.set('iconImageSize', [75,123]);
-    
+  myPlacemark.options.set('iconImageSize', [85,123]);
+  
+  var myPlacemark1 = new ymaps.Placemark([61.2546,73.425], {
+    // Свойства.
+    // Содержимое иконки, балуна и хинта.
+    balloonContent: '',
+    hintContent: '80м от ул. 30 лет Победы'
+  });
+ 	// иконка
+  myPlacemark1.options.set('iconImageHref', './img/rroute.png');
+  myPlacemark1.options.set('iconImageOffset', [7, 5]);
+  myPlacemark1.options.set('iconImageSize', [55,120]);
+
   myMap.controls.add('smallZoomControl');
   // Добавляем все метки на карту.
   myMap.geoObjects.add(myPlacemark);
-
-// ymaps.route([ [63.254623,71.425984],[61.254623,73.425984] ], {
-//     mapStateAutoApply: false
-// }).then(function (route) {
-//     route.getPaths().options.set({
-//         // в балуне выводим только информацию о времени движения с учетом пробок
-//         balloonContentLayout: ymaps.templateLayoutFactory.createClass('{{ properties.humanJamsTime }}'),
-//         // можно выставить настройки графики маршруту
-//         strokeColor: '0000ffff',
-//         opacity: 0.9
-//     });
-//     // добавляем маршрут на карту
-//     myMap.geoObjects.add(route);
-// });
-
-
+  myMap.geoObjects.add(myPlacemark1);
 };
