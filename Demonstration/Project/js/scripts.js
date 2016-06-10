@@ -69,7 +69,15 @@ $('body').on('click', '.btn__downloadPrice, .overlayGetPrice', function(event) {
 
 $('#modalGetPrice').on('hidden.bs.modal', function (e) {
   $('body').addClass('modal-open');
+  $('#modalGetPrice').removeClass('done');
 })
+
+$('body').on('click', '.btn-form__getPrice', function(event) {
+  event.preventDefault();
+  var mail = $('.form__getPrice').find('input[type="email"]').val();
+  $(this).closest('#modalGetPrice').find('p').text('Прайс успешно отправлен на '+ mail);
+  $(this).closest('#modalGetPrice').addClass('done');
+});
 
 /* ----- flexSlider.js ----- */
 

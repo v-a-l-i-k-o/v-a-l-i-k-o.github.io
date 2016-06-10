@@ -490,6 +490,9 @@ header {
   margin-top: 1rem;
   display: inline-block;
 }
+.navbar-brand:hover {
+  color: #3c3c3b;
+}
 .navbar-tel {
   float: right;
   color: #3c3c3b;
@@ -546,7 +549,7 @@ header {
 }
 /* ----- SECTION advs ----- */
 .advs {
-  top: -3.4rem;
+  top: -4.5rem;
   min-height: 64rem;
   position: relative;
   padding-top: 7rem;
@@ -1482,6 +1485,7 @@ footer .vk {
   position: relative;
   border-radius: 1rem;
   display: inline-block;
+  vertical-align: middle;
 }
 .modal-content {
   border: none;
@@ -1760,14 +1764,23 @@ footer .vk {
 }
 .modal-dialog__getPrice {
   width: 50rem;
-  text-align: left;
+  text-align: center;
+}
+.modal-dialog__getPrice .modal-body {
+  height: 22.4rem;
 }
 .modal-dialog__getPrice .form-control {
   height: auto;
   padding: .8rem .3rem;
 }
+.modal-dialog__getPrice p {
+  display: none;
+}
 .form__getPrice {
   margin-top: 2rem;
+}
+.form__getPrice .form-control {
+  line-height: 2rem;
 }
 .btn-form__getPrice {
   width: 50%;
@@ -1776,6 +1789,19 @@ footer .vk {
   display: block;
   margin-top: 7rem;
   background-color: green;
+}
+.modalGetPrice.done .modal-body {
+  line-height: 22.4rem;
+}
+.modalGetPrice.done .form__getPrice {
+  display: none;
+}
+.modalGetPrice.done p {
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 1.8rem;
+  display: inline-block;
+  vertical-align: middle;
 }
 .modal {
   text-align: center;
