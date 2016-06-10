@@ -170,20 +170,22 @@ function init () {
   myPlacemark.options.set('iconImageHref', './img/balloon.png');
   myPlacemark.options.set('iconImageOffset', [-45, -130]);
   myPlacemark.options.set('iconImageSize', [85,123]);
-  
-  var myPlacemark1 = new ymaps.Placemark([61.2546,73.425], {
-    // Свойства.
-    // Содержимое иконки, балуна и хинта.
-    balloonContent: '',
-    hintContent: '80м от ул. 30 лет Победы'
-  });
- 	// иконка
-  myPlacemark1.options.set('iconImageHref', './img/rroute.png');
-  myPlacemark1.options.set('iconImageOffset', [7, 5]);
-  myPlacemark1.options.set('iconImageSize', [55,120]);
-
   myMap.controls.add('smallZoomControl');
   // Добавляем все метки на карту.
   myMap.geoObjects.add(myPlacemark);
-  myMap.geoObjects.add(myPlacemark1);
+
+  var geometry = [[61.25335,73.4262], [61.254623,73.4253]],
+ 
+      properties = {
+        hintContent: "Путь к зданию"
+      },
+      options = {
+        draggable: true,
+        strokeColor: '#ffcc7c',
+        strokeWidth: 8
+ 
+      },
+      polyline = new ymaps.Polyline(geometry, properties, options);
+ 
+      myMap.geoObjects.add(polyline); 
 };
