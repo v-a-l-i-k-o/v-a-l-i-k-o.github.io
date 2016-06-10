@@ -1438,6 +1438,12 @@ header {
   background-position: 0 70%;
   background-image: url('../img/mail.png');
 }
+.map-contacts_mail:hover,
+.map-contacts_mail:focus {
+  outline: none;
+  color: #ffb600;
+  text-decoration: none;
+}
 /* ----- SECTION footer ----- */
 footer {
   padding: 3.5rem 0;
