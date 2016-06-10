@@ -81,6 +81,11 @@ $('body').on('click', '.btn-form__getPrice', function(event) {
   $(this).closest('#modalGetPrice').addClass('done');
 });
 
+$('.btn-form__thanks').on('click', function(event) {
+  event.preventDefault();
+  $('#modalThanks').modal('hide');
+});
+
 /* ----- flexSlider.js ----- */
 
 $('#tv-slider').flexslider({
