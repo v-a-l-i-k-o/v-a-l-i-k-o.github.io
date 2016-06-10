@@ -74,8 +74,10 @@ $('#modalGetPrice').on('hidden.bs.modal', function (e) {
 
 $('body').on('click', '.btn-form__getPrice', function(event) {
   event.preventDefault();
-  var mail = $('.form__getPrice').find('input[type="email"]').val();
-  $(this).closest('#modalGetPrice').find('p').text('Прайс успешно отправлен на '+ mail);
+  var inputMail = $('.form__getPrice').find('input[type="email"]');
+  var mailValue = inputMail.val();
+  $(this).closest('#modalGetPrice').find('p').text('Прайс успешно отправлен на '+ mailValue);
+  inputMail.val('');
   $(this).closest('#modalGetPrice').addClass('done');
 });
 
