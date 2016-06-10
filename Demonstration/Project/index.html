@@ -322,20 +322,6 @@
       </div>
     </div>
 
-    <div class="modal fade modalThanks" id="modalThanks" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog__thanks">
-        <a href="#" class="close" data-dismiss="modal">X</a>
-        <div class="modal-content modal-content__thanks">
-          <div class="modal-body">
-            <p class="modalThanks-txt">
-              Спасибо, Ваша заявка успешно отправлена. Мы свяжемся с Вами в ближайшее время.
-            </p>
-            <button type="submit" class="btn btn-form btn-form__thanks">Я счастлив</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="modal fade modalCallback" id="modalCallback" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog__callback">
         <a href="#" class="close" data-dismiss="modal">X</a>
@@ -385,7 +371,7 @@
                 </a>
               </div>
               <div class="navbar-contact col-xs-5 clearfix">
-                <button class="btn btn__callback">Заказать звонок</button>
+                <button class="btn btn__callback" data-id="modalCallback">Заказать звонок</button>
                 <div class="navbar-tel">
                   <span>(3462) 221-222</span>
                 </div>
@@ -507,40 +493,40 @@
           <div class="tab-content tab-content__targets">
             <div class="row row__targets grid">
               <div class="col-xs-3 targets-item grid-item tv">
-                <a href="#1"><div class="targets-item_unit targets-item_unit__1"></div></a>
+                <a href="4"><div class="targets-item_unit targets-item_unit__1"></div></a>
               </div>
               <div class="col-xs-3 targets-item grid-item tv">
-                <a href="#2"><div class="targets-item_unit targets-item_unit__2"></div></a>
+                <a href="3"><div class="targets-item_unit targets-item_unit__2"></div></a>
               </div>
               <div class="col-xs-3 targets-item grid-item rad">
-                <a href="#3"><div class="targets-item_unit targets-item_unit__3"></div></a>
+                <a href="2"><div class="targets-item_unit targets-item_unit__3"></div></a>
               </div>
               <div class="col-xs-3 targets-item grid-item advss">
-                <a href="#4"><div class="targets-item_unit targets-item_unit__4"></div></a>
+                <a href="1"><div class="targets-item_unit targets-item_unit__4"></div></a>
               </div>
               <div class="col-xs-3 targets-item grid-item rad">
-                <a href="#1"><div class="targets-item_unit targets-item_unit__5"></div></a>
+                <a href="4"><div class="targets-item_unit targets-item_unit__5"></div></a>
               </div>
               <div class="col-xs-3 targets-item grid-item tv">
-                <a href="#1"><div class="targets-item_unit targets-item_unit__6"></div></a>
+                <a href="4"><div class="targets-item_unit targets-item_unit__6"></div></a>
               </div>
               <div class="col-xs-3 targets-item grid-item">
-                <a href="#1"><div class="targets-item_unit targets-item_unit__7"></div></a>
+                <a href="3"><div class="targets-item_unit targets-item_unit__7"></div></a>
               </div>
               <div class="col-xs-3 targets-item grid-item">
-                <a href="#1"><div class="targets-item_unit targets-item_unit__8"></div></a>
+                <a href="3"><div class="targets-item_unit targets-item_unit__8"></div></a>
               </div>
               <div class="col-xs-3 targets-item grid-item">
-                <a href="#1"><div class="targets-item_unit targets-item_unit__9"></div></a>
+                <a href="2"><div class="targets-item_unit targets-item_unit__9"></div></a>
               </div>
               <div class="col-xs-3 targets-item grid-item">
-                <a href="#1"><div class="targets-item_unit targets-item_unit__10"></div></a>
+                <a href="2"><div class="targets-item_unit targets-item_unit__10"></div></a>
               </div>
               <div class="col-xs-3 targets-item grid-item">
-                <a href="#1"><div class="targets-item_unit targets-item_unit__11"></div></a>
+                <a href="1"><div class="targets-item_unit targets-item_unit__11"></div></a>
               </div>
               <div class="col-xs-3 targets-item grid-item">
-                <a href="#1"><div class="targets-item_unit targets-item_unit__12"></div></a>
+                <a href="1"><div class="targets-item_unit targets-item_unit__12"></div></a>
               </div>
             </div>
           </div>
@@ -557,7 +543,7 @@
               <div class="promo-advice_body">
                 <div class="promo-advice_txt">В честь 10-летнего юбилея<br/> РИА "ПЯТЬ ЗВЁЗД" - дополнительная</div>
                 <span class="promo-advice_discount">Скидка 30% на все услуги</span>
-                <button class="btn btn__view">Посмотреть кп</button>
+                <button class="btn btn__view" data-id="modalView">Посмотреть кп</button>
               </div>
             </div>
           </div>
@@ -577,7 +563,7 @@
                 <div class="form-group">
                   <input type="email" class="form-control" id="email" placeholder="Email">
                 </div>
-                <button type="submit" class="btn btn-form btn-form__form-order">Заказать рекламу со скидкой</button>
+                <button type="submit" class="btn btn-form btn-form__form-order" data-id="modalThanks">Заказать рекламу со скидкой</button>
               </form>
             </div>
           </div>
@@ -616,7 +602,7 @@
                 <div class="form-group">
                   <input type="email" class="form-control" id="emailConsult" placeholder="Email">
                 </div>
-                <button type="submit" class="btn btn-form btn-form__consult">Получить бесплатную консультацию</button>
+                <button type="submit" class="btn btn-form btn-form__consult" data-id="modalThanks">Получить бесплатную консультацию</button>
               </form>
             </div>
           </div>
@@ -715,7 +701,7 @@
               <a href="#" class="flex-next">Сдедующий</a>
             </div>
           </div>
-          <button type="button" class="btn btn__advs-order">Заказать рекламную компанию</button>
+          <button type="button" class="btn btn__advs-order" data-id="modalCallback">Заказать рекламную компанию</button>
         </div>
       </div>
     </section>
@@ -949,7 +935,7 @@
             <div class="row">
               <div class="col-xs-2 steps-col-num__1">
                 <div class="steps-action_num steps-action_num__red">01</div>
-                <button type="button" class="btn btn__step">Сделать первый шаг</button>
+                <button type="button" class="btn btn__step" data-id="modalCallback">Сделать первый шаг</button>
               </div>
               <div class="col-xs-3 steps-col-item steps-col-item__1">
                 <div class="steps-action_item steps-action_item__1">
@@ -977,13 +963,13 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-3">
-            <a class="contact-link" href="#rekvisit">Реквизиты</a>
+            <a class="contact-link" href="modalRekvisit">Реквизиты</a>
           </div>
           <div class="col-xs-3">
-            <a class="contact-link" href="#oferta">Публичная оферта</a>
+            <a class="contact-link" href="modalOferta">Публичная оферта</a>
           </div>
           <div class="col-xs-3">
-            <a class="contact-link" href="#about">О нас</a>
+            <a class="contact-link" href="modalAbout">О нас</a>
           </div>
           <div class="col-xs-3">
             <a class="vk" href="#"><img src="img/vk.png" alt="vk"></a>
@@ -1008,7 +994,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Получить прайс по почте</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Получить прайс по почте</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1032,7 +1018,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1044,7 +1030,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Скачать прайс</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Скачать прайс</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1063,7 +1049,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1075,7 +1061,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Скачать прайс</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Скачать прайс</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1089,7 +1075,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1101,7 +1087,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Скачать прайс</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Скачать прайс</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1110,7 +1096,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1140,7 +1126,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Получить прайс по почте</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Получить прайс по почте</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1159,7 +1145,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1171,7 +1157,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Скачать прайс</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Скачать прайс</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1190,7 +1176,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1202,7 +1188,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Скачать прайс</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Скачать прайс</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1216,7 +1202,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1228,7 +1214,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Скачать прайс</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Скачать прайс</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1237,7 +1223,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1267,7 +1253,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Получить прайс по почте</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Получить прайс по почте</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1281,7 +1267,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1293,7 +1279,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Скачать прайс</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Скачать прайс</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1312,7 +1298,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1324,7 +1310,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Скачать прайс</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Скачать прайс</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1338,7 +1324,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1350,7 +1336,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Скачать прайс</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Скачать прайс</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1359,7 +1345,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1389,7 +1375,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Получить прайс по почте</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Получить прайс по почте</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1398,7 +1384,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1410,7 +1396,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Скачать прайс</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Скачать прайс</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1429,7 +1415,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1441,7 +1427,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Скачать прайс</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Скачать прайс</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1455,7 +1441,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1467,7 +1453,7 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-xs-8 modalPrice__img">
-                      <a href="#" type="button" class="btn btn__downloadPrice"><span>Скачать прайс</span></a>
+                      <a href="#" type="button" class="btn btn__downloadPrice" data-id="modalGetPrice"><span>Скачать прайс</span></a>
                     </div>
                     <div class="col-xs-4">
                       <div class="row row__modalPrice">
@@ -1476,7 +1462,7 @@
                             <input type="text" class="form-control" id="modalTel" placeholder="Ваш телефон">
                           </div>
                           <div class="form-group col-xs-6">
-                            <button type="submit" class="btn btn__modalPrice">Оставить заявку</button>
+                            <button type="submit" class="btn btn__modalPrice" data-id="modalThanks">Оставить заявку</button>
                           </div>
                         </form>
                       </div>
@@ -1504,6 +1490,20 @@
               <button type="submit" class="btn btn-form btn-form__getPrice">Получить прайс</button>
             </form>
             <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade modalThanks" id="modalThanks" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog__thanks">
+        <a href="#" class="close" data-dismiss="modal">X</a>
+        <div class="modal-content modal-content__thanks">
+          <div class="modal-body">
+            <p class="modalThanks-txt">
+              Спасибо, Ваша заявка успешно отправлена. Мы свяжемся с Вами в ближайшее время.
+            </p>
+            <button type="submit" class="btn btn-form btn-form__thanks">Я счастлив</button>
           </div>
         </div>
       </div>

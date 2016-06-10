@@ -405,6 +405,11 @@ h2 {
   text-transform: uppercase;
   background-color: #e30413;
 }
+.btn:hover,
+.btn:focus,
+.btn:active {
+  outline: none !important;
+}
 .form-group {
   margin: 0;
 }
@@ -1760,6 +1765,9 @@ footer .vk {
 .btn__modalPrice {
   float: right;
   padding: .5rem 1.2rem;
+}
+.btn__modalPrice:hover {
+  color: #fff;
 }
 .modal-content__getPrice {
   height: 25rem;

@@ -16,59 +16,27 @@ $('.modal').on('shown.bs.modal', function (e) {
 
 /* ----- modal.js ----- */
 
-$('body').on('click', '.btn__callback, .btn__advs-order, .btn__step', function(event) {
+$('body').on('click', '.btn', function(event) {
 	event.preventDefault();
-	$('#modalCallback').modal();
-});
-
-$('body').on('click', '.btn__view', function(event) {
-	event.preventDefault();
-	$('#modalView').modal();
-});
-
-$('body').on('click', '.btn-form__form-order, .btn-form__consult', function(event) {
-	event.preventDefault();
-	$('#modalThanks').modal();
+  var data = $(this).data('id');
+	$('#'+ data).modal();
 });
 
 $('body').on('click', '.contact-link', function(event) {
 	event.preventDefault();
-	if ($(this).attr('href') == '#rekvisit') {
-		$('#modalRekvisit').modal();
-	} else if ($(this).attr('href') == '#about') {
-		$('#modalAbout').modal();
-	} else {
-		$('#modalOferta').modal();
-	}
+  var href = $(this).attr('href');
+	$('#'+ href).modal();
 });
 
-$('.tab-content__targets').on('click', 'a[href="#4"]', function(event) {
+$('.tab-content__targets').on('click', 'a', function(event) {
 	event.preventDefault();
-	$('#modalPrice1').modal();
+  var href = $(this).attr('href');
+	$('#modalPrice'+ href).modal();
 });
 
-$('.tab-content__targets').on('click', 'a[href="#3"]', function(event) {
-	event.preventDefault();
-	$('#modalPrice2').modal();
-});
-
-$('.tab-content__targets').on('click', 'a[href="#2"]', function(event) {
-	event.preventDefault();
-	$('#modalPrice3').modal();
-});
-
-$('.tab-content__targets').on('click', 'a[href="#1"]', function(event) {
-	event.preventDefault();
-	$('#modalPrice4').modal();
-});
-
-$('body').on('click', '.btn__downloadPrice, .overlayGetPrice', function(event) {
-	event.preventDefault();
-	$('#modalGetPrice').modal();
-});
-
-$('#modalGetPrice').on('hidden.bs.modal', function (e) {
-  $('body').addClass('modal-open');
+$('#modalGetPrice, #modalThanks').on('hidden.bs.modal', function (e) {
+  if ($('.modal').hasClass('in'))
+    $('body').addClass('modal-open');
   $('#modalGetPrice').removeClass('done');
 })
 
