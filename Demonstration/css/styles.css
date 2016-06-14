@@ -1320,6 +1320,11 @@ footer span a:hover {
   margin: -5.5rem 0 0;
 }
 /* ===== #MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
+@media screen and (max-width: 1150px) {
+  .flex-direction-nav {
+    display: none;
+  }
+}
 /* ----- TABLET VERSION ----- */
 @media screen and (max-width: 1023px) {
   html {
@@ -1334,9 +1339,6 @@ footer span a:hover {
   .slides li {
     width: 22.05rem;
     margin-right: 2.5rem;
-  }
-  .flex-direction-nav {
-    display: none;
   }
 }
 /* ----- MOBILE VERSION ----- */
@@ -1533,7 +1535,7 @@ footer span a:hover {
   }
   .menu a {
     padding: .5em 0;
-    font-size: 1.6em;
+    font-size: 2em;
     line-height: 1.3rem;
     display: inline-block;
   }
