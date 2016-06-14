@@ -960,6 +960,7 @@ header {
 .menu li {
   float: left;
   width: 10rem;
+  height: 7.6rem;
   background-color: #3943b4;
   border-bottom: 4px solid #3943b4;
 }
@@ -1505,28 +1506,36 @@ footer span a:hover {
   }
   .menu li {
     float: none;
+    height: auto;
     width: auto;
     border: none;
     display: block;
     text-align: left;
+    padding: .5rem 0;
+    border-top: 1px solid #fff;
     background-color: transparent;
+  }
+  .menu li div {
+    display: inline-block;
   }
   .menu li:hover {
     border: none;
-    background-color: transparent;
+    background-color: #2a328c;
+    border-top: 1px solid #fff;
   }
   .menu li.current {
     border: none;
+    border-top: 1px solid #fff;
     background-color: transparent;
+  }
+  .menu li.current:hover {
+    background-color: #2a328c;
   }
   .menu a {
     padding: .5em 0;
     font-size: 1.6em;
     line-height: 1.3rem;
     display: inline-block;
-  }
-  .menu a:hover {
-    text-decoration: underline;
   }
   /* ----- SECTION bonus ----- */
   .bonus {
