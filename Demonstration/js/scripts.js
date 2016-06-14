@@ -94,7 +94,10 @@ $('.btn-menu').on('click', function(event) {
   event.preventDefault();
   $('.navbar').toggleClass('is-visible');
   $(this).toggleClass('is-open');
+  var height = $(document).height();
   $('.hack').toggleClass('is-visible');
+  if ($('.hack').hasClass('is-visible'))
+    $('.hack').css('height', height + 'px');
 });
 
 // -------------------------------------------------------------------------------------

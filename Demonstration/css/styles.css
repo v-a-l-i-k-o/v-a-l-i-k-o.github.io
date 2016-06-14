@@ -1665,11 +1665,10 @@ footer span a:hover {
     opacity: 0;
     z-index: -1;
     width: 100%;
-    height: 1000rem;
     position: absolute;
     background-color: #3943b4;
-    -webkit-transition: opacity 500ms ease;
-    transition: opacity 500ms ease;
+    -webkit-transition: opacity 700ms ease;
+    transition: opacity 700ms ease;
   }
   .is-visible.hack {
     z-index: 1;
