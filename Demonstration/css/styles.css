@@ -1628,6 +1628,9 @@ footer span a:hover {
     padding: 0 1.3rem;
     margin-bottom: 1.5rem;
   }
+  .progressive-pokies-gallery {
+    margin: 0;
+  }
   /* ----- SECTION gen-content ----- */
   .gen-content .btn {
     margin: 2rem auto 0;
