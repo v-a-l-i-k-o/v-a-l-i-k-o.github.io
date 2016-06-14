@@ -94,6 +94,7 @@ $('.btn-menu').on('click', function(event) {
   event.preventDefault();
   $('.navbar').toggleClass('is-visible');
   $(this).toggleClass('is-open');
+  $('.hack').toggleClass('is-visible');
 });
 
 // -------------------------------------------------------------------------------------
