@@ -5,13 +5,25 @@ $(document).ready(function() {
 
 /* ----- flexSlider ----- */
 
-var $window = $(window);
+initSlider1();
+initSlider2();
+ 
+  // tiny helper function to add breakpoints
+function getGridSize() {
+  return (window.innerWidth < 480) ? 1 :
+         (window.innerWidth < 600) ? 2 :
+         (window.innerWidth < 768) ? 3 : 4;
+}
 
-$window.resize(function(event) {
-
+function destroy1() { 
   $('.flexslider-1').removeData("flexslider");
-  $('.flexslider-2').removeData("flexslider");
+};
 
+function destroy2() {
+  var destroy2 = $('.flexslider-2').removeData("flexslider");
+};
+
+function initSlider1() {
   $('.flexslider-1').flexslider({
     animation: "slide",
     itemWidth: 220.5,
@@ -26,7 +38,9 @@ $window.resize(function(event) {
     minItems: getGridSize(), // use function to pull in initial value
     maxItems: getGridSize() // use function to pull in initial value
   });
+}
 
+function initSlider2() {
   $('.flexslider-2').flexslider({
     animation: "slide",
     animationLoop: true,
@@ -41,43 +55,74 @@ $window.resize(function(event) {
     minItems: getGridSize(), // use function to pull in initial value
     maxItems: getGridSize() // use function to pull in initial value
   });
-});
- 
-  // tiny helper function to add breakpoints
-function getGridSize() {
-  return (window.innerWidth < 480) ? 1 :
-         (window.innerWidth < 600) ? 2 :
-         (window.innerWidth < 768) ? 3 : 4;
 }
- 
-$('.flexslider-1').flexslider({
-  animation: "slide",
-  itemWidth: 220.5,
-  itemMargin: (function() {
-		return (window.innerWidth < 1024) ? 20 : 26
-	})(),
-  controlNav: false,
-  slideshow: false,
-  prevText: "",
-  nextText: "",
-  animationLoop: true,
-  minItems: getGridSize(), // use function to pull in initial value
-  maxItems: getGridSize() // use function to pull in initial value
+
+enquire.register("screen and (max-width:479px)", {
+
+  match : function() {
+    destroy1();
+    destroy2();
+    initSlider1();
+    initSlider2();
+  },
+
+  unmatch : function() {
+    destroy1();
+    destroy2();
+    initSlider1();
+    initSlider2();
+  }
 });
 
-$('.flexslider-2').flexslider({
-  animation: "slide",
-  animationLoop: true,
-  itemWidth: 220.5,
-  controlNav: false,
-  slideshow: false,
-  itemMargin: (function() {
-		return (window.innerWidth < 1024) ? 20 : 26
-	})(),
-  prevText: "",
-  nextText: "",
-  minItems: getGridSize(), // use function to pull in initial value
-  maxItems: getGridSize() // use function to pull in initial value
+enquire.register("screen and (max-width:599px)", {
+
+  match : function() {
+    destroy1();
+    destroy2();
+    initSlider1();
+    initSlider2();
+  },
+
+  unmatch : function() {
+    destroy1();
+    destroy2();
+    initSlider1();
+    initSlider2();
+  }    
+});
+
+enquire.register("screen and (max-width:767px)", {
+
+  match : function() {
+    destroy1();
+    destroy2();
+    initSlider1();
+    initSlider2();
+  },
+
+  unmatch : function() {
+    destroy1();
+    destroy2();
+    initSlider1();
+    initSlider2();
+  }                                
+});
+
+enquire.register("screen and (max-width:1023px)", {
+
+  match : function() {
+    destroy1();
+    destroy2();
+    initSlider1();
+    initSlider2();
+  },
+
+  unmatch : function() {
+    destroy1();
+    destroy2();
+    initSlider1();
+    initSlider2();
+  }                                
 });
 
 /* ===== CUSTOM CODE: ===== */
