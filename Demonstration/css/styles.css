@@ -1108,6 +1108,12 @@ header {
 .top-pokies-item_title:hover {
   text-decoration: underline;
 }
+.top-pokies-item_discribe {
+  display: none;
+}
+.top-pokies-item_review {
+  display: none;
+}
 .top-pokies-item_txt {
   color: #333;
   font-size: 1.3em;
@@ -1575,10 +1581,10 @@ footer span a:hover {
     margin: .3rem;
   }
   .top-pokies-item_body {
-    height: 11rem;
+    height: auto;
     padding-bottom: .5rem;
     padding-right: 1rem;
-    padding-left: 8rem;
+    padding-left: 0;
     padding-top: .5rem;
   }
   .top-pokies-item_body .btn__green {
@@ -1591,7 +1597,7 @@ footer span a:hover {
     box-shadow: 0 0.2rem 0.2rem rgba(3, 3, 6, 0.3);
   }
   .top-pokies-item_content {
-    padding-right: 5rem;
+    padding-right: 0;
   }
   .top-pokies-item_header {
     display: none;
@@ -1608,13 +1614,51 @@ footer span a:hover {
   .top-pokies-item_title:hover {
     text-decoration: none;
   }
-  .top-pokies-item_txt {
+  .top-pokies-item_review {
+    opacity: .7;
+    width: 3.8rem;
+    height: 3.8rem;
+    margin-right: 1rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url('../img/review.png');
+  }
+  .top-pokies-item_review:hover {
+    opacity: 1;
+  }
+  .top-pokies-item_discribe {
+    display: block;
     height: 4.2rem;
     text-align: left;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 700;
-    overflow: hidden;
+    position: relative;
+  }
+  .top-pokies-item_bonus {
+    top: 50%;
+    width: 73%;
+    line-height: 1;
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .top-pokies-item_bonus:hover {
+    text-decoration: underline;
+  }
+  .top-pokies-item_txt {
+    display: none;
+    text-align: left;
+    font-size: 1.6em;
+    font-weight: 400;
     line-height: 2rem;
+  }
+  .top-pokies-item_why-play {
+    padding-bottom: 5rem;
   }
   .top-pokies-item_why-play ul {
     display: none;

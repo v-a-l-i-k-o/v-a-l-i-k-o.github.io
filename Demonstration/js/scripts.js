@@ -46,7 +46,8 @@ $window.resize(function(event) {
   // tiny helper function to add breakpoints
 function getGridSize() {
   return (window.innerWidth < 480) ? 1 :
-  			 (window.innerWidth < 768) ? 2 : 4;
+         (window.innerWidth < 600) ? 2 :
+         (window.innerWidth < 768) ? 3 : 4;
 }
  
 $('.flexslider-1').flexslider({
@@ -96,8 +97,21 @@ $('.btn-menu').on('click', function(event) {
   $(this).toggleClass('is-open');
   var height = $(document).height();
   $('.hack').toggleClass('is-visible');
-  if ($('.hack').hasClass('is-visible'))
+  if ($('.hack').hasClass('is-visible')) {
     $('.hack').css('height', height + 'px');
+  } else {
+    $('.hack').css('height', 'auto');
+  }
+});
+
+/* ---------- */
+
+$('.top-pokies-item_discribe').on('click', function(event) {
+  event.preventDefault();
+  var review = $(this).closest('.top-pokies-item').find('.top-pokies-item_txt');
+  var bonus = $(this).closest('.top-pokies-item').find('.top-pokies-item_why-play ul');
+  ($(event.target).hasClass('top-pokies-item_review'))? $(review).slideToggle(400) :
+                                                        $(bonus).slideToggle(400);
 });
 
 // -------------------------------------------------------------------------------------
