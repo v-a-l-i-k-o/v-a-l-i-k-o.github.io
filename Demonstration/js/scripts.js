@@ -114,5 +114,12 @@ $('.top-pokies-item_discribe').on('click', function(event) {
                                                         $(bonus).slideToggle(400);
 });
 
+$(window).resize(function(event) {
+  if ($(window).width() > 767) {
+    $('.top-pokies-item_txt, .top-pokies-item_why-play ul').show();
+  } else {
+    $('.top-pokies-item_txt, .top-pokies-item_why-play ul').hide();
+  }
+});
 // -------------------------------------------------------------------------------------
 });
