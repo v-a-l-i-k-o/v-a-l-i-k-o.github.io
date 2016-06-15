@@ -112,7 +112,7 @@ $('.top-pokies-item_discribe').on('click', function(event) {
   var bonus = $(this).closest('.top-pokies-item').find('.top-pokies-item_why-play ul');
   if ($(event.target).hasClass('top-pokies-item_review')) {
     $(review).slideToggle(400);
-    $('.top-pokies-item_review').toggleClass('show');
+    $(event.target).toggleClass('show');
   } else {
     $(bonus).slideToggle(400);
   }
