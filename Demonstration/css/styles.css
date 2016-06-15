@@ -1550,7 +1550,7 @@ footer span a:hover {
   }
   .menu a {
     padding: .5em 0;
-    font-size: 2.6em;
+    font-size: 2.2em;
     line-height: 1.3rem;
     display: inline-block;
   }
@@ -1615,9 +1615,9 @@ footer span a:hover {
     text-decoration: none;
   }
   .top-pokies-item_review {
-    opacity: .7;
-    width: 3.8rem;
-    height: 3.8rem;
+    width: 3rem;
+    height: 2rem;
+    margin-top: 1rem;
     margin-right: 1rem;
     display: inline-block;
     background-repeat: no-repeat;
@@ -1625,8 +1625,8 @@ footer span a:hover {
     background-size: cover;
     background-image: url('../img/review.png');
   }
-  .top-pokies-item_review:hover {
-    opacity: 1;
+  .top-pokies-item_review.show {
+    background-image: url('../img/review-up.png');
   }
   .top-pokies-item_discribe {
     display: block;
@@ -1676,6 +1676,9 @@ footer span a:hover {
   }
   .progressive-pokies-gallery {
     margin: 0;
+  }
+  .gallery-caption {
+    font-size: 1.6em;
   }
   /* ----- SECTION gen-content ----- */
   .gen-content .btn {
@@ -1757,21 +1760,25 @@ footer span a:hover {
     -ms-transform: translateX(50%);
     transform: translateX(50%);
   }
+  .top-pokies-item_bonus {
+    width: 65%;
+  }
   .top-pokies-item_content {
     padding-right: 1.5rem;
   }
   /* ----- SECTION best-pokies ----- */
   .slide-pic {
-    height: 22rem;
+    width: 22rem;
+    height: 15.5rem;
+    display: inline-block;
+  }
+  .slide-txt {
+    width: 22rem;
+    display: inline-block;
   }
   /* ----- SECTION progressive-pokies ----- */
   .progressive-pokies-gallery_item {
-    *display: inline;
-    vertical-align: top;
-    display: inline-block;
-    padding: 0 0%;
-    width: 83.33333333%;
-    *width: 83.28125%;
+    width: 25rem;
     padding: 0 1.3rem;
     margin-bottom: 1.5rem;
   }

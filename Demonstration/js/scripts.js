@@ -110,8 +110,12 @@ $('.top-pokies-item_discribe').on('click', function(event) {
   event.preventDefault();
   var review = $(this).closest('.top-pokies-item').find('.top-pokies-item_txt');
   var bonus = $(this).closest('.top-pokies-item').find('.top-pokies-item_why-play ul');
-  ($(event.target).hasClass('top-pokies-item_review'))? $(review).slideToggle(400) :
-                                                        $(bonus).slideToggle(400);
+  if ($(event.target).hasClass('top-pokies-item_review')) {
+    $(review).slideToggle(400);
+    $('.top-pokies-item_review').toggleClass('show');
+  } else {
+    $(bonus).slideToggle(400);
+  }
 });
 
 $(window).resize(function(event) {
