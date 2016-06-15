@@ -1351,7 +1351,7 @@ footer span a:hover {
   }
 }
 /* ----- MOBILE VERSION ----- */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 760px) {
   /* ----- general rules ----- */
   html {
     height: 100%;
