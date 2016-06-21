@@ -695,7 +695,7 @@ header {
   background-color: transparent;
 }
 .targets-tabs li + li {
-  margin-left: .2rem;
+  margin-left: .2%;
 }
 .targets-tabs li.current {
   color: #fff;
@@ -1587,7 +1587,7 @@ footer .vk {
 }
 .modal-dialog__about {
   width: 80rem;
-  height: 90vh;
+  height: 80%;
   text-align: left;
 }
 .modal-dialog__about p {
@@ -1654,7 +1654,7 @@ footer .vk {
 }
 .modal-dialog__oferta {
   width: 80rem;
-  height: 90vh;
+  height: 80%;
   text-align: left;
 }
 .modal-dialog__oferta p {
