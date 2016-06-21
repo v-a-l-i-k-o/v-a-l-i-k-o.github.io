@@ -1498,13 +1498,13 @@ footer .vk {
 }
 .modal-dialog {
   position: relative;
-  border-radius: 1rem;
+  border-radius: 1rem !important;
   display: inline-block;
   vertical-align: middle;
 }
 .modal-content {
   border: none;
-  border-radius: 1rem;
+  border-radius: 1rem !important;
 }
 .modal-content__callback {
   height: 40rem;
