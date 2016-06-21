@@ -14,6 +14,10 @@ $('.modal').on('shown.bs.modal', function (e) {
 	$(".nano").nanoScroller();
 });
 
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+  $('.nano-content').css('right', 0);
+}
+
 /* ----- modal.js ----- */
 
 $('body').on('click', '.btn', function(event) {
