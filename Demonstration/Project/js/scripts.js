@@ -16,7 +16,6 @@ $('.modal').on('shown.bs.modal', function (e) {
 
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
   $('.nano-content').css('right', 0);
-  $('.targets-tabs_item__tv, .targets-tabs_item__radio').css('margin-left', '3px');
 }
 
 /* ----- modal.js ----- */
@@ -93,8 +92,28 @@ $('#leaders-slider').flexslider({
 
 /* ----- tab.js ----- */
 
-$('.nav-tabs__modalPrice a').click(function(event) {
+$('.nav-tabs__modalPrice1 a').click(function(event) {
 	event.preventDefault();
+  $(this).tab('show');
+});
+
+$('.nav-tabs__modalPrice2 a').click(function(event) {
+  event.preventDefault();
+  $(this).tab('show');
+});
+
+$('.nav-tabs__modalPrice3 a').click(function(event) {
+  event.preventDefault();
+  $(this).tab('show');
+});
+
+$('.nav-tabs__modalPrice4 a').click(function(event) {
+  event.preventDefault();
+  $(this).tab('show');
+});
+
+$('.nav-tabs__modalPrice5 a').click(function(event) {
+  event.preventDefault();
   $(this).tab('show');
 });
 

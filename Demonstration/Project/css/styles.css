@@ -689,6 +689,9 @@ header {
 .targets-tabs li {
   float: left;
   padding: .5rem 0;
+  border-top: 0;
+  border-bottom: 0;
+  border-right: 0;
   background-color: #e0dfe0;
 }
 .targets-tabs li a {
@@ -705,7 +708,9 @@ header {
   background-color: transparent;
 }
 .targets-tabs li + li {
-  margin-left: .2%;
+  border-left: 2px;
+  border-style: solid;
+  border-color: #fff;
 }
 .targets-tabs li.current {
   color: #fff;
@@ -733,7 +738,7 @@ header {
   width: 21%;
 }
 .nav-tabs .targets-tabs_item__design {
-  width: 21%;
+  width: 22%;
 }
 .tab-content {
   padding: 0 1.5rem;
@@ -746,8 +751,8 @@ header {
   transition: height 500ms ease;
 }
 .targets-item {
+  padding: 0 1rem;
   overflow: hidden;
-  padding: 0 .9rem;
   position: relative;
   margin-bottom: 4.8rem;
   background: url('../img/gray-dot.png') repeat content-box;
@@ -1677,8 +1682,14 @@ footer .vk {
   box-shadow: none;
   background-color: transparent;
 }
+.modal.in .modal-dialog__price {
+  -webkit-transform: translateY(-3%);
+  -ms-transform: translateY(-3%);
+  transform: translateY(-3%);
+}
 .modal-dialog__price {
   margin: 0;
+  height: 90%;
   width: 100rem;
 }
 .modal-dialog__price .modal-body {
@@ -1733,7 +1744,7 @@ footer .vk {
 }
 .modalPrice__img {
   padding: 0;
-  height: 87vh;
+  height: 75rem;
   position: relative;
 }
 .modalPrice__img img {
