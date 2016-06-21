@@ -1572,6 +1572,7 @@ footer .vk {
 }
 .modal-dialog__rekvisit {
   width: 80rem;
+  height: 80%;
   text-align: left;
 }
 .modal-dialog__rekvisit p {
