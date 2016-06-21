@@ -1578,13 +1578,13 @@ footer .vk {
   text-transform: uppercase;
 }
 .modal-content__rekvisit {
-  padding: 3rem 4rem 2rem;
+  height: auto;
+  padding: 4rem 4rem;
 }
 .modal-dialog__rekvisit {
   width: 80rem;
   height: 80%;
   text-align: left;
-  margin: -9rem 0 3rem;
 }
 .modal-dialog__rekvisit p {
   font-family: Ubuntu;
