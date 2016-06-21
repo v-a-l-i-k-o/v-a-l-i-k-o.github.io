@@ -676,6 +676,7 @@ header {
   font-size: 2em;
   font-weight: 400;
   margin-bottom: 2rem;
+  padding-right: 1.2rem;
 }
 .targets-tabs li {
   padding: .5rem 0;
