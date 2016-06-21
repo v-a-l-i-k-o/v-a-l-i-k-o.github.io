@@ -16,6 +16,7 @@ $('.modal').on('shown.bs.modal', function (e) {
 
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
   $('.nano-content').css('right', 0);
+  $('.targets-tabs_item__tv, .targets-tabs_item__radio').css('margin-left', '3px');
 }
 
 /* ----- modal.js ----- */

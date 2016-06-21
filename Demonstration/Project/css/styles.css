@@ -671,14 +671,23 @@ header {
   display: inline-block;
 }
 .targets-tabs {
+  *zoom: 1;
   border: none;
   color: #333434;
   font-size: 2em;
   font-weight: 400;
   margin-bottom: 2rem;
-  padding-right: 1.2rem;
+}
+.targets-tabs:before,
+.targets-tabs:after {
+  content: '';
+  display: table;
+}
+.targets-tabs:after {
+  clear: both;
 }
 .targets-tabs li {
+  float: left;
   padding: .5rem 0;
   background-color: #e0dfe0;
 }
@@ -1569,7 +1578,7 @@ footer .vk {
   text-transform: uppercase;
 }
 .modal-content__rekvisit {
-  padding: 4rem 4rem;
+  padding: 3rem 4rem 2rem;
 }
 .modal-dialog__rekvisit {
   width: 80rem;
