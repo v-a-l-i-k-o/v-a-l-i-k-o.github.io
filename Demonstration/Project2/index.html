@@ -66,21 +66,13 @@
                 <div class="sb-form-group">
                   <input type="text" class="sb-form-control" id="sb-phone" placeholder="">
                 </div>
-                <button type="submit" class="sb-form-btn sb-form-btn-wait">Жду звонка!</button>
+                <button type="submit" class="sb-form-btn sb-form-btn-wait" id="cd_start">Жду звонка!</button>
                 <div class="sb-countdown" id="sb-countdown">
                   <div class="sb-countdown_body">
-                    <div class="sb-digit sb-digit_mins">
-                      <span class="sb-digit_item">0</span>
-                      <span class="sb-digit_item">0</span>:
-                    </div>
-                    <div class="sb-digit sb-digit_secs">
-                      <span class="sb-digit_item">1</span>
-                      <span class="sb-digit_item">2</span>:
-                    </div>
-                    <div class="sb-digit sb-digit_ms">
-                      <span class="sb-digit_item">0</span>
-                      <span class="sb-digit_item">0</span>
-                    </div>
+                    <span class="sb-digit_item" id="cd_m">00</span>:
+                    <span class="sb-digit_item" id="cd_s">12</span>:
+                    <span class="sb-digit_item" id="cd_ms">00</span>
+                    <input type="text" value="12" id="cd_seconds" hidden/>
                   </div>
                 </div>
                 <a href="#" class="sb-chose-time">Выбрать удобное время звонка</a>

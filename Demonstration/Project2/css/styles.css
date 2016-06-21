@@ -379,14 +379,21 @@ html, body {
 .sb-countdown_body:before, .sb-countdown_body:after {
   display: none; }
 
-.sb-digit {
+.sb-countdown {
   font-size: 40px;
   font-weight: 300;
   line-height: 31px;
-  letter-spacing: -4px;
+  letter-spacing: -2px;
   display: inline-block; }
-  .sb-digit:before, .sb-digit:after {
+  .sb-countdown:before, .sb-countdown:after {
     display: none; }
+
+.sb-digit_item {
+  height: 31px;
+  width: 38px;
+  margin-left: -7px;
+  line-height: 31px;
+  display: inline-block; }
 
 .sb-chose-time {
   color: #6d6e71;
