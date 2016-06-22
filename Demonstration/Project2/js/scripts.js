@@ -60,7 +60,7 @@ $('.sb-panel').on('click', function(event){
 		$(event.target).is('.sb-panel-close') ||
 		$(event.target).is('.sb-panel-hide') ) { 
 		$('.sb-panel').removeClass('is-visible');
-		$('.sb-chose-time').delay(500).slideDown();
+		$('.sb-chose-time').delay(500).slideDown().css('display', 'inline-block');;
 		$('.sb-countdown').delay(500).slideDown();
 		$('.sb-form-group__date').delay(500).slideUp(300);
 		setTimeout( function() { 

@@ -2375,7 +2375,8 @@ html, body {
 .sb-form-caption {
   display: none;
   font-size: 26px;
-  margin: 0 0 15px; }
+  margin: 0 0 15px;
+  text-align: left; }
   .sb-form-caption .small {
     display: block;
     font-size: 18px;
@@ -2384,14 +2385,19 @@ html, body {
 .sb-form-caption.in {
   display: block; }
 
-.sb-form__call .sb-form-caption {
-  font-size: 22px; }
+.sb-form__call {
+  text-align: center; }
+  .sb-form__call .sb-form-caption {
+    font-size: 22px; }
 
 .sb-countdown {
   height: 31px;
-  display: block;
+  width: 165px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 40px;
-  margin: 25px 0 38px 15px;
+  margin-top: 25px;
+  margin-bottom: 38px;
   background-repeat: no-repeat;
   background-position: 0   50%;
   background-size: contain;
@@ -2472,6 +2478,9 @@ html, body {
 /* PLUGIN intlTelInput */
 .intl-tel-input {
   width: 100%; }
+
+.iti-mobile .intl-tel-input {
+  width: auto; }
 
 .intl-tel-input .country-list {
   background-color: #fff;
