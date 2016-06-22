@@ -3,6 +3,33 @@ $(document).ready(function() {
   
 /* ===== INITIALIZATION OF THE PLUGINS: ===== */
 
+/* ----- intlTelInput.js ----- */
+
+$("#sb-phone").intlTelInput({
+  initialCountry: "auto",
+  geoIpLookup: function(callback) {
+    $.get('http://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+      var countryCode = (resp && resp.country) ? resp.country : "";
+      callback(countryCode);
+    });
+  },
+  utilsScript: "js/libs/utils.js" // just for formatting/placeholders etc
+});
+
+/* ----- bootstrap-datepicker.js ----- */
+
+$('#sb-date').datepicker({
+  format: "dd.mm.yyyy",
+  language: "ru",
+  orientation: "bottom left",
+  autoclose: true,
+  todayHighlight: true
+});
+
+/* ----- jquery.timepicker.js ----- */
+
+$('#sb-time').timepicker({ 'scrollDefault': 'now' });
+
 /* ===== CUSTOM CODE: ===== */
 
 /* ----- Add active class to li-element ----- */
@@ -49,8 +76,6 @@ $('.sb-chose-time').on('click', function(event) {
 	form.find('.sb-form-caption').toggleClass('in');
 	form.find('.sb-form-group__date').slideDown(300);
 });
-
-/* ----- countdown ----- */
 
 // -------------------------------------------------------------------------------------
 });
