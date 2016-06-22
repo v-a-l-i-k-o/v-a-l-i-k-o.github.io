@@ -2325,11 +2325,13 @@ html, body {
     width: 100%;
     color: #6d6e71;
     font-size: 14px;
+    border-radius: 6px;
     padding-left: 24px;
     padding-right: 24px;
-    border-radius: 10px;
     font-family: Calibri;
     background-color: rgba(119, 132, 131, 0.3); }
+    .sb-form .sb-form-control:focus {
+      outline-style: none; }
   .sb-form textarea {
     height: 105px;
     padding-top: 13px;
@@ -2351,12 +2353,29 @@ html, body {
     display: table; }
   .sb-form-group__date:after {
     clear: both; }
-  .sb-form-group__date .sb-form-control {
-    width: 48%; }
-  .sb-form-group__date .sb-form-control:first-child {
+  .sb-form-group__date .sb-form-control-wrapper:first-child {
     float: left; }
-  .sb-form-group__date .sb-form-control:last-child {
+  .sb-form-group__date .sb-form-control-wrapper:last-child {
     float: right; }
+
+.sb-form-control-wrapper {
+  width: 48%;
+  position: relative; }
+  .sb-form-control-wrapper:after, .sb-form-control-wrapper:before {
+    display: none; }
+  .sb-form-control-wrapper .sb-input-addon {
+    width: 16px;
+    height: 100%;
+    display: block;
+    top: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 0 6px 6px 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50%;
+    background-color: rgba(119, 131, 130, 0.4);
+    background-image: url("../img/icons/i-arrows.png"); }
 
 .sb-form-btn {
   color: #fff;
