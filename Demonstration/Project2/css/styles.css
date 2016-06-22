@@ -2318,7 +2318,9 @@ html, body {
   opacity: 1; }
 
 .sb-form {
-  padding: 0 43px 0 75px; }
+  padding: 0;
+  width: 218px;
+  margin-left: 75px; }
   .sb-form .sb-form-control {
     border: 0;
     margin: 0;
@@ -2562,9 +2564,19 @@ html, body {
     display: none; }
   .sb-panel-container {
     overflow-y: auto; }
-  /* PLUGIN intlTelInput */
-  /* PLUGIN timepicker */
-  /* PLUGIN bootstrap-datepicker3.standalone */ }
+  .sb-btn-major {
+    width: 60px;
+    height: 60px; }
+    .sb-btn-major:after {
+      border-left: 14px solid #27aae1;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent; }
+    .sb-btn-major img {
+      width: 30px;
+      height: 30px; }
+  .sb-callback {
+    bottom: 0;
+    right: 0; } }
 
 /* ----- MOBILE VERSION ----- */
 @media screen and (max-width: 380px) {
@@ -2574,3 +2586,7 @@ html, body {
     width: 100%; }
   .sb-form-btn-chat {
     width: 220px; } }
+
+@media screen and (max-width: 359px) {
+  .sb-form {
+    margin-left: 55px; } }
