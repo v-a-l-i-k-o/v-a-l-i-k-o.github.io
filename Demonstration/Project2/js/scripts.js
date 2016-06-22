@@ -28,7 +28,10 @@ $('#sb-date').datepicker({
 
 /* ----- jquery.timepicker.js ----- */
 
-$('#sb-time').timepicker({ 'scrollDefault': 'now' });
+$('#sb-time').timepicker({
+	'scrollDefault': 'now',
+	'timeFormat': 'H:i'
+});
 
 /* ===== CUSTOM CODE: ===== */
 
