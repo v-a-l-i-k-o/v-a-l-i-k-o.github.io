@@ -829,46 +829,74 @@ header {
 .offers_item-wrap {
   width: 30rem;
   height: 49rem;
-  cursor: pointer;
-  padding-top: 2rem;
   position: relative;
   border-radius: .5rem;
   display: inline-block;
   background-size: cover;
   background-position: 50% 50%;
-  background: url("../img/bg/offers-item-bg.png") no-repeat; }
+  background-repeat: no-repeat;
+  background-image: url("../img/bg/offers-item-bg.png"); }
+  .offers_item-wrap:after {
+    opacity: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: .5rem;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url("../img/bg/offers-item-bg__hover.png"); }
+  .offers_item-wrap:hover:after {
+    opacity: 1; }
 
 .offers_title {
+  z-index: 2;
   font-weight: 700;
   font-size: 2.4em;
+  padding-top: 2rem;
+  position: relative;
   margin-bottom: 1.3rem;
   text-transform: uppercase; }
 
 .offers_account {
+  z-index: 2;
   font-size: 1.4em;
   font-weight: 700;
   line-height: 1.2;
+  position: relative;
   margin-bottom: 1.3rem;
   text-transform: uppercase; }
 
 .offers_registration {
+  z-index: 2;
   font-size: 1.4em;
   font-weight: 700;
+  position: relative;
   margin-bottom: 1.6rem;
   display: inline-block;
   text-transform: uppercase; }
 
 .offers_money {
+  z-index: 2;
   font-size: 2.4em;
   font-weight: 700;
   padding: 1.3rem 0;
+  position: relative;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0.2); }
 
 .offers_for {
+  z-index: 2;
   text-align: left;
   list-style: none;
+  position: relative;
   padding-left: 7.5rem; }
   .offers_for li {
     color: white;
@@ -884,6 +912,7 @@ header {
       margin-top: .6rem; }
 
 .btn__order {
+  z-index: 2;
   width: 100%;
   padding: 1.1rem 0;
   bottom: 0;
