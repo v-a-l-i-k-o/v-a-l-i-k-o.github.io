@@ -1307,26 +1307,25 @@ header {
     vertical-align: middle; }
     .slick-dots li button {
       opacity: 1;
+      border: none;
       width: 1.1rem;
       height: 1.1rem;
-      position: relative;
       border-radius: 50%;
-      background-color: #4bcaff;
-      border: 0.4rem solid #4bcaff; }
+      background-color: #4bcaff; }
       .slick-dots li button:before {
         content: '';
-        width: .3rem;
-        height: .3rem;
+        width: 4px;
+        height: 4px;
         color: #404040;
+        margin-top: -2px;
+        margin-left: -2px;
         border-radius: 50%;
         position: absolute;
         text-align: center;
         top: 50%;
         left: 50%;
         display: inline-block;
-        background-color: #404040;
-        -webkit-transform: translate3d(-50%, -60%, 0);
-        transform: translate3d(-50%, -60%, 0); }
+        background-color: #404040; }
   .slick-dots li.slick-active button {
     opacity: 1;
     width: 1.7rem;
