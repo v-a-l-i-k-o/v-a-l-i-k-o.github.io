@@ -1296,8 +1296,8 @@ header {
         left: 50%;
         display: inline-block;
         background-color: #404040;
-        -webkit-transform: translate3d(-60%, -60%, 0);
-        transform: translate3d(-60%, -60%, 0); }
+        -webkit-transform: translate3d(-50%, -60%, 0);
+        transform: translate3d(-50%, -60%, 0); }
   .slick-dots li.slick-active button {
     opacity: 1;
     width: 1.7rem;
