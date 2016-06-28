@@ -1332,6 +1332,8 @@ header {
   border-radius: 5px;
   background-color: #fff;
   border: 0.1rem solid white;
+  background-repeat: repeat;
+  background-image: url("../img/pic/dot.png");
   box-shadow: 0 0 7rem rgba(36, 91, 114, 0.11); }
   .modal__thanks .modal-body {
     width: 100%;
