@@ -962,14 +962,38 @@ header {
   padding: 0 1rem;
   margin-bottom: 8.5rem; }
 
+.services-item-wrap.expanded {
+  width: 100%; }
+
 .services-item {
-  padding-top: 2rem;
-  min-height: 30rem;
   border-radius: 5px;
   position: relative;
-  text-align: center;
   background-color: #f9f9f9;
   border: 1px solid #e9e9e9; }
+
+.services-item_card {
+  min-height: 30rem;
+  padding-top: 2rem;
+  text-align: center;
+  position: relative; }
+
+.expanded .services-item_card {
+  float: left;
+  width: 33.3%; }
+
+.services-item-txt {
+  width: 63%;
+  float: right;
+  display: none;
+  padding: 4rem 1rem 2rem 0; }
+  .services-item-txt p {
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: #404040; }
+
+.expanded .services-item-txt {
+  display: block; }
 
 .services_brand {
   left: 50%;
@@ -1030,9 +1054,9 @@ header {
   line-height: 1.2;
   font-size: 2.4em;
   font-weight: 700;
-  padding: 1.4rem 0;
   min-height: 8.5rem;
   margin-bottom: 2rem;
+  padding: 1.4rem 3rem;
   background-color: #3cb3e4;
   text-transform: uppercase; }
 
@@ -1311,27 +1335,16 @@ header {
       width: 1.1rem;
       height: 1.1rem;
       border-radius: 50%;
-      background-color: #4bcaff; }
-      .slick-dots li button:before {
-        content: '';
-        width: 4px;
-        height: 4px;
-        color: #404040;
-        margin-top: -2px;
-        margin-left: -2px;
-        border-radius: 50%;
-        position: absolute;
-        text-align: center;
-        top: 50%;
-        left: 50%;
-        display: inline-block;
-        background-color: #404040; }
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-color: transparent;
+      background-image: url("../img/pic/slick-dot.png"); }
   .slick-dots li.slick-active button {
     opacity: 1;
     width: 1.7rem;
-    height: 1.7rem; }
-    .slick-dots li.slick-active button:before {
-      display: none; }
+    height: 1.7rem;
+    background-image: none;
+    background-color: #4bcaff; }
 
 /* SLICK-SLIDER slider__reviews */
 .reviews {
@@ -1436,5 +1449,24 @@ footer {
 
 /* ===== MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
 /* ----- DESKTOP VERSION ----- */
+@media screen and (max-width: 1499px) {
+  /* SLICK-SLIDER slider__order */
+  .slick-prev {
+    margin-left: -61rem; }
+  .slick-next {
+    margin-left: 61rem; } }
+
+@media screen and (max-width: 1293px) {
+  html {
+    font-size: 50%; }
+  /* ----- SECTION best-offers ----- */
+  .offers_for li {
+    background-size: contain; }
+  /* SLICK-SLIDER slider__order */
+  .slick-prev {
+    margin-left: -60.5rem; }
+  .slick-next {
+    margin-left: 60.5rem; } }
+
 /* ----- TABLET VERSION ----- */
 /* ----- MOBILE VERSION ----- */
