@@ -59,11 +59,13 @@ $('body').on('click', '.btn__order', function(event) {
 
 /* ----- navigate toTop ----- */
 
-$('.menu, .slicknav_menu').on('click', 'a[href^="#"], a[href^="."]', function(e) {          // если в href начинается с # или ., то ловим клик
+$('.menu, .slicknav_menu').on('click', 'a[href^="#"], a[href^="."]', function(e) {
   e.PreventDefault;
-  var scroll_el = $(this).attr('href');                                     // возьмем содержимое атрибута href
-  if ($(scroll_el).length != 0) {                                           // проверим существование элемента чтобы избежать ошибки
-    $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); // анимируем скроолинг к элементу scroll_el
+  var scroll_el = $(this).attr('href');                                     
+  if ($(window).width() < 800) {                                           
+    $('html, body').animate({ scrollTop: $(scroll_el).offset().top - 45}, 500);
+	} else {
+    $('html, body').animate({ scrollTop: $(scroll_el).offset().top + 2}, 500);
 	};
 });
 

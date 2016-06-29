@@ -1646,8 +1646,10 @@ footer {
     font-size: 2em; }
   /* ===== HEADER ===== */
   header {
+    z-index: 3;
     position: fixed;
-    padding: .3rem 0; }
+    padding: .3rem 0;
+    background-color: rgba(0, 0, 0, 0.6); }
   .navbar-brand {
     top: 0;
     width: 10rem; }
