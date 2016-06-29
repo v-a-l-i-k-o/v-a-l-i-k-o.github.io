@@ -2092,6 +2092,11 @@ footer {
     .modal__leave-request .form__send-request {
       width: 100%; } }
 
+@media screen and (max-width: 480px) {
+  /* ----- SECTION order -----*/
+  .form__order {
+    width: 100%; } }
+
 @media screen and (max-width: 359px) {
   /* ----- SECTION best-offers ----- */
   .offers_item {

@@ -59,7 +59,7 @@ $('body').on('click', '.btn__order', function(event) {
 
 /* ----- navigate toTop ----- */
 
-$('.menu').on('click', 'a[href^="#"], a[href^="."]', function(e) {          // если в href начинается с # или ., то ловим клик
+$('.menu, .slicknav_menu').on('click', 'a[href^="#"], a[href^="."]', function(e) {          // если в href начинается с # или ., то ловим клик
   e.PreventDefault;
   var scroll_el = $(this).attr('href');                                     // возьмем содержимое атрибута href
   if ($(scroll_el).length != 0) {                                           // проверим существование элемента чтобы избежать ошибки
