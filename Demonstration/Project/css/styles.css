@@ -1493,7 +1493,7 @@ footer {
     width: 100%;
     padding: 0 1rem; }
   .title__h2 {
-    font-size: 2em;
+    font-size: 2.4em;
     margin-bottom: 3rem; }
   button.btn {
     border: none;
@@ -1553,19 +1553,23 @@ footer {
     margin: 0;
     text-align: center; }
   .offers_item {
-    width: 32rem;
+    width: 28rem;
+    vertical-align: top;
     display: inline-block; }
     .offers_item + .offers_item {
-      margin-top: 1.5rem; }
+      margin-top: 0;
+      margin-bottom: 1.5rem; }
   .offers_item-wrap {
     width: 100%;
-    height: 45rem; }
+    height: 42rem; }
   .offers_title {
-    font-size: 2em; }
+    font-size: 2em;
+    padding-top: 1rem; }
   .offers_account {
     font-size: 1.2em; }
   .offers_registration {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    margin-bottom: .8rem; }
   .offers_money {
     font-size: 2em;
     padding: 1rem 0; }
@@ -1584,7 +1588,8 @@ footer {
     width: 25rem;
     display: inline-block; }
     .advantages_item + .advantages_item {
-      margin-top: 2rem; }
+      margin-top: 0;
+      margin-bottom: 2rem; }
   .advantages_brand {
     margin: 0 auto 1.5rem; }
   .advantages_txt {
@@ -1593,11 +1598,13 @@ footer {
   .services {
     padding-top: 2rem; }
   .services-items {
-    width: 100%; }
+    width: 58rem;
+    margin: 0 auto; }
   .services-item-wrap {
     float: none;
-    width: 32rem;
-    margin: 0 auto 7rem; }
+    width: 28.8rem;
+    margin: 0 auto 7rem;
+    display: inline-block; }
   .services_title {
     font-size: 2.2em;
     min-height: 8rem; }
@@ -1611,7 +1618,8 @@ footer {
   .title__white {
     margin-bottom: 2rem; }
   .form__order {
-    margin: 0; }
+    width: 46rem;
+    margin: 0 auto; }
     .form__order .form-item {
       float: none;
       width: 100%;
@@ -1671,28 +1679,28 @@ footer {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
     .slider__order .slide {
-      height: 35rem;
+      height: 40rem;
       background-size: cover; }
   .slide_info {
-    width: 60%;
     float: none;
+    width: 36rem;
     margin: 0 auto; }
   .slide_title {
     display: block;
-    font-size: 1.2em;
+    font-size: 1.4em;
     text-align: center;
     padding: .5rem 2rem;
     text-transform: uppercase; }
   .slide_form {
     float: none;
-    width: 25.5rem;
+    width: 36rem;
     margin: 1rem auto 0;
-    padding: 1.5rem 2rem; }
+    padding: 3rem 2rem; }
   .form__send-request .form-control {
     height: 3.5rem;
     font-size: 1.4em; }
   .form__send-request .form-group + .form-group {
-    margin-top: 1rem; }
+    margin-top: 1.5rem; }
   .btn__send-request {
     width: 100%;
     font-size: 1.6em;
@@ -1701,7 +1709,7 @@ footer {
     display: none; }
   /* SLICK-SLIDER slider__reviews */
   .slider__reviews {
-    width: 34rem; }
+    width: 40rem; }
   .reviews {
     position: relative; }
     .reviews .slick-dots {
@@ -1712,6 +1720,9 @@ footer {
       .reviews .slick-dots li.slick-active button {
         width: 4rem;
         height: .6rem; }
+  .reviews_avatar {
+    width: 13rem;
+    height: 13rem; }
   /* MODALS */
   /* ----- modal__thanks ----- */
   .modal__thanks {
@@ -1739,7 +1750,7 @@ footer {
     .modal__leave-request .form__send-request {
       width: 100%; } }
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 599px) {
   html {
     font-size: 62.5%; }
   /* ===== CORE ===== */
@@ -1763,39 +1774,6 @@ footer {
       background-color: #7dd8ff; }
   a.btn {
     font-size: 2em; }
-  /* ===== HEADER ===== */
-  header {
-    position: fixed;
-    padding: .3rem 0; }
-  .navbar-brand {
-    top: 0;
-    width: 10rem; }
-    .navbar-brand .logo {
-      font-size: 1.6em;
-      line-height: 2rem; }
-  .navbar-nav {
-    display: none; }
-    .navbar-nav li {
-      display: inline-block;
-      -webkit-transition: all 150ms ease;
-      transition: all 150ms ease;
-      border-top: .8rem solid transparent; }
-      .navbar-nav li:hover {
-        border-top: .8rem solid #4bcaff;
-        background-color: rgba(0, 0, 0, 0.3); }
-    .navbar-nav a {
-      color: white;
-      display: block;
-      font-size: 1.4em;
-      font-weight: 700;
-      text-transform: uppercase;
-      -webkit-transition: color 150ms ease;
-      transition: color 150ms ease;
-      padding: 3.5rem 1.6rem 4.5rem; }
-      .navbar-nav a:hover {
-        color: #4bcaff; }
-  .navbar-phone {
-    display: none; }
   /* ===== CONTENT ===== */
   /* ----- SECTION slider-board ----- */
   .slider-board {
@@ -1810,16 +1788,19 @@ footer {
     width: 32rem;
     display: inline-block; }
     .offers_item + .offers_item {
+      margin-bottom: 0;
       margin-top: 1.5rem; }
   .offers_item-wrap {
     width: 100%;
     height: 45rem; }
   .offers_title {
-    font-size: 2em; }
+    font-size: 2em;
+    padding-top: 2rem; }
   .offers_account {
     font-size: 1.2em; }
   .offers_registration {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    margin-bottom: 1.6rem; }
   .offers_money {
     font-size: 2em;
     padding: 1rem 0; }
@@ -1838,7 +1819,8 @@ footer {
     width: 25rem;
     display: inline-block; }
     .advantages_item + .advantages_item {
-      margin-top: 2rem; }
+      margin-top: 2rem;
+      margin-bottom: 0; }
   .advantages_brand {
     margin: 0 auto 1.5rem; }
   .advantages_txt {
@@ -1851,6 +1833,7 @@ footer {
   .services-item-wrap {
     float: none;
     width: 32rem;
+    display: block;
     margin: 0 auto 7rem; }
   .services_title {
     font-size: 2.2em;
@@ -1864,19 +1847,17 @@ footer {
     padding-bottom: 3rem; }
   .title__white {
     margin-bottom: 2rem; }
-  .form__order {
-    margin: 0; }
-    .form__order .form-item {
-      float: none;
-      width: 100%;
-      padding: 1rem; }
-    .form__order label {
-      font-size: 2em; }
-    .form__order .form-control {
-      height: 3.5rem;
-      font-size: 1.6em; }
-    .form__order textarea.form-control {
-      height: 12rem; }
+  .form__order .form-item {
+    float: none;
+    width: 100%;
+    padding: 1rem; }
+  .form__order label {
+    font-size: 2em; }
+  .form__order .form-control {
+    height: 3.5rem;
+    font-size: 1.6em; }
+  .form__order textarea.form-control {
+    height: 12rem; }
   .btn__order-submit {
     width: 25rem;
     height: 5rem;
@@ -1928,7 +1909,7 @@ footer {
       height: 35rem;
       background-size: cover; }
   .slide_info {
-    width: 60%;
+    width: 25.5rem;
     float: none;
     margin: 0 auto; }
   .slide_title {
