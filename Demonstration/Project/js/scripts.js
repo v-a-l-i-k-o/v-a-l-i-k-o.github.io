@@ -48,7 +48,15 @@ $('.menu').slicknav({
 });
 
 /* ===== CUSTOM CODE: ===== */
-  
+
+/* ----- write company name ----- */
+
+$('body').on('click', '.btn__order', function(event) {
+	event.preventDefault();
+	var title = $(this).closest('.offers_item').find('.offers_title').text();
+	$('.modal__leave-request').find('.insert').text(title);
+});
+
 /* ----- navigate toTop ----- */
 
 $('.menu').on('click', 'a[href^="#"], a[href^="."]', function(e) {          // если в href начинается с # или ., то ловим клик

@@ -1594,12 +1594,12 @@ footer {
   .slick-prev {
     margin-left: -65rem; }
   .slick-next {
-    margin-left: 65rem; } }
-
-@media screen and (max-width: 1100px) {
+    margin-left: 65rem; }
   /* ----- SECTION best-offers ----- */
   .offers_for li {
-    background-size: contain; }
+    background-size: contain; } }
+
+@media screen and (max-width: 1100px) {
   /* SLICK-SLIDER slider__order */
   .slick-prev {
     margin-left: -60.5rem; }
