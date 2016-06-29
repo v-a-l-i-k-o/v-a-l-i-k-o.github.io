@@ -76,14 +76,17 @@ $('body').on('click', '.btn__learn-more', function(event) {
 	var parent = $(this).closest('.services-items');
 	var item = $(this).closest('.services-item-wrap');
 
-	parent.find('.services-item-wrap').each(function(index, el) {
-		$(el).removeClass('expanded');
-	});
-	if (item.index() != 0 && item.index() < 3) {
-		$(parent.find('.services-item-wrap')[0]).before(item);	
-	} else if (item.index() != 3 && item.index() > 2) {
-		$(parent.find('.services-item-wrap')[2]).after(item);
-	}
+	if ($(window).width() > 599) {
+		parent.find('.services-item-wrap').each(function(index, el) {
+			$(el).removeClass('expanded');
+		});
+		
+		if (item.index() != 0 && item.index() < 3) {
+			$(parent.find('.services-item-wrap')[0]).before(item);	
+		} else if (item.index() != 3 && item.index() > 2) {
+			$(parent.find('.services-item-wrap')[2]).after(item);
+		}
+	};
 	item.addClass('expanded');
 });
 
