@@ -1590,6 +1590,13 @@ footer {
 @media screen and (max-width: 1293px) {
   html {
     font-size: 50%; }
+  /* SLICK-SLIDER slider__order */
+  .slick-prev {
+    margin-left: -65rem; }
+  .slick-next {
+    margin-left: 65rem; } }
+
+@media screen and (max-width: 1100px) {
   /* ----- SECTION best-offers ----- */
   .offers_for li {
     background-size: contain; }
