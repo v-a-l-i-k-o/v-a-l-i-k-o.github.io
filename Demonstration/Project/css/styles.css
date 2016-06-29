@@ -1126,9 +1126,6 @@ header {
     line-height: 2.4rem;
     color: #404040; }
 
-.expanded .services-item-txt {
-  display: block; }
-
 .services_brand {
   left: 50%;
   position: absolute;

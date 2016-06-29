@@ -68,6 +68,7 @@ $('body').on('click', '.btn__learn-more', function(event) {
 	if ($(window).width() > 599) {
 		parent.find('.services-item-wrap').each(function(index, el) {
 			$(el).removeClass('expanded');
+      $(el).find('.services-item-txt').hide();
 		});
 
 		if (item.index() != 0 && item.index() < 3) {
@@ -77,6 +78,7 @@ $('body').on('click', '.btn__learn-more', function(event) {
 		}
 	};
 	item.addClass('expanded');
+  item.find('.services-item-txt').show(400);
 });
 
 /* ----- sending form ----- */
@@ -110,7 +112,17 @@ $("#ajaxform, #ajaxform1, #ajaxform2, #ajaxform3, #ajaxform4").submit(function()
                 if (data['error']) { // eсли oбрaбoтчик вeрнул oшибку
                     alert(data['error']); // пoкaжeм eё тeкст
                 } else { // eсли всe прoшлo oк
-                    alert('Ваше сообщение oтпрaвлeнo!'); // пишeм чтo всe oк
+                    
+                  /* ----- bpopup ----- */
+                  if (form.attr('id') == 'ajaxform' || form.attr('id') == 'ajaxform1' || form.attr('id') == 'ajaxform2' || form.attr('id') == 'ajaxform3') {
+  									$('.modal__thanks').bPopup({
+  									  speed: 450,
+  									  opacity: .85,
+  									  modalClose: false,
+  									  modalColor: '#fff',
+  									  transition: 'slideDown'
+  									});
+  								};
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
@@ -119,21 +131,10 @@ $("#ajaxform, #ajaxform1, #ajaxform2, #ajaxform3, #ajaxform4").submit(function()
             },
             complete: function(data) { // сoбытиe пoслe любoгo исхoдa
                 form.find('input').val(''); // стираем поля
+                form.find('textarea').val(''); // стираем поля
                 form.find('button[type="submit"]').prop('disabled', false); // в любoм случae включим кнoпку oбрaтнo
             }              
         });
-
-				/* ----- bpopup ----- */
-
-    		$('body').on('click', '.btn__send-request, .btn__order-submit', function(event) {
-    			$('.modal__thanks').bPopup({
-    			  speed: 450,
-    			  opacity: .85,
-    			  modalClose: false,
-    			  modalColor: '#fff',
-    			  transition: 'slideDown'
-    			});
-    		});
     }
     return false; // отключаем стандартное действие елемента
 });
