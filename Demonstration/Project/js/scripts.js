@@ -40,6 +40,13 @@ $('body').on('click', '.btn__order', function(event) {
 	});
 });
 
+/* ----- slicknav ----- */
+
+$('.menu').slicknav({
+	'label' : '',
+	'closeOnClick': true
+});
+
 /* ===== CUSTOM CODE: ===== */
   
 /* ----- navigate toTop ----- */

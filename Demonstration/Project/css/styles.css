@@ -707,6 +707,128 @@ th {
 .slick-dots li.slick-active button {
   opacity: .6; }
 
+/* ===== MOBILE MENU ===== */
+.slicknav_menu {
+  *zoom: 1;
+  z-index: 5;
+  width: 100%;
+  font-size: 16px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: transparent;
+  box-sizing: border-box; }
+  .slicknav_menu * {
+    box-sizing: border-box; }
+  .slicknav_menu .slicknav_menutxt {
+    float: left;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    margin-right: .5em;
+    line-height: 1.188em;
+    text-shadow: 0 1px 3px #000; }
+  .slicknav_menu .slicknav_icon {
+    margin: .2em 0; }
+  .slicknav_menu .slicknav_no-text {
+    margin: 0; }
+  .slicknav_menu .slicknav_icon-bar {
+    display: block;
+    width: 1.125em;
+    height: .125em;
+    background-color: #fff;
+    border-radius: 1px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+  .slicknav_menu:before {
+    display: table;
+    content: " "; }
+  .slicknav_menu:after {
+    display: table;
+    content: " ";
+    clear: both; }
+
+.slicknav_btn {
+  float: right;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin: 5px 5px 6px;
+  padding: .43em .62em;
+  line-height: 1.125em;
+  text-decoration: none;
+  vertical-align: middle;
+  border-radius: 4px;
+  background-color: #4bcaff;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); }
+  .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+    margin-top: 0.188em; }
+
+.slicknav_nav {
+  top: .9rem;
+  margin: 0;
+  clear: both;
+  color: #fff;
+  width: 100%;
+  padding: .5rem 0;
+  list-style: none;
+  overflow: hidden;
+  font-size: .875em;
+  position: relative;
+  background-color: #4bcaff; }
+  .slicknav_nav ul {
+    padding: 0;
+    border: none;
+    display: block;
+    overflow: hidden;
+    margin-left: 1em;
+    border-radius: 0;
+    font-size: inherit;
+    line-height: normal; }
+  .slicknav_nav li {
+    display: block;
+    background-image: none; }
+  .slicknav_nav .slicknav_arrow {
+    margin-left: .4em;
+    font-size: .8em; }
+  .slicknav_nav .slicknav_item {
+    cursor: pointer; }
+  .slicknav_nav .slicknav_item a {
+    margin: 0;
+    padding: 0;
+    display: inline; }
+  .slicknav_nav .slicknav_row {
+    display: block;
+    margin: 2px 5px;
+    padding: 5px 10px; }
+    .slicknav_nav .slicknav_row:hover {
+      color: #fff;
+      border-radius: 6px; }
+  .slicknav_nav a {
+    color: #fff;
+    display: block;
+    margin: 2px 5px;
+    padding: 5px 10px;
+    text-decoration: none; }
+    .slicknav_nav a:hover {
+      color: #222;
+      text-decoration: none;
+      background-color: #7dd8ff;
+      border-radius: 6px; }
+  .slicknav_nav .slicknav_parent-link a {
+    display: inline;
+    margin: 0;
+    padding: 0; }
+  .slicknav_nav .slicknav_txtnode {
+    margin-left: 15px; }
+
+.slicknav_brand {
+  color: #fff;
+  float: left;
+  height: 44px;
+  font-size: 18px;
+  padding: 7px 12px;
+  line-height: 30px; }
+
 /*
   Для генерации всего спрайта запустить в корне
   @include sprites($spritesheet-sprites);
@@ -759,6 +881,9 @@ header {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.2); }
 
+.navbar {
+  position: relative; }
+
 .navbar-brand {
   float: left;
   top: 2.5rem;
@@ -770,6 +895,9 @@ header {
     font-weight: 700;
     line-height: 3rem;
     text-transform: uppercase; }
+
+.slicknav_menu {
+  display: none; }
 
 .navbar-nav {
   display: inline-block; }
@@ -1519,27 +1647,10 @@ footer {
     .navbar-brand .logo {
       font-size: 1.6em;
       line-height: 2rem; }
-  .navbar-nav {
+  .js .menu {
     display: none; }
-    .navbar-nav li {
-      display: inline-block;
-      -webkit-transition: all 150ms ease;
-      transition: all 150ms ease;
-      border-top: .8rem solid transparent; }
-      .navbar-nav li:hover {
-        border-top: .8rem solid #4bcaff;
-        background-color: rgba(0, 0, 0, 0.3); }
-    .navbar-nav a {
-      color: white;
-      display: block;
-      font-size: 1.4em;
-      font-weight: 700;
-      text-transform: uppercase;
-      -webkit-transition: color 150ms ease;
-      transition: color 150ms ease;
-      padding: 3.5rem 1.6rem 4.5rem; }
-      .navbar-nav a:hover {
-        color: #4bcaff; }
+  .js .slicknav_menu {
+    display: inline-block; }
   .navbar-phone {
     display: none; }
   /* ===== CONTENT ===== */
