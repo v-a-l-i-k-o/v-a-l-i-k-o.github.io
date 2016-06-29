@@ -13,7 +13,9 @@ $('.slider__order').slick({
 $('.slider__reviews').slick({
 	dots: true,
 	appendDots: '.reviews',
-	arrows: false
+	arrows: false,
+	autoplay: true,
+	speed: 1000
 });
 
 /* ----- bpopup ----- */
@@ -80,7 +82,7 @@ $('body').on('click', '.btn__learn-more', function(event) {
 		parent.find('.services-item-wrap').each(function(index, el) {
 			$(el).removeClass('expanded');
 		});
-		
+
 		if (item.index() != 0 && item.index() < 3) {
 			$(parent.find('.services-item-wrap')[0]).before(item);	
 		} else if (item.index() != 3 && item.index() > 2) {
