@@ -65,7 +65,7 @@ $('body').on('click', '.btn__learn-more', function(event) {
 	var parent = $(this).closest('.services-items');
 	var item = $(this).closest('.services-item-wrap');
 
-	if ($(window).width() > 599) {
+	if ($(window).width() > 799) {
 		parent.find('.services-item-wrap').each(function(index, el) {
 			$(el).removeClass('expanded');
       $(el).find('.services-item-txt').hide();

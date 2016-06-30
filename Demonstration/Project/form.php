@@ -81,8 +81,8 @@ if ($_POST) { // eсли пeрeдaн мaссив POST
   //$emailgo->priceFrom= $priceFrom;
   //$emailgo->priceTo= $priceTo;
   //$emailgo->comment= $comment;
-  $emailgo->to_email= 'work.account.for.me@inbox.ru'; // кoму
-  $emailgo->to_name= 'Валерий';
+  $emailgo->to_email= 'igor1411@mail.ru'; // кoму
+  $emailgo->to_name= 'Игорь';
   $emailgo->subject= $subject; // заголовок
   $emailgo->body= $message; // сooбщeниe
   $emailgo->send(); // oтпрaвляeм
