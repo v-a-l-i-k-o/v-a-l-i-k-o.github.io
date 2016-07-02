@@ -1,6 +1,7 @@
 <?php
 if ($_POST) { // eсли пeрeдaн мaссив POST
-  $name = htmlspecialchars($_POST['name']); 
+  $name = htmlspecialchars($_POST['name']);
+  $firmname = htmlspecialchars($_POST['firmname']); 
   $phone = htmlspecialchars($_POST['phone']);
   $account = htmlspecialchars($_POST['account']); 
   $activity = htmlspecialchars($_POST['activity']); 
@@ -15,6 +16,7 @@ if ($_POST) { // eсли пeрeдaн мaссив POST
               <body>
                   <p>Имя: '.$name.'</p>
                   <p>Телефон: '.$phone.'</p>
+                  <p>Название: '.$firmname.'</p>
                   <p>Расчетный счет: '.$account.'</p>                        
                   <p>Вид деятельности: '.$activity.'</p>                        
                   <p>Цена от: '.$priceFrom.'</p>                        
@@ -81,7 +83,7 @@ if ($_POST) { // eсли пeрeдaн мaссив POST
   //$emailgo->priceFrom= $priceFrom;
   //$emailgo->priceTo= $priceTo;
   //$emailgo->comment= $comment;
-  $emailgo->to_email= 'igor1411@mail.ru'; // кoму
+  $emailgo->to_email= '101gotovoka@mail.ru'; // кoму
   $emailgo->to_name= 'Игорь';
   $emailgo->subject= $subject; // заголовок
   $emailgo->body= $message; // сooбщeниe

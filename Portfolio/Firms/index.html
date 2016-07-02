@@ -337,11 +337,21 @@
       <div class="container">
         <h2 class="title title__h2 title__white">Заказать фирму по параметрам</h2>
         <div class="order-form">
-          <form action="" method="post" class="form__order cleafix" id="ajaxform3">
+          <form action="./form.php" method="post" class="form__order cleafix" id="ajaxform3">
+            <div class="form-item clearfix">
+              <div class="form-group">
+                <label for="nameInput">Ваше имя</label>
+                <input type="text" name="name" class="form-control" id="nameInput" placeholder="" value="">
+              </div>
+              <div class="form-group">
+                <label for="nameInput">Телефон</label>
+                <input type="text" name="phone" class="form-control" id="phoneInput" placeholder="" value="">
+              </div>
+            </div>
             <div class="form-item">
               <div class="form-group">
                 <label for="nameInput">Название</label>
-                <input type="text" name="name" class="form-control" id="nameInput" placeholder="" value="">
+                <input type="text" name="firmname" class="form-control" id="nameInput" placeholder="" value="">
               </div>
               <div class="form-group">
                 <label for="accountInput">Расчетный счет</label>
@@ -490,12 +500,12 @@
       <span class="button b-close"></span>
       <div class="modal-body">
         <p>Оставить заявку на компанию <span class="insert"></span></p>
-        <form id="ajaxform4" action="" method="post" class="form__send-request">
+        <form id="ajaxform4" action="./form.php" method="post" class="form__send-request">
           <div class="form-group">
-            <input type="text" class="form-control" id="" placeholder="Ваше имя">
+            <input type="text" name="name" class="form-control" id="" placeholder="Ваше имя">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" id="" placeholder="Ваш телефон">
+            <input type="text" name="phone" class="form-control" id="" placeholder="Ваш телефон">
           </div>
           <button type="submit" class="btn btn__send-request">Отправить заявку</button>
         </form>

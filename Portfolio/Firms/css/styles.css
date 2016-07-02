@@ -1213,8 +1213,8 @@ header {
 
 /* ----- SECTION order -----*/
 .order {
-  min-height: 60rem;
-  padding-top: 9.5rem;
+  min-height: 62rem;
+  padding-top: 6rem;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -1222,11 +1222,22 @@ header {
 
 .title__white {
   color: #fff;
-  margin-bottom: 5rem; }
+  margin-bottom: 4rem; }
 
 .form__order {
   margin: 0 -2.9rem;
   text-align: center; }
+  .form__order .form-item:first-child {
+    float: none;
+    width: 84rem;
+    display: block;
+    margin: 0 auto; }
+    .form__order .form-item:first-child .form-group {
+      width: 46%; }
+      .form__order .form-item:first-child .form-group:first-child {
+        float: left; }
+      .form__order .form-item:first-child .form-group:last-child {
+        float: right; }
   .form__order .form-item {
     float: left;
     width: 33.3%;
@@ -1761,6 +1772,11 @@ footer {
   .form__order {
     width: 46rem;
     margin: 0 auto; }
+    .form__order .form-item:first-child {
+      width: 100%;
+      padding: 1rem; }
+      .form__order .form-item:first-child .form-group {
+        width: 100%; }
     .form__order .form-item {
       float: none;
       width: 100%;

@@ -3,9 +3,11 @@ $(document).ready(function() {
   
 /* ===== INITIALIZATION OF THE PLUGINS: ===== */
 
+var bPopup;
+
 $('body').on('click', '.btn__order', function(event) {
 	event.preventDefault();
-	$('.modal__leave-request').bPopup({
+	bPopup = $('.modal__leave-request').bPopup({
 	  speed: 450,
 	  opacity: .85,
 	  modalClose: false,
@@ -91,7 +93,7 @@ $("#ajaxform, #ajaxform1, #ajaxform2, #ajaxform3, #ajaxform4").submit(function()
         	$(el).css({
         		outline: '2px solid red'
         	});;
-        	// Через полсекунды удаляем подсветку
+        	// Через 2 екунды удаляем подсветку
         	setTimeout(function(){
         	  $(el).removeAttr('style');
         	},2000);
@@ -114,15 +116,16 @@ $("#ajaxform, #ajaxform1, #ajaxform2, #ajaxform3, #ajaxform4").submit(function()
                 } else { // eсли всe прoшлo oк
                     
                   /* ----- bpopup ----- */
-                  if (form.attr('id') == 'ajaxform' || form.attr('id') == 'ajaxform1' || form.attr('id') == 'ajaxform2' || form.attr('id') == 'ajaxform3') {
-  									$('.modal__thanks').bPopup({
-  									  speed: 450,
-  									  opacity: .85,
-  									  modalClose: false,
-  									  modalColor: '#fff',
-  									  transition: 'slideDown'
-  									});
-  								};
+                  if ($('.modal__leave-request').css('display') == 'block')
+                    bPopup.close();
+
+				  $('.modal__thanks').bPopup({
+				    speed: 450,
+				    opacity: .85,
+				    modalClose: false,
+				    modalColor: '#fff',
+				    transition: 'slideDown'
+				  });
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
