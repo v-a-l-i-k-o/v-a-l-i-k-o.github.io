@@ -566,14 +566,19 @@ body {
   font-style: normal;
   font-weight: 300; }
 
+* {
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none; }
+
 html, body {
   font-weight: 400;
   font-family: 'HelveticaNeue'; }
 
 body {
   color: #fff;
-  min-height: 100vh;
-  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
   background-color: #000; }
 
 .container {
@@ -596,7 +601,16 @@ header {
     line-height: 7.8rem;
     text-transform: uppercase; }
 
-.menu li.active a {
+.shop-page .shop a {
+  font-weight: 700; }
+
+.about-page .about a {
+  font-weight: 700; }
+
+.tearms-page .tearms a {
+  font-weight: 700; }
+
+.contact-page .contact a {
   font-weight: 700; }
 
 /* ===== CONTENT ===== */
@@ -608,11 +622,15 @@ header {
   margin: 0 -4.2rem; }
 
 .products-items_item {
-  width: 85.4rem;
+  float: left;
+  *display: inline;
+  position: relative;
+  display: inline-block;
+  padding: 0 0%;
+  width: 33.33333%;
+  *width: 33.28125%;
   padding: 0 4.2rem;
-  vertical-align: top;
-  text-align: center;
-  display: inline-block; }
+  text-align: center; }
   .products-items_item img {
     width: 100%;
     margin-bottom: 5rem; }
@@ -679,17 +697,27 @@ header {
   padding-top: 37rem; }
 
 .catalog-item_pic {
-  width: 77rem;
-  vertical-align: top;
-  display: inline-block; }
+  float: left;
+  *display: inline;
+  position: relative;
+  display: inline-block;
+  padding: 0 0%;
+  width: 33.33333%;
+  *width: 33.28125%;
+  vertical-align: top; }
   .catalog-item_pic img {
     width: 100%; }
 
 .catalog-item_order {
-  width: 125rem;
+  float: left;
+  *display: inline;
+  position: relative;
+  display: inline-block;
+  padding: 0 0%;
+  width: 66.66667%;
+  *width: 66.61458%;
   padding-left: 29rem;
-  vertical-align: top;
-  display: inline-block; }
+  vertical-align: top; }
 
 .title__h4 {
   font-size: 2.5em;
@@ -739,6 +767,7 @@ header {
     border: none;
     display: block;
     font-size: 2.1em;
+    padding: .5rem 0;
     background-color: transparent; }
     .form__order .form-control::-webkit-input-placeholder {
       color: #fff;
@@ -752,6 +781,9 @@ header {
     .form__order .form-control:-ms-input-placeholder {
       color: #fff;
       font-size: inherit; }
+    .form__order .form-control:focus {
+      border: none;
+      outline: none; }
 
 .btn__submit {
   color: #000;
@@ -771,6 +803,9 @@ header {
 .catalog-item2 {
   display: none; }
 
+.catalog-item2 {
+  width: 95rem; }
+
 /* ===== FOOTER ===== */
 footer {
   left: 0;
@@ -788,5 +823,31 @@ footer {
 
 /* ===== MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
 /* ----- DESKTOP VERSION ----- */
+@media screen and (max-width: 1920px) {
+  .products {
+    padding-top: 20rem; }
+  .info {
+    padding-top: 20rem; }
+  .contact {
+    padding-top: 20rem; }
+  .about {
+    padding-top: 20rem; }
+  .catalog {
+    padding-top: 20rem; }
+  .catalog-item_order {
+    padding-left: 15rem; } }
+
+@media screen and (max-width: 1679px) {
+  html {
+    font-size: 52%; } }
+
+@media screen and (max-width: 1399px) {
+  html {
+    font-size: 45%; } }
+
 /* ----- TABLET VERSION ----- */
+@media screen and (max-width: 1240px) {
+  html {
+    font-size: 35%; } }
+
 /* ----- MOBILE VERSION ----- */

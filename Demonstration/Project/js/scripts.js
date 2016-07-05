@@ -12,14 +12,16 @@ $(document).ready(function() {
 /* ----- toggle steps ----- */
 
 $('body').on('click', '.btn__buy, .btn__submit', function (event) {
-    $(this).closest('.catalog-item').fadeOut(0);
-    if ($(this).hasClass('btn__buy')) {
-        $('.catalog-item2').fadeIn(600);
-    } else {
-        $('.catalog-item3').fadeIn(600);
-    }
-    return false;
-})
+	$(this).closest('.catalog-item').fadeOut(0);
+  if ($(this).hasClass('btn__buy')) {
+  	$('.catalog-item2').fadeIn(600);
+	} else {
+    $('.catalog-item3').fadeIn(600);
+  }
+  return false;
+});
+	
+	
 
 // -------------------------------------------------------------------------------------
 });
