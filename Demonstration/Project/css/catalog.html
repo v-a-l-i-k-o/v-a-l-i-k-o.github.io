@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>Catalog</title>
+    <link rel="shortcut icon" href="#">
+    <!-- <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    <script src="js/libs/modernizr-2.8.3.min.js"></script>
+  
+  </head>
+  <body class="catalog-page">
+    <header>
+        <div class="navbar">
+            <ul class="menu clearfix">
+                <li class="shop"><a href="./index.html">Shop</a></li>
+                <li class="tearms"><a href="./tearms.html">Tearms</a></li>
+                <li class="contact"><a href="./contact.html">Contact</a></li>
+                <li class="about"><a href="./about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="catalog">
+      <div class="container">
+        <div class="catalog-item clearfix">
+          <div class="catalog-item_pic">
+            <img src="img/pic/item2.png" alt="t-shirt">
+          </div>
+          <div class="catalog-item_order">
+            <div class="catalog-item catalog-item1">
+              <h4 class="title title__h4">Death always win</h4>
+              <span class="lable">T-Shirt</span>
+              <span class="price">₽3000.00</span>
+              <button class="btn btn__buy">Buy now</button>
+            </div>
+            <div class="catalog-item catalog-item2">
+              <p class="title-order">Вы <i>успешно</i> оформили заказ!</p>
+              <p class="action-txt">Для завершения покупки необходимо заполнить следующую форму, после чего
+                на оставленный email прийдет чек для оплаты вашего заказа на сумму <span class="price">₽3000.00</span>
+              </p>
+              <form action="" method="" class="form__order">
+                <div class="form-group">
+                  <label for="InputName">Name:</label>
+                  <input type="text" class="form-control" id="InputName" placeholder="Имя Фамилия">
+                </div>
+                <div class="form-group">
+                  <label for="InputAdress">Adress:</label>
+                  <input type="text" class="form-control" id="InputAdress" placeholder="Страна, Город, Дом, Квартира">
+                </div>
+                <div class="form-group">
+                  <label for="InputEmail1">Email:</label>
+                  <input type="email" class="form-control" id="InputEmail1" placeholder="На Email прийдет письмо для подтверждения покупки">
+                </div>
+                <button type="submit" class="btn btn__submit">Отправить</button>
+              </form>
+            </div>
+            <div class="catalog-item catalog-item3">
+              <p class="title-order">Благодарим Вас за покупку!</p>
+              <p class="action-txt">В течении 1-ого часа вам прийдет письмо на email для оплаты вашего заказа.</p>
+            </div>
+          </div>
+          <div class="catalog-item_sold hidden">
+            <p class="title-order">Sold out!</p>
+            <p class="action-txt">Данного товара нет в наличии.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">©2016 Death always win</p>
+        </div>
+    </footer>
+
+<!-- scripts -->
+    <script src="js/libs/jquery.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/plugins.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
+
