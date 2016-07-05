@@ -647,7 +647,7 @@ header {
 
 /* ----- SECTION info ----- */
 .info {
-  width: 140rem;
+  width: 128rem;
   padding-right: 2rem;
   padding-top: 36rem; }
 
@@ -834,6 +834,7 @@ footer {
   .products {
     padding-top: 20rem; }
   .info {
+    width: 96rem;
     padding-top: 20rem; }
   .contact {
     padding-top: 20rem; }
