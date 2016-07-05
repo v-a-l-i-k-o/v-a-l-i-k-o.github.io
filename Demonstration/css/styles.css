@@ -598,7 +598,7 @@ header {
     padding: 0  3.7rem; }
     .menu li a {
       color: #fff;
-      font-size: 3em;
+      font-size: 2.4em;
       font-weight: 400;
       line-height: 7.8rem;
       text-transform: uppercase; }
@@ -656,11 +656,11 @@ header {
   margin-bottom: 2.5rem; }
 
 .title__h2 {
-  font-size: 2.5em;
+  font-size: 2.3em;
   font-weight: 700; }
 
 .info-txt_describe {
-  font-size: 2.5em;
+  font-size: 2.1em;
   font-weight: 400; }
 
 /* ----- SECTION contact ----- */
@@ -668,7 +668,7 @@ header {
   padding-top: 36rem; }
 
 .contact-items_item {
-  font-size: 2.5em;
+  font-size: 2.1em;
   line-height: 1.2; }
   .contact-items_item + .contact-items_item {
     margin-top: 2rem; }
@@ -690,7 +690,7 @@ header {
 
 .about-txt_describe {
   line-height: 1.2;
-  font-size: 2.5em;
+  font-size: 2.1em;
   font-weight: 400;
   padding-right: 2rem; }
 
@@ -723,18 +723,18 @@ header {
   vertical-align: top; }
 
 .title__h4 {
-  font-size: 2.5em;
+  font-size: 2.1em;
   text-transform: uppercase; }
 
 .lable {
   line-height: 1;
-  font-size: 2.5em;
+  font-size: 2.1em;
   margin-bottom: 4rem;
   display: inline-block; }
 
 .price {
   display: block;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   margin-bottom: 1.5rem; }
 
 .btn__buy {
@@ -747,14 +747,14 @@ header {
 
 .title-order {
   font-weight: 700;
-  font-size: 2.5em; }
+  font-size: 2.1em; }
   .title-order i {
     font-style: normal;
     color: #b1ffb8; }
 
 .action-txt {
   font-weight: 400;
-  font-size: 2.5em; }
+  font-size: 2.1em; }
   .action-txt .price {
     display: inline-block; }
 
@@ -819,7 +819,7 @@ footer {
   position: absolute; }
 
 .copyright {
-  font-size: 2em;
+  font-size: 1.4em;
   font-weight: 300;
   display: inline-block;
   text-transform: uppercase; }
