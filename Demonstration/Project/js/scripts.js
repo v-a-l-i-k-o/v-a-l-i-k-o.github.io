@@ -3,13 +3,13 @@ $(document).ready(function() {
   
 /* ===== INITIALIZATION OF THE PLUGINS: ===== */
 
-/* ----- name of the plugin ----- */
+	/* ----- name of the plugin ----- */
 
 
 
 /* ===== CUSTOM CODE: ===== */
   
-/* ----- toggle steps ----- */
+	/* ----- toggle steps ----- */
 
 $('body').on('click', '.btn__buy, .btn__submit', function (event) {
 	$(this).closest('.catalog-item').fadeOut(0);
@@ -20,8 +20,19 @@ $('body').on('click', '.btn__buy, .btn__submit', function (event) {
   }
   return false;
 });
-	
-	
+
+	/* ----- redirect ----- */
+
+$('body').on('click', '.products-items_item a', function (event) {
+	var imgPath = $(this).find('img').attr('src');
+	var price = $(this).find('.price').text();
+	$('.products').fadeOut(0);
+	$('body').removeClass('shop-page');
+	$('.catalog').fadeIn(500).find('.catalog-item_pic img').attr('src', imgPath);
+	$('.catalog').find('.price').text(price);
+	return false;
+});
+
 
 // -------------------------------------------------------------------------------------
 });

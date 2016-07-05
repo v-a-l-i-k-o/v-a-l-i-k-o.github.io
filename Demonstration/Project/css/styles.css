@@ -591,15 +591,17 @@ header {
   width: 100%;
   position: absolute; }
 
-.menu li {
-  float: left;
-  padding: 0  3.7rem; }
-  .menu li a {
-    color: #fff;
-    font-size: 3em;
-    font-weight: 400;
-    line-height: 7.8rem;
-    text-transform: uppercase; }
+.menu {
+  display: inline-block; }
+  .menu li {
+    float: left;
+    padding: 0  3.7rem; }
+    .menu li a {
+      color: #fff;
+      font-size: 3em;
+      font-weight: 400;
+      line-height: 7.8rem;
+      text-transform: uppercase; }
 
 .shop-page .shop a {
   font-weight: 700; }
@@ -694,6 +696,7 @@ header {
 
 /* ----- SECTION catalog ----- */
 .catalog {
+  display: none;
   padding-top: 37rem; }
 
 .catalog-item_pic {
@@ -824,6 +827,10 @@ footer {
 /* ===== MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
 /* ----- DESKTOP VERSION ----- */
 @media screen and (max-width: 1920px) {
+  .menu {
+    padding-left: 1.7rem; }
+    .menu li {
+      padding: 0  2rem; }
   .products {
     padding-top: 20rem; }
   .info {
@@ -832,6 +839,8 @@ footer {
     padding-top: 20rem; }
   .about {
     padding-top: 20rem; }
+  .about-txt {
+    width: 92rem; }
   .catalog {
     padding-top: 20rem; }
   .catalog-item_order {
