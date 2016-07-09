@@ -27,13 +27,13 @@
             <a href="#" class="btn btn__callback">Обратный звонок</a>
           </div>
           <div class="navbar-nav">
-            <ul class="menu">
+            <ul class="menu nav">
               <li class="advantages"><a href="#advantages">Преимущества</a></li>
               <li class="ubs"><a href="#ubs">ИБП</a></li>
               <li class="order"><a href="#order">Заказать</a></li>
               <li class="digits"><a href="#digits">Цифры</a></li>
-              <li class="about"><a href="#about">О нас</a></li>
               <li class="problems"><a href="#problems">Проблемы</a></li>
+              <li class="about"><a href="#about">О нас</a></li>
               <li class="contacts"><a href="#contacts">Контакты</a></li>
             </ul>
           </div>
@@ -60,7 +60,7 @@
       </div>
     </section>
 
-    <section class="advantages-block">
+    <section class="advantages-block" id="advantages">
       <div class="container">
         <h2 class="title title__two">Преимущества</h2>
         <div class="advantages-items">
@@ -287,7 +287,9 @@
     <section class="about-block" id="about">
       <div class="about-video">
         <h2 class="title title__two">О нас</h2>
-        <div class="videoo"></div>
+        <div class="videoo">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6T71mOdZL_Y" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
       <div class="container">
         <div class="about-txt">
@@ -340,7 +342,7 @@
       </div>
     </section>
 
-    <section class="map"></section>
+    <section class="map" id="map"></section>
 
     <footer>
       <div class="container">
@@ -354,7 +356,7 @@
     
     <div class="modal modal__get-offer">
       <div class="modal-body modal-body__get-offer">
-        <a href="#" class="modal-close"></a>
+        <a href="#" class="modal-close b-close"></a>
         <h4 class="modal-title">Получить предложение</h4>
         <p class="modal-note">Оставьте заявку и наш менеджер перезвонит Вам в течении 15 минут</p>
         <form action="" method="post" class="modal-form__get-offer">
@@ -376,7 +378,7 @@
     
     <div class="modal modal__thanks">
       <div class="modal-body modal-body__thanks">
-        <a href="#" class="modal-close"></a>
+        <a href="#" class="modal-close b-close"></a>
         <h4 class="modal-title">Благодарим Вас за заказ</h4>
         <p class="modal-note">Наш менеджер перезвонит Вам,<br/>в течении 15 минут</p>
       </div>
@@ -384,6 +386,7 @@
 
 <!-- scripts -->
     <script src="js/libs/jquery.min.js"></script>
+    <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
     <!-- <script src="js/bootstrap.min.js"></script> -->
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
