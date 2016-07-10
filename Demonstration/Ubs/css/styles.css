@@ -4017,9 +4017,9 @@ footer {
     width: 6rem; }
   .navbar-contacts {
     float: none;
-    margin-left: -5rem;
-    text-align: center;
-    display: inline-block; }
+    display: block;
+    margin-right: 5rem;
+    text-align: center; }
   .navbar-contacts_tel {
     font-size: 2em; }
   .navbar-contacts_mail {
