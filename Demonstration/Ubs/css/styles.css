@@ -3170,11 +3170,14 @@ header {
 
 .navbar-contacts {
   top: 50%;
+  z-index: 2;
   float: right;
   text-align: right;
   position: relative;
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0); }
+  .navbar-contacts p {
+    font-size: 1.2em; }
 
 .navbar-contacts_tel {
   line-height: 1;
@@ -3201,8 +3204,8 @@ header {
 
 .navbar-nav {
   top: 50%;
+  display: block;
   position: relative;
-  display: inline-block;
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0); }
 
@@ -3343,7 +3346,25 @@ header {
   -webkit-transform: translateY(-35%);
   -ms-transform: translateY(-35%);
   transform: translateY(-35%);
+  -webkit-animation: blink 2s linear infinite;
+  animation: blink 2s linear infinite;
   background-image: url("../img/icons/flashlight.png"); }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /* ----- SECTION advantages-block ----- */
 .advantages-block {
@@ -3371,32 +3392,32 @@ header {
   opacity: 1; }
 
 .advantages-item1 {
-  -webkit-animation-delay: 100ms;
-  animation-delay: 100ms; }
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms; }
 
 .advantages-item2 {
-  -webkit-animation-delay: 400ms;
-  animation-delay: 400ms; }
+  -webkit-animation-delay: 800ms;
+  animation-delay: 800ms; }
 
 .advantages-item3 {
-  -webkit-animation-delay: 700ms;
-  animation-delay: 700ms; }
+  -webkit-animation-delay: 1100ms;
+  animation-delay: 1100ms; }
 
 .advantages-item4 {
-  -webkit-animation-delay: 1000ms;
-  animation-delay: 1000ms; }
+  -webkit-animation-delay: 1400ms;
+  animation-delay: 1400ms; }
 
 .advantages-item5 {
-  -webkit-animation-delay: 1300ms;
-  animation-delay: 1300ms; }
+  -webkit-animation-delay: 1700ms;
+  animation-delay: 1700ms; }
 
 .advantages-item6 {
-  -webkit-animation-delay: 1600ms;
-  animation-delay: 1600ms; }
+  -webkit-animation-delay: 2000ms;
+  animation-delay: 2000ms; }
 
 .advantages-item7 {
-  -webkit-animation-delay: 1900ms;
-  animation-delay: 1900ms; }
+  -webkit-animation-delay: 2300ms;
+  animation-delay: 2300ms; }
 
 .advantages-item_brand {
   margin-bottom: .5rem; }
