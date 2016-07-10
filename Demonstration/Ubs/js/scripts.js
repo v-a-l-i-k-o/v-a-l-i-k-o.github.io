@@ -21,6 +21,8 @@ $('body').scrollspy({
   })()
 });
 
+/* ----- switch animate using scrollspy ----- */
+
 $('.navbar-nav').on('activate.bs.scrollspy', function () {
 	var active = $(this).find('li.active a').attr('href');
 	var flag = true;
@@ -30,7 +32,18 @@ $('.navbar-nav').on('activate.bs.scrollspy', function () {
 			flag = false;
 		})
 	};
-})
+});
+
+/* ----- switch animate ----- */
+
+$(window).scroll(function () {
+	var flag = true;
+	if (flag) {
+		$('.advantages-item:even').addClass('animated bounceInDown');
+		$('.advantages-item:odd').addClass('animated bounceInUp');
+		flag = false;
+	};
+});
 
 /* ----- bpopup ----- */
 
