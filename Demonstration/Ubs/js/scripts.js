@@ -13,13 +13,13 @@ $('.menu').slicknav({
 
 /* ----- switch animate ----- */
 
-$(window).scroll(function () {
-	var flag = true;
-	if (flag) {
-		$('.advantages-item:even').addClass('animated bounceInDown');
-		$('.advantages-item:odd').addClass('animated bounceInUp');
-		flag = false;
+$(window).on('scroll', function () {
+	if ($('.advantages-item').hasClass('animated')) {
+		$(window).off('scroll');
+		return;
 	};
+	$('.advantages-item:even').addClass('animated bounceInDown');
+	$('.advantages-item:odd').addClass('animated bounceInUp');
 });
 
 /* ----- bpopup ----- */
