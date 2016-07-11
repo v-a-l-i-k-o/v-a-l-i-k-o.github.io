@@ -5,11 +5,13 @@ html {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
+  overflow-x: hidden;
   overflow-y: scroll;
   font-size: 62.5%;
   line-height: 1.4;
   cursor: default;
   color: #222;
+  width: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%; }
@@ -33,7 +35,8 @@ body {
   *zoom: 1;
   margin: 0;
   padding: 0;
-  width: 100%; }
+  width: 100%;
+  overflow-x: hidden; }
 
 body:before, body:after {
   content: '';
@@ -1777,9 +1780,11 @@ footer {
   .problems-figure__price {
     left: 0%; }
   .problems-figure_hand {
-    display: none; }
+    display: none;
+    width: 100%; }
   .problems-figure_calc {
-    display: none; }
+    display: none;
+    width: 100%; }
   .problems-figure__price-txt {
     right: 0%; }
   .problems-figure_claim {
