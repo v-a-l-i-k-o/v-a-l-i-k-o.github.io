@@ -1608,7 +1608,8 @@ footer {
     font-size: 62.5%; }
   /* ===== CORE ===== */
   .title__one {
-    font-size: 2.6em; }
+    font-size: 2.6em;
+    text-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.5); }
   .title__two {
     font-size: 2.6em; }
   .title__three {
@@ -1646,7 +1647,9 @@ footer {
   .offer-title {
     margin-bottom: 1rem; }
   .offer-title_small {
-    font-size: 2.4em; }
+    font-size: 2.4em;
+    text-shadow: none;
+    text-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.5); }
   .offer-board {
     padding-left: 0;
     text-align: center; }
@@ -1665,7 +1668,8 @@ footer {
       width: 40.3rem;
       height: 12.3rem; }
     .offer-board_get-item span {
-      font-size: 2em; }
+      font-size: 2em;
+      text-shadow: none; }
   .btn__get {
     width: 25rem;
     height: 5rem;
