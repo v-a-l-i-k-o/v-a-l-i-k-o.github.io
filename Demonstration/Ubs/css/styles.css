@@ -1005,28 +1005,28 @@ header {
   animation-delay: 500ms; }
 
 .advantages-item2 {
-  -webkit-animation-delay: 800ms;
-  animation-delay: 800ms; }
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms; }
 
 .advantages-item3 {
-  -webkit-animation-delay: 1100ms;
-  animation-delay: 1100ms; }
+  -webkit-animation-delay: 1300ms;
+  animation-delay: 1300ms; }
 
 .advantages-item4 {
-  -webkit-animation-delay: 1400ms;
-  animation-delay: 1400ms; }
-
-.advantages-item5 {
   -webkit-animation-delay: 1700ms;
   animation-delay: 1700ms; }
 
+.advantages-item5 {
+  -webkit-animation-delay: 2100ms;
+  animation-delay: 2100ms; }
+
 .advantages-item6 {
-  -webkit-animation-delay: 2000ms;
-  animation-delay: 2000ms; }
+  -webkit-animation-delay: 2500ms;
+  animation-delay: 2500ms; }
 
 .advantages-item7 {
-  -webkit-animation-delay: 2300ms;
-  animation-delay: 2300ms; }
+  -webkit-animation-delay: 2900ms;
+  animation-delay: 2900ms; }
 
 .advantages-item_brand {
   margin-bottom: .5rem; }
@@ -1244,7 +1244,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  min-height: 25.2rem;
+  min-height: 25rem;
   background-image: url("../img/bg/digits-block-bg.png"); }
 
 .digits-items {
@@ -1261,20 +1261,20 @@ header {
   opacity: 1; }
 
 .digits-figure-wrap1 {
-  -webkit-animation-delay: 400ms;
-  animation-delay: 400ms; }
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms; }
 
 .digits-figure-wrap2 {
-  -webkit-animation-delay: 800ms;
-  animation-delay: 800ms; }
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms; }
 
 .digits-figure-wrap3 {
-  -webkit-animation-delay: 1200ms;
-  animation-delay: 1200ms; }
+  -webkit-animation-delay: 1300ms;
+  animation-delay: 1300ms; }
 
 .digits-figure-wrap4 {
-  -webkit-animation-delay: 1600ms;
-  animation-delay: 1600ms; }
+  -webkit-animation-delay: 1700ms;
+  animation-delay: 1700ms; }
 
 .digits-figure {
   width: 22rem;
