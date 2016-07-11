@@ -13,9 +13,9 @@ $('.menu').slicknav({
 
 /* ----- switch animate ----- */
 
-$(window).on('scroll', function () {
+$(window).on('scroll', function handlerScroll() {
 	if ($('.advantages-item').hasClass('animated')) {
-		$(window).off('scroll');
+		$(window).off('scroll', handlerScroll);
 		return;
 	};
 	$('.advantages-item:even').addClass('animated bounceInDown');
