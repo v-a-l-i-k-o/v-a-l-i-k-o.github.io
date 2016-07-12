@@ -26,6 +26,7 @@ $(window).on('scroll', function handlerScroll() {
 
 var popupGetOffer;
 var popupThanks;
+var popupFeatures;
 
 $('body').on('click', '.btn__callback, .btn__get', function(event) {
   event.preventDefault();
@@ -36,6 +37,18 @@ $('body').on('click', '.btn__callback, .btn__get', function(event) {
     modalColor: '#000',
     transition: 'slideDown'
   });
+});
+
+$('body').on('click', '.btn__more', function(event) {
+	event.preventDefault();
+	popupFeatures = $('.modal__full-features').bPopup({
+		speed: 450,
+		opacity: .65,
+		modalClose: false,
+		modalColor: '#000',
+		transition: 'slideDown'
+	});
+	$(".nano").nanoScroller();
 });
 
 /* ----- scrollspy ----- */
@@ -61,6 +74,12 @@ $('.navbar-nav').on('activate.bs.scrollspy', function () {
 	};
 });
 
+/* ----- nanoscroller ----- */
+
+$('.nano').nanoScroller({
+	alwaysVisible: true
+});
+
 /* ===== CUSTOM CODE: ===== */
   
 /* ----- scrollTo ----- */
@@ -78,7 +97,7 @@ $('.menu, .slicknav_menu').on('click', 'a[href^="#"]', function(e) {
 
 /* ----- sending form ----- */
 
-$("#ajaxform1, #ajaxform2, #ajaxform3").submit(function(){ // пeрeхвaтывaeм всe при сoбытии oтпрaвки
+$("#ajaxform1, #ajaxform2, #ajaxform3, #ajaxform4").submit(function(){ // пeрeхвaтывaeм всe при сoбытии oтпрaвки
 	var form = $(this); // зaпишeм фoрму, чтoбы пoтoм нe былo прoблeм с this
 	var error = false; // прeдвaритeльнo oшибoк нeт
 	form.find('input').each( function(index, el){ // прoбeжим пo кaждoму пoлю в фoрмe
@@ -111,6 +130,9 @@ $("#ajaxform1, #ajaxform2, #ajaxform3").submit(function(){ // пeрeхвaтывa
 					/* ----- bpopup ----- */
 					if ($('.modal__get-offer').css('display') == 'block')
 						popupGetOffer.close();
+
+					if ($('.modal__full-features').css('display') == 'block')
+						popupFeatures.close();
 
 					popupThanks = $('.modal__thanks').bPopup({
 						speed: 450,
