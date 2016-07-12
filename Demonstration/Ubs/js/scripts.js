@@ -41,6 +41,13 @@ $('body').on('click', '.btn__callback, .btn__get', function(event) {
 
 $('body').on('click', '.btn__more', function(event) {
 	event.preventDefault();
+	var ubs = $(this).data('ubs');
+	var table = $('.modal__full-features').find('table');
+	table.addClass('hidden');
+	table.each(function (index, el) {
+		if ($(el).data('ubs') == ubs)
+			$(el).removeClass('hidden');
+	});
 	popupFeatures = $('.modal__full-features').bPopup({
 		speed: 450,
 		opacity: .65,
