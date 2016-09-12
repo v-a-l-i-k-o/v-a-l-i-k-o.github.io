@@ -789,7 +789,7 @@ body {
   top: -200%;
 }
 .finished .phone-Le2 {
-  top: 10rem;
+  top: 18rem;
 }
 .finished .title__1 {
   margin-top: 3rem;
@@ -955,7 +955,7 @@ body {
     left: 11.5rem;
   }
   .finished .phone-Le2 {
-    top: -5rem;
+    top: 3rem;
   }
   .finished .btn__order {
     opacity: 1;
@@ -975,7 +975,7 @@ body {
     top: -52rem;
   }
   .ring {
-    top: -52rem;
+    top: -57rem;
   }
   .content {
     padding-left: 10rem;
@@ -1016,7 +1016,7 @@ body {
   }
   .note {
     font-size: 2em;
-    bottom: 15rem;
+    bottom: 12rem;
     left: 11rem;
   }
   .btn__order {
@@ -1026,11 +1026,11 @@ body {
     width: 27rem;
   }
   .finished .total-price {
-    left: 11.5rem;
-  }
-  .finished .total-price {
     left: 10.5rem;
-    bottom: 19rem;
+    bottom: 15rem;
+  }
+  .finished .phone-Le2 {
+    top: 1rem;
   }
 }
 @media screen and (max-height: 500px) {

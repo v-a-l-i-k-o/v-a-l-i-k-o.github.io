@@ -1,41 +1,19 @@
-var animatron = {
-
-	el: {},
-
-	init: function($) {
-	  this.el.ring = $('.ring');
-	  this.el.rope = $('.rope');
-      this.bindUIEvents();
-      console.log(this.el);
-    },
-
-    bindUIEvents: function() {
-
-      this.el.ring.on("touchstart", this.start);
-
-      this.el.ring.on("touchmove", this.move);
-
-      this.el.ring.on("touchend", this.end);
-
-    },
-
-    start: function(event) {console.log(event);},
-    move: function(event) {console.log(event);},
-    end: function(event) {console.log(event);},
-}
-
 document.addEventListener("DOMContentLoaded", function(event) { 
 
-	// animatron.init(u);
-
-	var rope = document.getElementsByClassName('rope')[0],
-		phone = document.getElementsByClassName('phone-Le2')[0],
-		planet = document.getElementsByClassName('planet')[0],
-		topOffset = null,
-		steps = [100, 120, 70],
-		// steps = [130, 150, 120],
-		badges = [document.getElementsByClassName('price-dec__1')[0], document.getElementsByClassName('price-dec__2')[0]];
-		visibiles = [false, false];
+	var rope      = document.getElementsByClassName('rope')[0],
+		phone     = document.getElementsByClassName('phone-Le2')[0],
+		planet    = document.getElementsByClassName('planet')[0],
+		price     = {
+			el    : document.querySelector('.total-price span'),
+			value : document.querySelector('.total-price span').textContent
+		},
+		discount  = {
+			el    : document.querySelector('.price-dec span'),
+			max   : document.querySelector('.price-dec').getAttribute('data-max-discount')
+		},
+		topOffset    = null,
+		bottomOffset = document.body.clientHeight-50,
+		pathLenght   = dc = null;
 
 	// console.log(topOffset); return;
 
@@ -64,12 +42,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	  	if (topOffset === null) {
 	  		// topOffset = event.clientY0;
 	  		topOffset = target.getBoundingClientRect().top;
-	  		// var delta = event.clientY0 - (topOffset + target.clientHeight/2);
-	  		steps[0] = topOffset + steps[0];
-	  		steps[1] = steps[0] + steps[1];
-	  		steps[2] = steps[1] + steps[2];
+	  		pathLength = bottomOffset - topOffset;
+	  		dc = discount.max/pathLength;
 
 	  		document.getElementsByClassName('price-down')[0].classList.toggle('on', false);
+	  		document.getElementsByClassName('price-dec')[0].classList.toggle('off', false);
 	  	}
 
 	  	target.getBoundingClientRect();
@@ -85,12 +62,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         if (event.clientY >= topOffset) {
 
-        	// animate({
-        	//   el: [target, rope],
-        	//   translateY: y,
-        	//   easing: 'linear',
-        	//   duration: 0
-        	// });
         	target.style.webkitTransform =
         	target.style.transform =
         	rope.style.webkitTransform =
@@ -99,51 +70,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
         	target.setAttribute('data-y', y);
 
         	phone.style.webkitTransform =
-        	phone.style.transform = 'translateY(' + y*0.1 + 'px)';
-        	console.log(planet.style.height);
-        	planet.style.height = planet.clientHeight + event.dy*0.2 + 'px';
+        	phone.style.transform = 'translateY(' + (-y*0.12) + 'px)';
+        	// console.log(Math.floor(y*dc));
+        	planet.style.height = planet.clientHeight + event.dy*0.25 + 'px';
+        	discount.el.textContent = Math.floor(y*dc);
+        	price.el.textContent = price.value - Math.floor(y*dc);
 
         	if (direction == 'bottom' ) {
 
-        		if (event.clientY >= steps[2]) {
+        		if (event.clientY >= bottomOffset) {
+        			discount.el.textContent = discount.max;
+		        	price.el.textContent = price.value - discount.max;
         			document.getElementsByClassName('banner')[0].classList.toggle('finished', true);
         			return;
         		}
-
-	        	if (event.clientY >= steps[1] && !visibiles[1]) {
-	        		var offset = target.getBoundingClientRect().top + target.clientHeight/2;
-	        		badges[1].style.top = offset - badges[1].clientHeight/2 + 'px';
-	        		badges[0].classList.toggle('on', false);
-	        		badges[0].classList.toggle('off', true);
-	        		badges[1].classList.toggle('off', false);
-	        		badges[1].classList.toggle('on', true);
-	        		visibiles[1] = true; return;
-	        	}
-
-	        	if (event.clientY >= steps[0] && !visibiles[0]) {
-	        		var offset = target.getBoundingClientRect().top + target.clientHeight/2;
-	        		badges[0].style.top = offset - badges[0].clientHeight/2 + 'px';
-	        		badges[0].classList.toggle('off', false);
-	        		badges[0].classList.toggle('on', true);
-	        		visibiles[0] = true; return;
-	        	}
         	}
 
         	if (direction == 'top') {
 
-	        	if (event.clientY <= steps[0] && visibiles[0]) {
-	        		badges[0].classList.toggle('on', false);
-	        		badges[0].classList.toggle('off', true);
-	        		visibiles[0] = false; return;
-	        	}
-
-	        	if (event.clientY <= steps[1] && visibiles[1]) {
-	        		badges[1].classList.toggle('on', false);
-	        		badges[1].classList.toggle('off', true);
-	        		badges[0].classList.toggle('off', false);
-	        		badges[0].classList.toggle('on', true);
-	        		visibiles[1] = false; return;
-	        	}
+	        	
         	}
         }
 
