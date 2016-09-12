@@ -893,6 +893,7 @@ body {
 @media screen and (max-width: 550px) {
   html {
     font-size: 42%;
+    overflow-y: hidden;
   }
   .price-down {
     top: 50%;
