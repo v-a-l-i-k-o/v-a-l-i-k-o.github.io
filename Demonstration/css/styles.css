@@ -729,19 +729,15 @@ body {
 .price-dec {
   z-index: 3;
   opacity: 1;
-  left: 15.5rem;
   color: #1aa6e0;
   font-weight: 400;
   font-size: 4.8em;
   position: absolute;
+  display: inline-block;
+  bottom: 13rem;
+  right: 27rem;
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
-}
-.price-dec__1 {
-  top: 55%;
-}
-.price-dec__2 {
-  top: 72%;
 }
 .off {
   opacity: 0;
@@ -853,6 +849,42 @@ body {
   .price-down {
     top: 50%;
   }
+  .tail-bar {
+    width: 10rem;
+  }
+  .tail {
+    width: 7rem;
+  }
+  .rope {
+    top: -33rem;
+  }
+  .rope:before {
+    width: 1.2rem;
+    height: 200rem;
+    bottom: 74%;
+    left: 49%;
+  }
+  .ring {
+    top: -33rem;
+    width: 7rem;
+    height: 7rem;
+  }
+  .content {
+    padding-left: 12rem;
+  }
+  .price-down {
+    left: 12rem;
+  }
+  .note {
+    bottom: 15rem;
+    left: 12rem;
+  }
+  .btn__order {
+    left: 12rem;
+  }
+  .finished .total-price {
+    left: 12rem;
+  }
 }
 @media screen and (max-width: 470px) {
   html {
@@ -860,12 +892,6 @@ body {
   }
   .price-down {
     top: 47%;
-  }
-  .rope {
-    top: -36rem;
-  }
-  .ring {
-    top: -35rem;
   }
 }
 @media screen and (max-width: 400px) {
@@ -875,9 +901,6 @@ body {
   .price-down {
     top: 53%;
   }
-  .tail-bar {
-    width: 11rem;
-  }
   .rope {
     top: -45rem;
   }
@@ -885,7 +908,6 @@ body {
     top: -44rem;
   }
   .content {
-    padding-left: 11.5rem;
     padding-top: 3rem;
   }
   .logo {
@@ -899,7 +921,7 @@ body {
     font-size: 1.8em;
   }
   .phone-Le2 {
-    top: 10rem;
+    top: 12rem;
     width: 27rem;
   }
   .price-down {
@@ -908,14 +930,9 @@ body {
     left: 12rem;
   }
   .price-dec {
-    left: 12rem;
-    font-size: 4.8em;
-  }
-  .price-dec__1 {
-    top: 55%;
-  }
-  .price-dec__2 {
-    top: 72%;
+    font-size: 4em;
+    bottom: 9rem;
+    right: 16rem;
   }
   .total-price {
     font-size: 8em;
@@ -924,15 +941,15 @@ body {
   }
   .note {
     font-size: 2em;
-    bottom: 17rem;
+    bottom: 15rem;
     left: 12rem;
   }
   .btn__order {
     bottom: 3rem;
-    height: 9rem;
+    height: 7rem;
     left: 11.5rem;
-    width: 35rem;
-    font-size: 3.5em;
+    width: 30rem;
+    font-size: 3em;
   }
   .finished .total-price {
     left: 11.5rem;
@@ -951,20 +968,17 @@ body {
   }
 }
 @media screen and (max-width: 339px) {
+  .tail-bar {
+    width: 9rem;
+  }
   .rope {
     top: -52rem;
-    width: 7.5rem;
-  }
-  .rope:before {
-    bottom: 75%;
-    width: 1.2rem;
   }
   .ring {
     top: -52rem;
-    width: 7.5rem;
   }
   .content {
-    padding-left: 9rem;
+    padding-left: 10rem;
     padding-top: 2rem;
   }
   .logo {
@@ -984,28 +998,32 @@ body {
   .price-down {
     font-size: 1.8em;
     top: 45%;
-    left: 11rem;
+    left: 10rem;
   }
   .price-down:before {
     top: 0;
-    left: -7.5rem;
+    left: -6.5rem;
   }
   .price-dec {
-    left: 11rem;
     font-size: 4em;
+    bottom: 9rem;
+    right: 14rem;
   }
   .total-price {
-    font-size: 9em;
+    font-size: 8em;
     bottom: 0;
-    right: 6rem;
+    right: 4rem;
   }
   .note {
     font-size: 2em;
-    bottom: 16rem;
+    bottom: 15rem;
     left: 11rem;
   }
   .btn__order {
-    font-size: 3em;
+    font-size: 2.8em;
+    height: 6.5rem;
+    left: 11.5rem;
+    width: 27rem;
   }
   .finished .total-price {
     left: 11.5rem;
