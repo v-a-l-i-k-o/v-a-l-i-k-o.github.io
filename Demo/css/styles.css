@@ -566,6 +566,8 @@ html {
   font-weight: 400;
   height: 100%;
   position: fixed;
+  -ms-touch-action: none;
+  touch-action: none;
 }
 body {
   color: #fff;
@@ -574,6 +576,8 @@ body {
   overflow: hidden;
   position: fixed;
   background-color: #000;
+  -ms-touch-action: none;
+  touch-action: none;
 }
 .warning {
   display: none;
@@ -647,14 +651,12 @@ body {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAFCAYAAABM6GxJAAABBklEQVQYlQWA3S7DUACAv3Pas7Zqk5HaiEYWLsbNbkQiLjyCV/ECXgwJr7EbIibCNlm3tbqePxFHecr30t74+4dnc9gTuAhpDM7GDPKM1UbjA8v84wXVPWa/fcowTbnIXNN/f7wOWolCCb+odg/uyEcK6/HegY/Is5RKOOZuAlsnuChghWZSCLKODM52wql0jWFjRSr+fj8RBkwFWhEqxaw2zNc/sNwjqLahySAsMLLhabxgvNKXslQR9AbnfjjqYRtahIjAQiz5khW2mOG9x7oNcSNh0ccHNYUqefVpVwZao+POLflVm62axgl8IrAtC+s3KJegLcK2aEcCakFSSginyLCT/AMesXdh8O5bFgAAAABJRU5ErkJggg==');
 }
 .ring {
-  top: 0!important;
+  top: -32rem;
   z-index: 101;
   width: 9.6rem;
   height: 9.6rem;
-  border: 1px solid red;
-  margin: 0!important;
-  display: inline-block;
-  position: absolute;
+  margin-top: -100%;
+  position: relative;
   -webkit-transition: -webkit-transform .5s ease;
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;

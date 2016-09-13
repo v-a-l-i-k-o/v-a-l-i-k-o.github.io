@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	var rope      = document.getElementsByClassName('rope')[0],
 		phone     = document.getElementsByClassName('phone-Le2')[0],
-		planet    = document.getElementsByClassName('planet')[0],
 		planet     = {
 			el    : document.getElementsByClassName('planet')[0],
 			minH  : document.getElementsByClassName('planet')[0].clientHeight
@@ -28,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	    // keep the element within the area of it's parent
 	    restrict: {
 	      restriction: "parent",
-	      endOnly: true,
 	      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
 	    },
 	    // enable autoScroll
@@ -61,16 +59,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	  	var delay = 0; isMoving = false;
 
-	  	if ("ActiveXObject" in window) {
-	  		delay = 2000;
-	  	}
+	  	// if ("ActiveXObject" in window) {
+	  	// 	delay = 500;
+	  	// }
 
-	  	setTimeout(dragEndCallback.bind(null, event), delay);
+	  	// setTimeout(dragEndCallback.bind(null, event), delay);
+	  	dragEndCallback(event);
 	  }
 
 	  function dragEndCallback(event) {
 
-	  	if (isMoving) return;
+	  	// if (isMoving) return;
 
 	  	body.classList.remove('touchStart');
 	  	body.classList.add('touchEnd');
@@ -92,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	  function dragMoveListener (event) {
 
-        isMoving = true;
+        // isMoving = true;
 
 	    var target = event.target,
 	    	direction = event.dy > 0 ? 'bottom' : 'top';
