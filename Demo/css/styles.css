@@ -942,6 +942,9 @@ body {
   .price-down {
     top: 55%;
   }
+  .content {
+    padding-top: 4.5rem;
+  }
 }
 @media screen and (max-width: 400px) {
   html {
@@ -955,9 +958,6 @@ body {
   }
   .ring {
     top: -44rem;
-  }
-  .content {
-    padding-top: 3rem;
   }
   .logo {
     margin-bottom: 3.5rem;
@@ -1034,7 +1034,6 @@ body {
   }
   .content {
     padding-left: 10rem;
-    padding-top: 2rem;
   }
   .logo {
     margin-bottom: 1.5rem;
