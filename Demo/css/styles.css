@@ -698,7 +698,7 @@ body {
 }
 .phone-Le2 {
   z-index: 2;
-  width: 38.9rem;
+  width: 36.5rem;
   height: 62.6rem;
   position: absolute;
   top: 23rem;
@@ -754,7 +754,7 @@ body {
   transition: opacity 0.1s ease;
 }
 .price-dec i {
-  width: 3.3rem;
+  width: 3.1rem;
   font-style: normal;
   display: inline-block;
 }
@@ -779,7 +779,7 @@ body {
   margin-left: -1.5rem;
 }
 .total-price i {
-  width: 6.7rem;
+  width: 6.5rem;
   text-align: right;
   font-style: normal;
   display: inline-block;
@@ -816,7 +816,7 @@ body {
   top: -200%;
 }
 .finished .phone-Le2 {
-  top: 9rem;
+  top: 8rem;
 }
 .finished .title__1 {
   margin-top: 3rem;
@@ -893,7 +893,7 @@ body {
     top: 25rem;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   html {
     font-size: 42%;
     overflow-y: hidden;
@@ -951,7 +951,7 @@ body {
 }
 @media screen and (max-width: 400px) {
   html {
-    font-size: 42%;
+    font-size: 41%;
   }
   .rope {
     top: -45rem;
@@ -980,18 +980,18 @@ body {
   .price-dec {
     font-size: 4em;
     bottom: 9rem;
-    right: 13rem;
+    right: 12rem;
   }
   .price-dec i {
-    width: 2.8rem;
+    width: 2.7rem;
   }
   .total-price {
-    font-size: 7em;
+    font-size: 6.5em;
     bottom: 0;
     right: 6rem;
   }
   .total-price i {
-    width: 4.8rem;
+    width: 4.1rem;
   }
   .note {
     font-size: 2em;
@@ -1058,12 +1058,15 @@ body {
   .price-dec {
     font-size: 4em;
     bottom: 9rem;
-    right: 14rem;
+    right: 10rem;
   }
   .total-price {
     font-size: 8em;
     bottom: 0;
     right: 4rem;
+  }
+  .total-price i {
+    width: 4.8rem;
   }
   .note {
     font-size: 2em;
