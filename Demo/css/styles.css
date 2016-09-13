@@ -651,6 +651,7 @@ body {
   z-index: 101;
   width: 9.6rem;
   height: 9.6rem;
+  outline: 1px solid red;
   margin-top: -100%;
   position: relative;
   -webkit-transition: -webkit-transform .5s ease;
