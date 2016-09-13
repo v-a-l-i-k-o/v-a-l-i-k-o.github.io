@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	  	var delay = 0; isMoving = false;
 
-	  	if (("ActiveXObject" in window) {
+	  	if ("ActiveXObject" in window) {
 	  		delay = 500;
 	  		event.stopPropagation();
 	  		event.stopImmediatePropagation();
