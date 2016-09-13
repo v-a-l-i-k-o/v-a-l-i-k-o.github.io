@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   interact('.ring')
     .draggable({
       // enable inertial throwing
-      inertia: false,
+      inertia: true,
       // keep the element within the area of it's parent
       restrict: {
         restriction: "parent",
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       var target = event.target;
 
       if (topOffset === null) {
-        topOffset  = event.clientY;
+        topOffset  = event.pageY;
         pathLength = bottomOffset - topOffset;
         dc         = discount.max/pathLength;
         document.getElementsByClassName('price-down')[0].classList.remove('on');
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         direction = event.dy > 0 ? 'bottom' : 'top';
           y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-        if (event.clientY >= topOffset) {
+        if (event.pageY >= topOffset) {
 
           target.style.webkitTransform =
           target.style.transform =
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
           if (direction == 'bottom' ) {
 
-            if (event.clientY >= bottomOffset) {
+            if (event.pageY >= bottomOffset) {
               body.classList.remove('touchStart');
               discount.el.textContent = discount.max;
               price.el.textContent = price.value - discount.max;
