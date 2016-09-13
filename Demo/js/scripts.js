@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	  	var delay = 0; isMoving = false;
 
 	  	if ("ActiveXObject" in window) {
-	  		delay = 500;
+	  		delay = 2000;
+	  		alert("Хуйло интернет");
 	  		event.stopPropagation();
 	  		event.stopImmediatePropagation();
 	  		event.preventDefault();
