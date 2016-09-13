@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
       },
       // enable autoScroll
-      autoScroll: true,
+      autoScroll: false,
 
       onstart: dragStartListener,
       onmove: dragMoveListener,
