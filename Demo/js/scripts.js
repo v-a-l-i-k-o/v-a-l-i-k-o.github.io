@@ -23,14 +23,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
   interact('.ring')
     .draggable({
       // enable inertial throwing
-      inertia: true,
+      inertia: false,
       // keep the element within the area of it's parent
       restrict: {
         restriction: "parent",
         elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
       },
       // enable autoScroll
-      autoScroll: false,
+      autoScroll: true,
 
       onstart: dragStartListener,
       onmove: dragMoveListener,
