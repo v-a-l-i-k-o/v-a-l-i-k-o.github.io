@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	    // keep the element within the area of it's parent
 	    restrict: {
 	      restriction: "parent",
+	      endOnly: true,
 	      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
 	    },
 	    // enable autoScroll
@@ -62,10 +63,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	  	if ("ActiveXObject" in window) {
 	  		delay = 2000;
-	  		alert("Хуйло интернет");
-	  		event.stopPropagation();
-	  		event.stopImmediatePropagation();
-	  		event.preventDefault();
 	  	}
 
 	  	setTimeout(dragEndCallback.bind(null, event), delay);
