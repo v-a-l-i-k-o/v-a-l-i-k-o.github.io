@@ -58,14 +58,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	  	if (document.getElementsByClassName('banner')[0].classList.contains('finished')) return;
 
-	  	var delay = 0;
+	  	var delay = 0; isMoving = false;
 
 	  	if ("ActiveXObject" in window) delay = 500;
 
-	  	setTimeout(dragEndCallback, delay);
+	  	setTimeout(dragEndCallback.bind(null, event), delay);
 	  }
 
-	  function dragEndCallback() {
+	  function dragEndCallback(event) {
 
 	  	if (isMoving) return;
 
