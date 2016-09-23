@@ -1247,7 +1247,6 @@ input[type="search"]:focus + .empty-search{
 .search-response-wrap {
 	padding: 15px 30px;
 	display: inline-block;
-	background-color: #fff;
 }
 
 .search-response p{
@@ -1360,19 +1359,6 @@ img + .search-wrapper .search-body {
 
 .tag-list_item a {
 	text-decoration: underline;
-}
-
-.search-result_numer {
-	width: 40px;
-	opacity: 0.23;
-	color: #191919;
-	font-size: 36px;
-	font-weight: 300;
-	text-align: right;
-	position: absolute;
-	font-style: italic;
-	top: 10px; left: -55px;
-	text-transform: uppercase;
 }
 
 @media only screen and (max-width: 1200px) {
