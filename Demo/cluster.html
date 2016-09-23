@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Главная страница</title>
+	<title>Кластер</title>
 	
 	<meta name="keywords" content="">
 	<meta name="description" content="">
@@ -30,24 +30,16 @@
 	<div class="page">
 
 		<header class="b-header">
-			<a href="#" title="" class="header-logo header-logo-sm"></a>
+			<a href="#" title="" class="header-logo header-logo-sm show"></a>
 			<div class="header-buttons">
 				<a href="#" title="" class="header-logo"></a>
-				<div class="search-wrap">
-					<div class="search-box">
-						<button class="header-close"></button>
-						<input type="text" name="search" placeholder="Введите строку для поиска" value="Введите строку для поиска"/>
-					</div>
-					<button class="header-search"></button>
-				</div>
+				<button class="header-search"></button>
 				<div class="header-lang">
 					<span class="selected">ру</span>
 					<ul class="list">
 						<li><a href="#" title="ру">ру</a></li>
 						<li><a href="#" title="en">en</a></li>
 						<li><a href="#" title="de">de</a></li>
-						<li><a href="#" class="wide" title="sa">العربية</a></li>
-						<li><a href="#" class="wide" title="zn">首页</a></li>
 					</ul>
 				</div>
 				<button class="header-menu">
@@ -60,121 +52,141 @@
 
 
 
-		<section class="b-first">
+		<section class="page-title paralax" style="background: url(img/bg-avia.jpg) center top no-repeat; background-size: cover;">
 			<div class="container">
-				<a href="#" title="" class="first-logo">
-					<img src="img/logo-lg.png" alt="">
-				</a>
-				<div class="first-slider">
-					<div class="first-slide">
-						<div class="caption">
-							<a href="#" title="Кластеры" class="category">Кластеры</a>
-							<h2>Авиация</h2>
-							<p>Авиационный кластер производит все: от сердца летательного аппарата – двигателя ‐ до глаз – авионики</p>
-						</div>
-					</div>
-					<div class="first-slide">
-						<div class="caption">
-							<a href="#" title="Кластеры" class="category">Кластеры</a>
-							<h2>Электроника</h2>
-							<p>Авиационный кластер производит все: от сердца летательного аппарата – двигателя ‐ до глаз – авионики</p>
-						</div>
-					</div>
-					<div class="first-slide">
-						<div class="caption">
-							<a href="#" title="Кластеры" class="category">Кластеры</a>
-							<h2>Вооружение</h2>
-							<p>Авиационный кластер производит все: от сердца летательного аппарата – двигателя ‐ до глаз – авионики</p>
-						</div>
-					</div>
-					<div class="first-slide">
-						<div class="caption">
-							<a href="#" title="Кластеры" class="category">Кластеры</a>
-							<h2>Авто</h2>
-							<p>Авиационный кластер производит все: от сердца летательного аппарата – двигателя ‐ до глаз – авионики</p>
-						</div>
-					</div>
-					<div class="first-slide">
-						<div class="caption">
-							<a href="#" title="Кластеры" class="category">Кластеры</a>
-							<h2>Машиностроение</h2>
-							<p>Авиационный кластер производит все: от сердца летательного аппарата – двигателя ‐ до глаз – авионики</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="first-nav">
-				<div class="prev"></div>
-				<div class="next"></div>
+				<ul class="breadcrumbs">
+					<li><a href="#" title="Главная">Главная</a></li>
+					<li><a href="#" title="Кластеры">Кластеры</a></li>
+				</ul>
+				<h1>Авиация</h1>
 			</div>
 		</section>
 
 
 
-		<div class="b-categories">
+		<nav class="nav-categ">
 			<div class="container">
-				<div class="categ-slider">
-					<div class="categ-item">
-						<img src="img/categ1.jpg" alt="" class="img">
-						<a href="#" title="Стратегия" class="category">стратегия</a>
-						<a href="#" title="" class="caption">
-							<h3>Выход на масштаб ведущих глобальных конкурентов</h3>
-							<button class="btn">Подробнее</button>
-						</a>
+				<ul>
+					<li class="current"><a href="#block1" title="Интервью руководителя">Интервью руководителя</a></li>
+					<li><a href="#block2" title="Описание кластера">Описание кластера</a></li>
+					<li><a href="#block3" title="Лента новостей">Лента новостей</a></li>
+					<li><a href="#block4" title="Аналитика">Аналитика</a></li>
+					<li><a href="#block5" title="Компании кластера">Компании кластера</a></li>
+				</ul>
+			</div>
+		</nav>
+
+
+
+		<main class="main" role="main">
+			<div class="container">
+				<div id="block1" class="content">
+					<div class="person">
+						<div class="person-info clearfix">
+							<div class="img">
+								<img src="img/tmp/photo2.jpg" alt="">
+							</div>
+							<div class="desc">
+								<h2>«Авиационный кластер производит все: от сердца летательного аппарата – двигателя ‐ до глаз – авионики»</h2>
+								<div class="info">
+									<span>Анатолий Сердюков</span>
+									<label>Индустриальный директор</label>
+								</div>
+							</div>
+						</div>
+						<div id="block2" class="person-text">
+							<h3>Предприятие «Авиаагрегат» холдинга «Технодинамика» (входит в Госкорпорацию Ростех) закупит три новых обрабатывающих центра и две вакуумные печи для расширения производства шасси Ил-76МД-90А.</h3>
+							<p>Самарское предприятие «Авиаагрегат» (входит в холдинг «Технодинамика») закупит три новых фрезерных обрабатывающих центра для изготовления деталей шасси из титановых сплавов. Кроме того, предприятие намерено приобрести две новых вакуумных печи для термообработки. Общая стоимость оборудования составит примерно 385 млн рублей.</p>
+							<p>«Оборудование предназначено для увеличения мощности предприятия под выполнение программы выпуска ВПУ Ил-76МД-90А, - рассказывает генеральный директор предприятия Павел Майоров. - Предприятие постоянно наращивает свои производственные мощности и планирует выйти на производство 18 комплектов шасси для Ил-76МД-90А с 2017 года». В 2016 году завод планирует закупку еще трех обрабатывающих центров, добавляет он.</p>
+						</div>
 					</div>
-					<div class="categ-item">
-						<img src="img/categ2.jpg" alt="" class="img">
-						<a href="#" title="Стратегия" class="category">разработки</a>
-						<a href="#" title="" class="caption">
-							<h3>Продукция, произведенная в синергии инноваций и технологий Продукция, произведенная в синергии инноваций и технологий Продукция, произведенная в синергии инноваций и технологий</h3>
-							<button class="btn">Подробнее</button>
-						</a>
+				</div>
+
+				<div id="block3" class="news-row3 row">
+					<div class="col">
+						<div class="news-item small">
+							<img src="img/tmp/img2.jpg" alt="" class="img">
+							<a href="#" title="В Улан-Удэ завершились контрольно-летные испытания Ми-8АМТШ-ВА" class="caption">
+								<span class="text">
+									<span class="date">19 НОЯ 2015</span>
+									<h3>В Улан-Удэ завершились контрольно-летные испытания Ми-8АМТШ-ВА</h3>
+									<p>Вертолет создавался специально для работы в условиях Арктики</p>
+								</span>
+							</a>
+						</div>
 					</div>
-					<div class="categ-item">
-						<img src="img/categ3.jpg" alt="" class="img">
-						<a href="#" title="Стратегия" class="category">аналитика</a>
-						<a href="#" title="" class="caption">
-							<h3>Основные показатели деятельности</h3>
-							<button class="btn">Подробнее</button>
-						</a>
+					<div class="col">
+						<div class="news-item small">
+							<img src="img/tmp/img2.jpg" alt="" class="img">
+							<a href="#" title="В Улан-Удэ завершились контрольно-летные испытания Ми-8АМТШ-ВА" class="caption">
+								<span class="text">
+									<span class="date">19 НОЯ 2015</span>
+									<h3>«Ка-52 – машина тяжелая, но управлять ею легко»</h3>
+									<p>Дмитрий Рогозин совершил полет на боевом разведывательно-ударном вертолете</p>
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="col">
+						<div class="news-item small">
+							<img src="img/tmp/img2.jpg" alt="" class="img">
+							<a href="#" title="В Улан-Удэ завершились контрольно-летные испытания Ми-8АМТШ-ВА" class="caption">
+								<span class="text">
+									<span class="date">19 НОЯ 2015</span>
+									<h3>«Вертолеты России» передали заказчикам Ми-8АМТ в новом варианте</h3>
+									<p>Салон машины может быть легко переоборудован из транспортной в пассажирскую модификацию</p>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn-more">
+					<a href="#" title="Показать еще">Показать еще</a>
+				</div>
+
+				<div id="block4" class="anlitic">
+					<div class="inside">
+						<h3>Аналитика</h3>
+						<p>В соответствии с утвержденной Стратегией Корпорации основными стратегическими целями кластера являются рост выручки в среднем на 14% в рублевом выражении до 2025г., увеличение доля гражданской продукции, повышение операционной эффективности и выход на мировые рынки.</p>
+						<a href="#" title="Подробнее" class="btn">Подробнее</a>
+					</div>
+				</div>
+
+				<div id="block5" class="listnews">
+					<div class="row">
+						<div class="col">
+							<img src="img/tmp/news.jpg" alt="">
+						</div>
+						<div class="col">
+							<img src="img/tmp/news.jpg" alt="">
+						</div>
+						<div class="col">
+							<img src="img/tmp/news.jpg" alt="">
+						</div>
+						<div class="col">
+							<img src="img/tmp/news.jpg" alt="">
+						</div>
+						<div class="col">
+							<img src="img/tmp/news.jpg" alt="">
+						</div>
+						<div class="col">
+							<img src="img/tmp/news.jpg" alt="">
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</main>
 
 
 
-		<div class="b-chief">
+		<a href="#" class="next-cluster">
 			<div class="container">
-				<div class="chief-slider">
-					<div class="chief-slide">
-						<img src="img/slides/slide1.jpg" alt="" class="img">
-						<div class="caption">
-							<h4 class="fadeInLeft">О компании</h4>
-							<p>Содействие государственной политике по развитию и модернизации промышленности</p>
-							<a href="#" title="Подробнее" class="btn fadeIn">Подробнее</a>
-						</div>
-					</div>
-					<div class="chief-slide about320">
-						<img src="img/slides/slide2.jpg" alt="" class="img">
-						<div class="caption">
-							<h4 class="fadeInLeft">Структура компании</h4>
-							<p>В состав корпорации входит более 700 организаций, из которых в настоящее время сформировано 9 холдинговых компаний в оборонно-промышленном комплексе и 5 в гражданских отраслях промышленности, а также выделено 22 организации прямого управления</p>
-							<a href="#" title="Подробнее" class="btn fadeIn">Подробнее</a>
-						</div>
-					</div>
-					<div class="chief-slide prez320">
-						<img src="img/slides/slide3.jpg" alt="" class="img">
-						<div class="caption">
-							<h4 class="fadeInLeft">Руководство</h4>
-							<p>Органами управления Госкорпорации Ростех являются: наблюдательный совет, правление и генеральный директор, который назначается президентом Российской Федерации</p>
-							<a href="#" title="Подробнее" class="btn fadeIn">Подробнее</a>
-						</div>
-					</div>					
-				</div>
+				<p>следующий кластер</p>
+				<h3>Электроника</h3>
 			</div>
-		</div>
-
+		</a>
+		
 
 
 		<footer class="b-footer">
@@ -237,37 +249,6 @@
 			</div>
 			<button class="footer-scrolltop"></button>
 		</footer>
-
-
-		<div class="videos">
-			<div class="videos-slider">
-				<video preload="none" poster="img/avia.jpg" width="100%">
-					<source src="video/01_avia.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-					<source src="video/01_avia.webm" type='video/webm; codecs="vp8, vorbis"'>				
-				</video>
-
-				<video  preload="none" poster="img/engeniiring.jpg" width="100%">
-					<source src="video/02_electronic.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-					<source src="video/02_electronic.webm" type='video/webm; codecs="vp8, vorbis"'>
-				</video>
-
-				<video  preload="none" poster="img/arming.jpg" width="100%">
-					<source src="video/03_vooruzhenie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-					<source src="video/03_vooruzhenie.webm" type='video/webm; codecs="vp8, vorbis"'>		
-				</video>
-
-				<video  preload="none" poster="img/auto.jpg" width="100%">					
-					<source src="video/04_auto.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-					<source src="video/04_auto.webm" type='video/webm; codecs="vp8, vorbis"'>				
-				</video>
-
-				<video  preload="none" poster="img/mash.jpg" width="100%">
-					<source src="video/05_maschinostroenie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-					<source src="video/05_maschinostroenie.webm" type='video/webm; codecs="vp8, vorbis"'>	
-				</video>
-			</div>
-		</div>
-
 	</div>
 
 	
@@ -389,20 +370,16 @@
 						</div>
 					</div>
 					<div class="col">
-						<div class="news-item video-box">
-							<div class="news-item news-vgallery">
-								<img src="img/tmp/img2.jpg" alt="" class="img">
-								<a href="#" title="Видео" class="category">Видео</a>
-								<a href="#" title="Ростех расширяет возможности каждого человека" class="caption">
-									<span class="text">
-										<span class="date">19 НОЯ 2015</span>
-										<h3>Ростех расширяет возможности каждого человека</h3>
-									</span>
-								</a>
-								<div class="vgallery">
-									<iframe width="100%" height="100%" src="https://www.youtube.com/embed/iDBt28Mpzfc" frameborder="0" allowfullscreen></iframe>								
-								</div>
-							</div>
+						<div class="news-item">
+							<img src="img/tmp/img2.jpg" alt="" class="img">
+							<a href="#" title="Приборостроение" class="category">Приборостроение</a>
+							<a href="#" title="В Улан-Удэ завершились контрольно-летные испытания Ми-8АМТШ-ВА" class="caption">
+								<span class="text">
+									<span class="date">19 НОЯ 2015</span>
+									<h3>Гендиректор ЦНИИ «Электроника» избрана членом-корреспондентом Академии военных наук</h3>
+									<p>Вертолет создавался специально для работы в условиях Арктики</p>
+								</span>
+							</a>
 						</div>
 					</div>
 					<div class="col">
@@ -455,7 +432,7 @@
 					</div>
 				</div>
 
-				<!--div class="news-tabs">
+				<div class="news-tabs">
 					<ul class="btns">
 						<li class="current">Пермская область</li>
 						<li>другие регионы</li>
@@ -516,7 +493,7 @@
 							</div>
 						</div>
 					</div>
-				</div-->
+				</div>
 
 				<div class="news-row row">
 					<div class="col">
@@ -607,125 +584,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="news-video">
-					<div class="gheader">
-						<div class="left">
-							<span class="date">19 НОЯ 2015</span>
-							<h3>КРЭТ на авиасалоне МАКС-2015</h3>
-						</div>
-						<div class="right">
-							<ul class="socials">
-								<li><a href="#" title="" class="fb"></a></li>
-								<li><a href="#" title="" class="gl"></a></li>
-								<li><a href="#" title="" class="tw"></a></li>
-								<li><a href="#" title="" class="lj"></a></li>
-								<li><a href="#" title="" class="ml"></a></li>
-								<li><a href="#" title="" class="vk"></a></li>
-							</ul>
-							<button class="close js-closegal"></button>
-						</div>
-					</div>
-					<div class="video">
-						
-					</div>
-				</div>
-			</div>
-
 			</div>
 		</div>
-
-		<article class="news-article">
-			<button class="news-close">Закрыть новость</button>
-			<div class="news-artscroll">
-				<div class="preview">
-					<img src="img/tmp/news-photo.jpg" alt="">
-					<a href="#" title="" class="category">аВИАЦИЯ</a>
-				</div>
-				<div class="inform">					
-					<div class="b-social-like">
-						<span class="date">19 НОЯ 2015</span>
-						<div class="b-social-wrap">
-							<!--span class="views">Просмотров: <i class="num">6543</i></span-->
-							<ul class="social-nets">
-								<li class="social-nets_item">
-								  <a href="#"><img src="img/icons/fb.jpg" alt="social"></a> 67</li>
-								<li class="social-nets_item">
-								  <a href="#"><img src="img/icons/vk.jpg" alt="social"></a> 32</li>
-								<li class="social-nets_item">
-								  <a href="#"><img src="img/icons/tv.jpg" alt="social"></a> 32</li>
-							</ul>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-					<h1>«Росэлектроника» создала видеосистему для работы в открытом космосе</h1>
-					<div class="tags">
-						<label>#</label>
-						<a href="#" title="Авиация">Авиация</a>
-						<a href="#" title="Ка-52">Ка-52</a>
-						<a href="#" title="Рогозин">Рогозин</a>
-						<a href="#" title="Презентация">Презентация</a>
-					</div>
-				</div>
-				<div class="content">
-					<section class="news-left">
-						<h2>«Росэлектроника» разработала по заказу РКК «Энергия» автономную систему видеонаблюдения, предназначенную для контроля деятельности космонавтов вне корабля. Устройство способно контролировать деятельность двух космонавтов за бортом в течение 8 часов</h2>
-						<p>Система разработана с учетом особенностей скафандра «Орлан-МКС», который используется российскими космонавтами в настоящее время, и рассчитана на восемь часов непрерывной работы.</p>
-						<p>Моноблок телекамеры, размещенный на шлеме, формирует цифровой телевизионный сигнал цветного изображения. Затем система видеонаблюдения обеспечивает кодирование сигнала и передачу его по радиоканалу к служебному модулю российского сегмента Международной космической станции, откуда сигнал поступает в Центр управления полетами (ЦУП). Устойчивые прием и передача телевизионного сигнала между оборудованием скафандра и антеннами МКС осуществляются на расстоянии до 200 м.</p>
-						<p>В настоящее время система видеонаблюдения уже прошла основные испытания, в том числе входной контроль на РКК «Энергия» и испытания на комплексном стенде. Летные испытания оборудования состоятся в 2017 году.</p>
-						<blockquote>
-							<h3>«Росэлектроника»</h3>
-							– крупнейший в России производитель радиоэлектронных компонентов и технологий. Входит в Ростех. Холдинговая компания объединяет 108 предприятий электронной отрасли, специализирующихся на разработке и производстве изделий электронной техники, электронных материалов и оборудования для их изготовления, СВЧ-техники и полупроводниковых приборов, подсистем, комплексов и технических средств связи, а также автоматизированных и информационных систем. Холдинг консолидирует около 60% отечественной промышленности электронных компонентов (по СВЧ-компонентам – до 80%).
-						</blockquote>
-						<!--div class="rating">
-							<label>Оцените статью:</label>
-							<img src="img/icons/stars.png" alt="">
-						</div-->
-					</section>
-					<aside class="news-right">
-						<div class="item">
-							<h4>События, связанные с этим</h4>
-							<div class="timeline">
-								<div class="box current">
-									<!--a href="#" title=""-->
-										<span class="date">19 НОЯ 2015</span>
-										<p>«Росэлектроника» создала видеосистему для работы в открытом космосе</p>
-									<!--/a-->
-								</div>
-								<div class="box">
-									<a href="#" title="">
-										<span class="date">19 НОЯ 2015</span>
-										<p>Подписание соглашений о партнерстве</p>
-									</a>
-								</div>
-								<div class="box">
-									<a href="#" title="">
-										<span class="date">19 НОЯ 2015</span>
-										<p>Технодинамика на МАКС-2015 (итоги, прессрелиз)</p>
-									</a>
-								</div>
-								<div class="box">
-									<a href="#" title="">
-										<span class="date">19 НОЯ 2015</span>
-										<p>Подписание соглашений о партнерстве</p>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<h4>Подпишитесь на новости этой тематики</h4>
-							<form action="#" method="post" class="news-subscr">
-								<input type="email" placeholder="Введите ваш email" name="email">
-								<button class="btn">подписаться</button>
-							</form>
-						</div>
-					</aside>
-				</div>
-				<div class="preview small">
-					<img src="img/tmp/news-photo2.jpg" alt="">
-					<a href="#" title="" class="category">аВИАЦИЯ</a>
-				</div>
-			</div>
-		</article>
 		<div class="overlay2"></div>
 	</section>
 	
@@ -782,7 +642,7 @@
 					<span class="title"><a href="#" title="Кластеры">Кластеры</a></span>
 					<ul class="list">
 						<li>
-							<a href="#" title="Авиация">Авиация</a>
+							<a href="#" title="Кластеры">Кластеры</a>
 						</li>
 						<li>
 							<a href="#" title="Электроника">Электроника</a>
@@ -901,6 +761,7 @@
 
 
 	<div class="overlay"></div>
+
 
 	<div class="hidden"></div>
 
