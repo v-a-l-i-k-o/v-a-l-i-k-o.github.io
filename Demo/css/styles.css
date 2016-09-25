@@ -75,6 +75,8 @@ a:focus {
     color: #fff;
     border: 1px solid #00a8ff;
     background-color: #00a8ff; }
+  .btn__white:active, .btn__white:focus {
+    color: #fff; }
 
 .btn__blue {
   color: #358ed7;
@@ -82,6 +84,8 @@ a:focus {
   .btn__blue:hover {
     color: #fff;
     background-color: #00a8ff; }
+  .btn__blue:active, .btn__blue:focus {
+    color: #358ed7; }
 
 /* ===== HEADER ===== */
 header {
