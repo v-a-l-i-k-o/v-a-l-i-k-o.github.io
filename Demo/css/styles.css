@@ -59,6 +59,9 @@ a:active,
 a:focus {
   outline: none !important; }
 
+.current {
+  display: block !important; }
+
 .btn {
   font-size: 10px;
   font-weight: 700;
@@ -71,21 +74,21 @@ a:focus {
 .btn__white {
   color: #fff;
   border: 1px solid #fff; }
+  .btn__white:active, .btn__white:focus {
+    color: #fff; }
   .btn__white:hover {
     color: #fff;
     border: 1px solid #00a8ff;
     background-color: #00a8ff; }
-  .btn__white:active, .btn__white:focus {
-    color: #fff; }
 
 .btn__blue {
   color: #358ed7;
   border: 1px solid #358ed7; }
+  .btn__blue:active, .btn__blue:focus {
+    color: #358ed7; }
   .btn__blue:hover {
     color: #fff;
     background-color: #00a8ff; }
-  .btn__blue:active, .btn__blue:focus {
-    color: #358ed7; }
 
 /* ===== HEADER ===== */
 header {
@@ -273,7 +276,7 @@ header {
   margin: 0 -8px 0; }
 
 .service-items > div {
-  padding: 0 8px 15px; }
+  padding: 0 8px 25px; }
 
 .service-item_logo {
   text-align: center;
@@ -315,12 +318,30 @@ header {
 
 .btn__more {
   width: 135px;
-  height: 35px; }
+  height: 35px;
+  position: relative; }
+
+.active .btn__more:after {
+  z-index: 2;
+  content: '';
+  width: 30px;
+  height: 16px;
+  position: absolute;
+  background-color: #fff;
+  bottom: -27px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("../img/icons/tool.png"); }
 
 div.service-item_detail {
   clear: both;
+  margin: 8px;
   padding: 8px;
-  margin: 0 8px;
+  position: relative;
   border: 1px dashed #358ed7; }
 
 /* ----- SECTION .start-now ----- */
@@ -429,6 +450,8 @@ footer {
     left: -45px;
     width: 320px; }
   /* ----- SECTION .services ----- */
+  .service-item {
+    padding-top: 10px; }
   .service-item_desc {
     padding: 0 50px;
     min-height: 120px;
@@ -493,8 +516,6 @@ footer {
     width: 300px;
     margin-right: 100px; }
   /* ----- SECTION .services ----- */
-  .service-item {
-    margin-bottom: 15px; }
   .service-item_desc {
     margin: 0 auto;
     max-width: 400px; }
