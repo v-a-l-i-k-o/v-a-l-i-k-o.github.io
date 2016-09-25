@@ -9,9 +9,23 @@ $(document).ready(function() {
 
 /* ===== CUSTOM CODE: ===== */
   
-/* ----- description of your code ----- */
+/* ----- Разворачиваем подробное описание ----- */
 
+$('.service-item').on('click', '.js-btn-more', function (e) {
+	e.preventDefault();
+	var id = $(this).data('num');
+	var detail = $('.service-items').find(id);
+	var parent = $('.js-service-detail');
 
+	detail.removeClass('hidden').siblings()
+															.addClass('hidden');
+
+	if ( $(parent).is(":hidden")) {
+		$(parent).slideDown(300);
+	} else {
+		$(parent).slideUp(300);
+	}
+})
 
 // -------------------------------------------------------------------------------------
 });

@@ -24,7 +24,7 @@
     			</div>
     			<ul class="navbar-nav">
     				<li class="navbar-list_item">
-    					<a class="nav-link" href="#">Перезвонить мне</a>
+    					<a class="nav-link" href="#" data-toggle="modal" data-target="#CallMe">Перезвонить мне</a>
     				</li>
     				<li class="navbar-list_item">
     					<a class="nav-link" href="#">Войти</a>
@@ -41,7 +41,7 @@
             <div class="let-start">
               <h2 class="let-start_title title title__2">Задумались над тем, как <i class="hightlight">автоматизировать ваш бизнес?</i></h2>
               <p class="let-start_txt">Начните вместе с нами!</p>
-              <button class="btn btn__sign btn__blue">Зарегистрироваться</button>
+              <button class="btn btn__sign btn__blue" data-toggle="modal" data-target="#LogIn">Зарегистрироваться</button>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@
             <div class="free-start">
               <h2 class="free-start_title title title__2"><b>Попробуйте</b> наше программное обеспечение <b>бесплатно!</b></h2>
               <p class="free-start_txt">Подключайтесь сейчас- платите через месяц!</p>
-              <button class="btn btn__sign btn__white">Зарегистрироваться</button>
+              <button class="btn btn__sign btn__white" data-toggle="modal" data-target="#LogIn">Зарегистрироваться</button>
             </div>
           </div>
           <div class="macbook">
@@ -95,7 +95,7 @@
               <p class="service-item_desc">Позволяет получать доступ к информации с любого устройства и в любое время.
                 Вы не привязаны к рабочему кабинету и можете контролировать бизнес с любой точки мира, а также поручить
                 работу с базой данных своим специалистам.</p>
-              <button class="btn btn__more btn__blue">Подробнее</button>
+              <button class="btn btn__more btn__blue js-btn-more" data-num="#1">Подробнее</button>
             </figure>
           </div>
           <div class="col-md-3 col-sm-6">
@@ -106,7 +106,7 @@
                 и ведет подсчеты мгновенно. Вы можете отслеживать статистику, прогнозировать прибыль и вносить коррективы
                 в работу когда угодно.
               </p>
-              <button class="btn btn__more btn__blue">Подробнее</button>
+              <button class="btn btn__more btn__blue js-btn-more" data-num="#2">Подробнее</button>
             </figure>
           </div>
           <div class="col-md-3 col-sm-6">
@@ -117,7 +117,7 @@
                 отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
                 в налоговую службу.
               </p>
-              <button class="btn btn__more btn__blue">Подробнее</button>
+              <button class="btn btn__more btn__blue js-btn-more" data-num="#3">Подробнее</button>
             </figure>
           </div>
           <div class="col-md-3 col-sm-6">
@@ -128,18 +128,18 @@
                 отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
                 в налоговую службу.
               </p>
-              <button class="btn btn__more btn__blue">Подробнее</button>
+              <button class="btn btn__more btn__blue js-btn-more" data-num="#4">Подробнее</button>
             </figure>
           </div>
-          <div class="service-item_detail js-service-detail">
-            <p class="service-item_detail_txt">Позволяет получать доступ к информации с любого устройства и в любое время.
+          <div class="service-item_detail js-service-detail" hidden>
+            <p class="service-item_detail_txt" id="1">Позволяет получать доступ к информации с любого устройства и в любое время.
               Вы не привязаны к рабочему кабинету и можете контролировать бизнес с любой точки мира, а также поручить
               работу с базой данных своим специалистам.Позволяет получать доступ к информации с любого устройства и в любое время.
               Вы не привязаны к рабочему кабинету и можете контролировать бизнес с любой точки мира, а также поручить
               работу с базой данных своим специалистам.Позволяет получать доступ к информации с любого устройства и в любое время.
               Вы не привязаны к рабочему кабинету и можете контролировать бизнес с любой точки мира, а также поручить
               работу с базой данных своим специалистам.</p>
-            <p class="service-item_detail_txt hidden">Программа полностью исключает ошибки при составлении аналитических графиков
+            <p class="service-item_detail_txt" id="2">Программа полностью исключает ошибки при составлении аналитических графиков
               и ведет подсчеты мгновенно. Вы можете отслеживать статистику, прогнозировать прибыль и вносить коррективы
               в работу когда угодно.Программа полностью исключает ошибки при составлении аналитических графиков
               и ведет подсчеты мгновенно. Вы можете отслеживать статистику, прогнозировать прибыль и вносить коррективы
@@ -149,7 +149,7 @@
               и ведет подсчеты мгновенно. Вы можете отслеживать статистику, прогнозировать прибыль и вносить коррективы
               в работу когда угодно.
             </p>
-            <p class="service-item_detail_txt hidden">Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
+            <p class="service-item_detail_txt" id="3">Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
               отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
               в налоговую службу.Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
               отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
@@ -159,7 +159,7 @@
               отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
               в налоговую службу.
             </p>
-            <p class="service-item_detail_txt hidden">Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
+            <p class="service-item_detail_txt" id="4">Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
               отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
               в налоговую службу.Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
               отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
@@ -179,7 +179,7 @@
             <div class="start-action">
               <h2 class="start-action_title title title__2">Начните налаживать бизнес <b>прямо сейчас!</b></h2>
               <p class="start-action_txt">Подключайтесь сейчас - платите через месяц!</p>
-              <button class="btn btn__sign btn__white">Начать сейчас</button>
+              <button class="btn btn__sign btn__white" data-toggle="modal" data-target="#CallMe">Начать сейчас</button>
             </div>
           </div>
         </div>
@@ -221,7 +221,7 @@
     					<p>8 800 2000 600</p>
 
 
-    					<a href="#">Перезвоните мне</a>
+    					<a href="#" data-toggle="modal" data-target="#CallMe">Перезвоните мне</a>
 
 
     				</div>
@@ -238,7 +238,61 @@
 
     </footer>
 
+    <div class="modal fade" id="CallMe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    	<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+    			<div class="modal-header">
+    				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    					<span aria-hidden="true">&times;</span>
+    				</button>
+    				<h4 class="modal-title">Жду звонка</h4>
+    			</div>
+    			<div class="modal-body">
+    				<form method="post" action="#">
+    					<div class="form-group">
+    						<label for="inputName">Ваше имя</label>
+    						<input type="text" class="form-control" id="inputName" placeholder="Введите имя">
+    					</div>
+    					<div class="form-group">
+    						<label for="inputPhone">Телефон</label>
+    						<input type="text" class="form-control" id="inputPhone" placeholder="Ваш номер телефона">
+    					</div>
+    					<button type="submit" class="btn btn__blue btn__modal">Отправить</button>
+    				</form>
+    			</div>
+    		</div>
+    	</div>
+    </div>
     
+    <div class="modal fade" id="LogIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    	<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+    			<div class="modal-header">
+    				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    					<span aria-hidden="true">&times;</span>
+    				</button>
+    				<h4 class="modal-title">Регистрация</h4>
+    			</div>
+    			<div class="modal-body">
+    				<form method="post" action="#">
+    					<div class="form-group">
+    						<label for="inputName">Ваше имя</label>
+    						<input type="text" class="form-control" id="inputName" placeholder="Введите имя">
+    					</div>
+    					<div class="form-group">
+    						<label for="inputMail">Email адрес</label>
+    						<input type="email" class="form-control" id="inputMail" aria-describedby="emailHelp" placeholder="Введите email">
+    					</div>
+    					<div class="form-group">
+    						<label for="inputPassword">Пароль</label>
+    						<input type="password" class="form-control" id="inputPassword" placeholder="Введите пароль">
+    					</div>
+    					<button type="submit" class="btn btn__blue btn__modal">Зарегистрироваться</button>
+    				</form>
+    			</div>
+    		</div>
+    	</div>
+    </div>
 
 <!-- scripts -->
     <script src="js/libs/jquery.min.js"></script>

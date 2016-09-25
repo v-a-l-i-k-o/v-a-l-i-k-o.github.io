@@ -52,6 +52,13 @@ h3 {
   font-weight: 700;
   font-style: normal; }
 
+button,
+button:active,
+button:focus,
+a:active,
+a:focus {
+  outline: none !important; }
+
 .btn {
   font-size: 10px;
   font-weight: 700;
@@ -385,6 +392,17 @@ footer {
     color: #358ed7; }
 
 /* ===== MODALS ===== */
+.modal-dialog {
+  width: auto;
+  max-width: 500px;
+  margin: 30px auto; }
+
+.btn__modal {
+  border-radius: 4px; }
+
+.modal-body {
+  padding-bottom: 25px; }
+
 /* ===== MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
 /* ----- MOBILE VERSION ----- */
 @media screen and (max-width: 991px) {
@@ -557,4 +575,7 @@ footer {
       font-size: 16px;
       line-height: 26px; }
     .footer-phone a {
-      font-size: 10px; } }
+      font-size: 10px; }
+  .modal-dialog {
+    width: 100%;
+    padding: 0 10px; } }
