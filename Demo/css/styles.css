@@ -29,6 +29,7 @@ body {
 /* ===== CORE ===== */
 html, body {
   font-weight: 400;
+  overflow-x: hidden;
   font-family: 'Roboto';
   background-color: #fff; }
 
@@ -253,7 +254,7 @@ header {
 .macbook {
   top: -15px;
   left: -55px;
-  width: 390px;
+  max-width: 390px;
   position: relative;
   display: inline-block; }
   .macbook img {
@@ -450,7 +451,7 @@ footer {
     font-size: 18px; }
   .macbook {
     left: -45px;
-    width: 320px; }
+    max-width: 320px; }
   /* ----- SECTION .services ----- */
   .service-item {
     padding-top: 10px; }
@@ -515,7 +516,7 @@ footer {
   .macbook {
     left: 0;
     top: 15px;
-    width: 300px;
+    max-width: 300px;
     margin-right: 100px; }
   /* ----- SECTION .services ----- */
   .service-item_desc {
@@ -576,7 +577,7 @@ footer {
   .free-start_txt {
     font-size: 14px; }
   .macbook {
-    width: 300px;
+    max-width: 300px;
     display: block;
     margin: 0 auto; }
   /* ----- SECTION .services ----- */
