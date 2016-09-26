@@ -420,6 +420,9 @@ footer {
     color: #358ed7; }
 
 /* ===== MODALS ===== */
+.modal-open {
+  padding-right: 0 !important; }
+
 .modal-dialog {
   width: auto;
   max-width: 500px;
