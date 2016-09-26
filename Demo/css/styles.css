@@ -172,6 +172,7 @@ header {
   background: url("../img/bg/suggest-bg.png") no-repeat 95% 100%; }
   .suggest-wrap .row {
     top: 50%;
+    width: 100%;
     position: absolute;
     -webkit-transform: translateY(-57%);
     -ms-transform: translateY(-57%);
@@ -230,6 +231,7 @@ header {
   background: url("../img/bg/try-it-bg.png") no-repeat 50% 50%; }
   .try-it-wrap .row {
     top: 50%;
+    width: 100%;
     position: absolute;
     -webkit-transform: translateY(-30%);
     -ms-transform: translateY(-30%);
