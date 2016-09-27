@@ -4,302 +4,43 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <title>Мойка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LeEco</title>
     <link rel="shortcut icon" href="#">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
     <script src="js/libs/modernizr-2.8.3.min.js"></script>
   </head>
   <body>
-    <header>
-    	<div class="container-fluid">
-    		<nav class="navbar clearfix">
-    			<div class="navbar-header">
-    				<h1 class="navbar-brand">Мойка</h1>
-    			</div>
-    			<div class="navbar-phone">
-    				<a href="tel: +88002000600">8 800 2000 600</a>
-    			</div>
-    			<ul class="navbar-nav">
-    				<li class="navbar-list_item">
-    					<a class="nav-link" href="#" data-toggle="modal" data-target="#CallMe">Перезвонить мне</a>
-    				</li>
-    				<li class="navbar-list_item">
-    					<a class="nav-link" href="#">Войти</a>
-    				</li>
-    			</ul>
-    		</nav>
-    	</div>
-    </header>
-
-    <section class="suggest">
-      <div class="container-fluid suggest-wrap">
-        <div class="row">
-          <div class="col-md-7 col-sm-8">
-            <div class="let-start">
-              <h2 class="let-start_title title title__2">Задумались над тем, как <i class="hightlight">автоматизировать ваш бизнес?</i></h2>
-              <p class="let-start_txt">Начните вместе с нами!</p>
-              <button class="btn btn__sign btn__blue" data-toggle="modal" data-target="#LogIn">Зарегистрироваться</button>
-            </div>
+    <p class="warning">Переверните телефон!</p>
+    <section class="banner clearfix">
+      <div class="tail-bar clearfix">
+        <div class="tail">
+          <div class="rope">
+            <span class="price-down on">Потяни кольцо вниз:<br/>попробуй снизить<br/>цены на наши<br/>телефоны</span>
           </div>
+          <div class="ring"></div>
         </div>
       </div>
-    </section>
-
-    <section class="explain">
-      <div class="container-fluid explain-wrap">
-        <div class="row">
-          <h3 class="title title__3">Поднимите ваш бизнес на <i class="hightlight">качественно новый уровень</i> с помощью программного обеспечения <i class="hightlight">МОЙКА24!</i></h3>
-          <p class="explain_txt">Вы сможете с легкостью <b>вести управленческие расчеты, систематизировать базу клиентов,<br>
-            обрабатывать заказы, осуществлять прогнозирование продаж</b> и многое другое.<br> Это позволит вам оптимизировать
-            рабочее время, увеличить производительность труда сотрудников<br> и, как следствие, <i class="hightlight">повысить ваши доходы.</i>
-          </p>
-          <p class="explain_txt">Программа <i class="hightlight">не требует установки</i> - вся информация загружается вами на отдельный сервер в облако.
-            Все, что вам нужно сделать: подключиться к интернету, зарегистрироваться и начать работу - это <i class="hightlight">бесплатно.</i></p>
-          <p class="explain_txt">Оплачивать услуги сервиса в размере 1000 руб. в месяц нужно лишь спустя полгода, когда убедитесь,
-            что программное обеспечение действительно приносит прибыль!</p>
+      <div class="content">
+        <div class="logo">
+          <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOIAAAA9CAMAAACHpkUfAAACylBMVEVHcEz///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////878QJTAAAA7XRSTlMASw8zzOFpRJmIqrsiAf797fwC+d4M+i31AwYKJfgJVPf2TsQENA7zvRxK3+Zd1hePxwtX6NPN8dKzUTcdDTZaIacmB3M1Ohs/IKYQGgUewxio8HcVvsHawM+w3edyKCOuMtf7PGCjQYTrjrfgg0XL7094bXxDZ2wuPUdb0W9Q2ztuFmOr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" alt="LeEco">
         </div>
+        <h1 class="title__1">Le 2</h1>
+        <ul class="params">
+          <li>Процессор Qualcomm Snapdragon 652</li>
+          <li>Две 4G сим-карты</li>
+          <li>Быстрая зарядка</li>
+        </ul>
+        <div class="phone-Le2"></div>
       </div>
+      <span class="price-dec off" data-max-discount="5009"><span><i></i><i></i><i></i><i></i><i>0</i></span> руб.</span>
+      <div class="total-price" data-start-price="14999"><span><i>1</i><i>4</i><i>9</i><i>9</i><i>9</i></span> <i class="cur">руб.</i></div>
+      <span class="note">с учетом Подарочного<br/>Сертификата на 5009 руб.</span>
+      <button class="btn btn__order" onclick="parent.postMessage('banner.redirect','*')">Заказать сейчас!</button>
+      <div class="planet"></div>
     </section>
-
-    <section class="try-it">
-      <div class="container-fluid try-it-wrap">
-        <div class="row">
-          <div class="col-sm-7">
-            <div class="free-start">
-              <h2 class="free-start_title title title__2"><b>Попробуйте</b> наше программное обеспечение <b>бесплатно!</b></h2>
-              <p class="free-start_txt">Подключайтесь сейчас- платите через месяц!</p>
-              <button class="btn btn__sign btn__white" data-toggle="modal" data-target="#LogIn">Зарегистрироваться</button>
-            </div>
-          </div>
-          <div class="macbook">
-            <img src="img/pic/macbook.png" alt="photo">
-          </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="services">
-      <div class="container-fluid">
-        <div class="row">
-          <h2 class="title title__2">Что мы можем предложить?</h2>
-        </div>
-        <div class="row service-items">
-          <div class="col-md-3 col-sm-6">
-            <figure class="service-item">
-              <div class="service-item_logo"><img src="img/icons/storage.png" alt="logo"></div>
-              <p class="service-item_title">Облачное хранение <br> и работа с базой данных</p>
-              <p class="service-item_desc">Позволяет получать доступ к информации с любого устройства и в любое время.
-                Вы не привязаны к рабочему кабинету и можете контролировать бизнес с любой точки мира, а также поручить
-                работу с базой данных своим специалистам.</p>
-              <button class="btn btn__more btn__blue js-btn-more" data-num="1">Подробнее</button>
-            </figure>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <figure class="service-item">
-              <div class="service-item_logo"><img src="img/icons/crm-system.png" alt="logo"></div>
-              <p class="service-item_title">Ведение аналитики <br>с помощью нашей CRM системы</p>
-              <p class="service-item_desc">Программа полностью исключает ошибки при составлении аналитических графиков
-                и ведет подсчеты мгновенно. Вы можете отслеживать статистику, прогнозировать прибыль и вносить коррективы
-                в работу когда угодно.
-              </p>
-              <button class="btn btn__more btn__blue js-btn-more" data-num="2">Подробнее</button>
-            </figure>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <figure class="service-item">
-              <div class="service-item_logo"><img src="img/icons/paymant.png" alt="logo"></div>
-              <p class="service-item_title">Автоматическое <br>ведение и начисление <br>зарплат</p>
-              <p class="service-item_desc">Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
-                отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
-                в налоговую службу.
-              </p>
-              <button class="btn btn__more btn__blue js-btn-more" data-num="3">Подробнее</button>
-            </figure>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <figure class="service-item">
-              <div class="service-item_logo"><img src="img/icons/update.png" alt="logo"></div>
-              <p class="service-item_title">Обновления <br> и улучшения <br>программы</p>
-              <p class="service-item_desc">Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
-                отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
-                в налоговую службу.
-              </p>
-              <button class="btn btn__more btn__blue js-btn-more" data-num="4">Подробнее</button>
-            </figure>
-          </div>
-          <div class="service-item_detail js-service-detail" hidden>
-            <p class="service-item_detail_txt hidden" id="1">Позволяет получать доступ к информации с любого устройства и в любое время.
-              Вы не привязаны к рабочему кабинету и можете контролировать бизнес с любой точки мира, а также поручить
-              работу с базой данных своим специалистам.Позволяет получать доступ к информации с любого устройства и в любое время.
-              Вы не привязаны к рабочему кабинету и можете контролировать бизнес с любой точки мира, а также поручить
-              работу с базой данных своим специалистам.Позволяет получать доступ к информации с любого устройства и в любое время.
-              Вы не привязаны к рабочему кабинету и можете контролировать бизнес с любой точки мира, а также поручить
-              работу с базой данных своим специалистам.</p>
-            <p class="service-item_detail_txt hidden" id="2">Программа полностью исключает ошибки при составлении аналитических графиков
-              и ведет подсчеты мгновенно. Вы можете отслеживать статистику, прогнозировать прибыль и вносить коррективы
-              в работу когда угодно.Программа полностью исключает ошибки при составлении аналитических графиков
-              и ведет подсчеты мгновенно. Вы можете отслеживать статистику, прогнозировать прибыль и вносить коррективы
-              в работу когда угодно.Программа полностью исключает ошибки при составлении аналитических графиков
-              и ведет подсчеты мгновенно. Вы можете отслеживать статистику, прогнозировать прибыль и вносить коррективы
-              в работу когда угодно.Программа полностью исключает ошибки при составлении аналитических графиков
-              и ведет подсчеты мгновенно. Вы можете отслеживать статистику, прогнозировать прибыль и вносить коррективы
-              в работу когда угодно.
-            </p>
-            <p class="service-item_detail_txt hidden" id="3">Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
-              отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
-              в налоговую службу.Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
-              отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
-              в налоговую службу.Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
-              отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
-              в налоговую службу.Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
-              отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
-              в налоговую службу.
-            </p>
-            <p class="service-item_detail_txt hidden" id="4">Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
-              отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
-              в налоговую службу.Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
-              отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
-              в налоговую службу.Позволяет быстро, легко и безошибочно составлять ведомости, учитывать количество
-              отработанных сотрудниками часов, подсчитывать точные суммы премий или штрафов, а также взносов и отчислений
-              в налоговую службу.
-            </p>
-            <div class="tool"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="start-now">
-      <div class="container-fluid start-now-wrap">
-        <div class="row">
-          <div class="col-xs-7 col-xs-push-5">
-            <div class="start-action">
-              <h2 class="start-action_title title title__2">Начните налаживать бизнес <b>прямо сейчас!</b></h2>
-              <p class="start-action_txt">Подключайтесь сейчас - платите через месяц!</p>
-              <button class="btn btn__sign btn__white" data-toggle="modal" data-target="#CallMe">Начать сейчас</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <footer>
-
-
-    	<div class="container-fluid">
-
-
-    		<div class="row footer-wrap">
-
-
-    			<div class="col-xs-5 col-sm-4">
-
-
-    				<div class="logo__footer">
-
-
-    					<p class="footer-brand">Мойка</p>
-
-
-    				</div>
-
-
-    			</div>
-
-
-    			<div class="col-xs-7 col-sm-4 col-sm-offset-4">
-
-
-    				<div class="footer-phone">
-
-
-    					<p>8 800 2000 600</p>
-
-
-    					<a href="#" data-toggle="modal" data-target="#CallMe">Перезвоните мне</a>
-
-
-    				</div>
-
-
-    			</div>
-
-
-    		</div>
-
-
-    	</div>
-
-
-    </footer>
-
-    <div class="modal fade" id="CallMe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    	<div class="modal-dialog" role="document">
-    		<div class="modal-content">
-    			<div class="modal-header">
-    				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    					<span aria-hidden="true">&times;</span>
-    				</button>
-    				<h4 class="modal-title">Жду звонка</h4>
-    			</div>
-    			<div class="modal-body">
-    				<form method="post" action="#">
-    					<div class="form-group">
-    						<label for="inputName">Ваше имя</label>
-    						<input type="text" class="form-control" id="inputName" placeholder="Введите имя">
-    					</div>
-    					<div class="form-group">
-    						<label for="inputPhone">Телефон</label>
-    						<input type="text" class="form-control" id="inputPhone" placeholder="Ваш номер телефона">
-    					</div>
-    					<button type="submit" class="btn btn__blue btn__modal">Отправить</button>
-    				</form>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-    
-    <div class="modal fade" id="LogIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    	<div class="modal-dialog" role="document">
-    		<div class="modal-content">
-    			<div class="modal-header">
-    				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    					<span aria-hidden="true">&times;</span>
-    				</button>
-    				<h4 class="modal-title">Регистрация</h4>
-    			</div>
-    			<div class="modal-body">
-    				<form method="post" action="#">
-    					<div class="form-group">
-    						<label for="inputName">Ваше имя</label>
-    						<input type="text" class="form-control" id="inputName" placeholder="Введите имя">
-    					</div>
-    					<div class="form-group">
-    						<label for="inputMail">Email адрес</label>
-    						<input type="email" class="form-control" id="inputMail" aria-describedby="emailHelp" placeholder="Введите email">
-    					</div>
-    					<div class="form-group">
-    						<label for="inputPassword">Пароль</label>
-    						<input type="password" class="form-control" id="inputPassword" placeholder="Введите пароль">
-    					</div>
-    					<button type="submit" class="btn btn__blue btn__modal">Зарегистрироваться</button>
-    				</form>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-
 <!-- scripts -->
-    <script src="js/libs/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
-
