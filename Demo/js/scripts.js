@@ -57,8 +57,20 @@ $(document).ready(function() {
         right: 50,
         bottom: 30
     });
-    
-/* ===== CUSTOM CODE: ===== */
+
+    /* ----- slicknav ----- */
+
+    $('#menu').slicknav({
+        label: '',
+        prependTo: 'header',
+        closeOnClick: true
+    });
+
+    $('.has-submenu').on('click', '.slicknav_row a', function () {
+        $('#menu').slicknav('toggle');
+    } );
+
+    /* ===== CUSTOM CODE: ===== */
   
     /* ----- toElement ----- */
 
@@ -70,3 +82,44 @@ $(document).ready(function() {
 
 // -------------------------------------------------------------------------------------
 });
+
+/* ----- yandex map ----- */
+
+ymaps.ready(init);
+
+function init () {
+    var myMap = new ymaps.Map("map", {
+        center: [55.649065106787525,37.631151992065334],
+        zoom: 15
+    });
+    // Создаем метку с помощью вспомогательного класса.
+    var myPlacemark = new ymaps.Placemark([55.64891950222155,37.632396537048244], {
+        // Свойства.
+        // Содержимое иконки, балуна и хинта.
+        balloonContent: '',
+        hintContent: 'Москва, 2-й Котляковский пер. д.1'
+    },{
+        // Стандартная иконка.
+        preset: 'twirl#blueDotIcon',
+        balloonOffset: [0, 0]
+    });
+    // иконка
+    myMap.controls.add('smallZoomControl');
+    // Добавляем все метки на карту.
+    myMap.geoObjects.add(myPlacemark);
+
+    var geometry = [[55.64891950222155,37.632396537048244]],
+
+        properties = {
+            hintContent: "Территория"
+        },
+        options = {
+            draggable: true,
+            strokeColor: '#78в5а7',
+            strokeWidth: 8
+
+        },
+        polyline = new ymaps.Polyline(geometry, properties, options);
+
+    myMap.geoObjects.add(polyline);
+};
