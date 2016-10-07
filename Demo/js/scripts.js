@@ -66,18 +66,19 @@ $(document).ready(function() {
         closeOnClick: true
     });
 
-    $('.has-submenu').on('click', '.slicknav_row a', function () {
+    /* ===== CUSTOM CODE: ===== */
+
+    $('.has-submenu').on('click', '.slicknav_row a', function (e) {
         $('#menu').slicknav('toggle');
     } );
 
-    /* ===== CUSTOM CODE: ===== */
-  
     /* ----- toElement ----- */
 
     $('.menu, .slicknav_menu').on('click', 'a[href^="#"], a[href^="."]', function(e) {
-        e.PreventDefault;
+        e.preventDefault();
         var scroll_el = $(this).attr('href');
-        $('html, body').animate({ scrollTop: $(scroll_el).offset().top + 1}, 500);
+        if (scroll_el != '#')
+            $('html, body').animate({ scrollTop: $(scroll_el).offset().top + 1}, 500);
     });
 
 // -------------------------------------------------------------------------------------
@@ -89,11 +90,11 @@ ymaps.ready(init);
 
 function init () {
     var myMap = new ymaps.Map("map", {
-        center: [55.649065106787525,37.631151992065334],
-        zoom: 15
+        center: [48.52405907387438,44.61516099999992],
+        zoom: 17
     });
     // Создаем метку с помощью вспомогательного класса.
-    var myPlacemark = new ymaps.Placemark([55.64891950222155,37.632396537048244], {
+    var myPlacemark = new ymaps.Placemark([48.523809636178584,44.61481767724603], {
         // Свойства.
         // Содержимое иконки, балуна и хинта.
         balloonContent: '',
@@ -108,15 +109,15 @@ function init () {
     // Добавляем все метки на карту.
     myMap.geoObjects.add(myPlacemark);
 
-    var geometry = [[55.64891950222155,37.632396537048244]],
+    var geometry = [[48.52452231203106,44.61634117196647],[48.5233036301998,44.614506541000296],[48.523745494857074,44.61388426850885],[48.52291165024213,44.61257535050957],[48.52338202582517,44.61197453569023],[48.52535612997318,44.61509662698358],[48.524536279800266,44.61632378880905]],
 
         properties = {
             hintContent: "Территория"
         },
         options = {
             draggable: true,
-            strokeColor: '#78в5а7',
-            strokeWidth: 8
+            strokeColor: '#00a3db',
+            strokeWidth: 5
 
         },
         polyline = new ymaps.Polyline(geometry, properties, options);
