@@ -14,11 +14,19 @@ $(document).ready(function() {
     });
 
     $('.store-slider').slick({
+        pauseOnHover: false,
+        autoplaySpeed: 3500,
+        autoplay: true,
         arrows: false,
-        dots: true
+        dots: true,
+        speed: 1200
     });
 
     $('.partners-slider').slick({
+        pauseOnHover: false,
+        autoplaySpeed: 3500,
+        autoplay: true,
+        speed: 500,
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -68,12 +76,6 @@ $(document).ready(function() {
 
     /* ===== CUSTOM CODE: ===== */
 
-    $('.has-submenu').on('click', '.slicknav_row a', function (e) {
-        // if ($(this).closest('.has-submenu').hasClass('slicknav_open'))
-
-        $('#menu').slicknav('toggle');
-    } );
-
     /* ----- toElement ----- */
 
     $('.menu, .slicknav_menu').on('click', 'a[href^="#"], a[href^="."]', function(e) {
@@ -82,6 +84,15 @@ $(document).ready(function() {
         if (scroll_el != '#')
             $('html, body').animate({ scrollTop: $(scroll_el).offset().top + 1}, 500);
     });
+
+    $('.has-submenu').on('click', '.slicknav_row a', function (e) {
+        if ($(this).closest('.has-submenu').hasClass('slicknav_open'))
+            $(this).closest('.has-submenu').find('.slicknav_row').trigger('click');
+        $('#menu').slicknav('toggle');
+        var scroll_el = $(this).attr('href');
+        $('html, body').animate({ scrollTop: $(scroll_el).offset().top + 1}, 500);
+        e.stopPropagation();
+    } );
 
 // -------------------------------------------------------------------------------------
 });
@@ -93,7 +104,7 @@ ymaps.ready(init);
 function init () {
     var myMap = new ymaps.Map("map", {
         center: [48.52405907387438,44.61516099999992],
-        zoom: 17
+        zoom: 15
     });
     // Создаем метку с помощью вспомогательного класса.
     var myPlacemark = new ymaps.Placemark([48.523809636178584,44.61481767724603], {
