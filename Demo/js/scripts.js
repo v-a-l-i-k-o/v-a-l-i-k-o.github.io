@@ -69,6 +69,8 @@ $(document).ready(function() {
     /* ===== CUSTOM CODE: ===== */
 
     $('.has-submenu').on('click', '.slicknav_row a', function (e) {
+        // if ($(this).closest('.has-submenu').hasClass('slicknav_open'))
+
         $('#menu').slicknav('toggle');
     } );
 
@@ -98,7 +100,7 @@ function init () {
         // Свойства.
         // Содержимое иконки, балуна и хинта.
         balloonContent: '',
-        hintContent: 'Москва, 2-й Котляковский пер. д.1'
+        hintContent: 'г. Волгоград ул. Вилянская 20б, 20г.'
     },{
         // Стандартная иконка.
         preset: 'twirl#blueDotIcon',
