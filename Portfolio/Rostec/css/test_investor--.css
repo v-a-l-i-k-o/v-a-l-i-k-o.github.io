@@ -1,0 +1,118 @@
+.banner-box .years-line {
+    position: absolute;
+    top: 60px;
+    left: 49px;
+    right: auto;
+}
+
+.banner-box .container {
+    margin: 180px auto 0px;
+}
+
+
+.banner-box .container h2 {
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.banner-box .stats-tabs {
+    top: 50px;
+}
+
+.banner-box .years-list li {
+    display: block;
+    vertical-align: top;
+    position: relative;
+    margin-right: 5px;
+    float: left;
+}
+
+.banner-box .years-list li a {
+    color: #b18f41;
+    text-decoration: none;
+	display: block;
+    height: 30px;
+	padding: 0 0px;
+	margin: 0 20px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-transform: uppercase;
+	position: relative;
+	border-bottom: 1px solid #b18f41;
+}
+
+.banner-box .years-list .active a {
+    color: #b18f41;
+	border: 1px solid #b18f41;    
+	margin: 0px 0px;
+    padding: 0 20px;
+}
+
+.banner-box .years-line:after {
+    display: none;
+}
+
+.banner-box .years-list li.disabled {
+    display: none;
+}
+
+.banner-box .years-list a:after {
+	display: none;
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+	.banner-box .years-line {
+		top: 40px;
+	}
+	
+	.banner-box .stats-tabs {
+		top: 35px;
+	}
+	
+	.banner-box {
+		height: 620px;
+	}
+	
+	.banner-box .container {
+		height: 415px;
+	}
+}
+
+@media only screen and (max-width: 550px){
+	.banner-box .years-line {
+		top: 40px;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.banner-box .years-line {
+		top: -5px;
+		left: 25px;		
+	}
+	
+	.banner-box .container h2 {
+		margin-top: -40px;
+		margin-bottom: 20px;		
+		font-size: 23px;
+		line-height: 24px;
+	}
+	
+	.banner-box .stats-tabs {
+		top: -5px;
+	}
+	
+	.banner-box {
+		height: 555px;
+	}
+	
+	.banner-box .container {
+		height: 345px;
+	}
+}
+
