@@ -965,7 +965,8 @@ header {
   display: inline-block;
   padding: 0 0%;
   width: 41.66667%;
-  *width: 41.61458%; }
+  *width: 41.61458%;
+  z-index: 3; }
   .logo-box li {
     display: inline-block;
     vertical-align: middle; }
@@ -999,6 +1000,7 @@ header {
   padding: 0 0%;
   width: 58.33333%;
   *width: 58.28125%;
+  z-index: 3;
   text-align: right; }
 
 .contacts_wrap {
