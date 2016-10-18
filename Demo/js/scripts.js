@@ -85,6 +85,16 @@ $(document).ready(function() {
 		]
 	});
 
+	/* ----- slicknav ----- */
+
+	$('#menu').slicknav({
+		label: '',
+		prependTo: '',
+		appendTo: 'header',
+		closeOnClick: true,
+		removeClasses: true
+	});
+
 /* ===== CUSTOM CODE: ===== */
   
 	/* ----- description of your code ----- */
