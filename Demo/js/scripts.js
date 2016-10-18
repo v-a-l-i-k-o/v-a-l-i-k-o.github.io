@@ -3,137 +3,47 @@ $(document).ready(function() {
   
 /* ===== INITIALIZATION OF THE PLUGINS: ===== */
 
-    /* ----- slick-slider ----- */
+	/* ----- slick-slider ----- */
 
-    $('.rent-slider').slick({
-        pauseOnHover: false,
-        autoplaySpeed: 3500,
-        autoplay: true,
-        arrows: false,
-        speed: 1200
-    });
+	$('.slider__take-care').slick({
+		autoplay: true,
+		autoplaySpeed: 4000,
+		arrows: false,
+		dots: true,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		speed: 1000
+	});
 
-    $('.store-slider').slick({
-        pauseOnHover: false,
-        autoplaySpeed: 3500,
-        autoplay: true,
-        arrows: false,
-        dots: true,
-        speed: 1200
-    });
+	$('.carusel__reviews').slick({
+		// autoplay: true,
+		// autoplaySpeed: 4000,
+		arrows: true,
+		dots: false,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		speed: 1000,
+		slidesToShow: 4,
+		slidesToScroll: 1
+	});
 
-    $('.partners-slider').slick({
-        pauseOnHover: false,
-        autoplaySpeed: 3500,
-        autoplay: true,
-        speed: 500,
-        infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1023,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 639,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 411,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
-    
-    /* ----- toTop ----- */
+	$('.carusel__licenses').slick({
+		// autoplay: true,
+		// autoplaySpeed: 4000,
+		arrows: true,
+		dots: false,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		speed: 1000,
+		slidesToShow: 4,
+		slidesToScroll: 1
+	});
 
-    $("#toTop").toTop({
-        autohide: true,
-        position: true,
-        offset: 700,
-        speed: 300,
-        right: 50,
-        bottom: 30
-    });
+/* ===== CUSTOM CODE: ===== */
+  
+	/* ----- description of your code ----- */
 
-    /* ----- slicknav ----- */
 
-    $('#menu').slicknav({
-        label: '',
-        prependTo: 'header',
-        closeOnClick: true
-    });
-
-    /* ===== CUSTOM CODE: ===== */
-
-    /* ----- toElement ----- */
-
-    $('.menu, .slicknav_menu').on('click', 'a[href^="#"], a[href^="."]', function(e) {
-        e.preventDefault();
-        var scroll_el = $(this).attr('href');
-        if (scroll_el != '#')
-            $('html, body').animate({ scrollTop: $(scroll_el).offset().top + 1}, 500);
-    });
-
-    $('.has-submenu').on('click', '.slicknav_row a', function (e) {
-        if ($(this).closest('.has-submenu').hasClass('slicknav_open'))
-            $(this).closest('.has-submenu').find('.slicknav_row').trigger('click');
-        $('#menu').slicknav('toggle');
-        var scroll_el = $(this).attr('href');
-        $('html, body').animate({ scrollTop: $(scroll_el).offset().top + 1}, 500);
-        e.stopPropagation();
-    } );
 
 // -------------------------------------------------------------------------------------
 });
-
-/* ----- yandex map ----- */
-
-ymaps.ready(init);
-
-function init () {
-    var myMap = new ymaps.Map("map", {
-        center: [48.52405907387438,44.61516099999992],
-        zoom: 15
-    });
-    // Создаем метку с помощью вспомогательного класса.
-    var myPlacemark = new ymaps.Placemark([48.523809636178584,44.61481767724603], {
-        // Свойства.
-        // Содержимое иконки, балуна и хинта.
-        balloonContent: '',
-        hintContent: 'г. Волгоград ул. Вилянская 20б, 20г.'
-    },{
-        // Стандартная иконка.
-        preset: 'twirl#blueDotIcon',
-        balloonOffset: [0, 0]
-    });
-    // иконка
-    myMap.controls.add('smallZoomControl');
-    // Добавляем все метки на карту.
-    myMap.geoObjects.add(myPlacemark);
-
-    var geometry = [[48.52452231203106,44.61634117196647],[48.5233036301998,44.614506541000296],[48.523745494857074,44.61388426850885],[48.52291165024213,44.61257535050957],[48.52338202582517,44.61197453569023],[48.52535612997318,44.61509662698358],[48.524536279800266,44.61632378880905]],
-
-        properties = {
-            hintContent: "Территория"
-        },
-        options = {
-            draggable: true,
-            strokeColor: '#00a3db',
-            strokeWidth: 5
-
-        },
-        polyline = new ymaps.Polyline(geometry, properties, options);
-
-    myMap.geoObjects.add(polyline);
-};
