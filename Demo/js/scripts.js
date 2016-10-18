@@ -6,8 +6,8 @@ $(document).ready(function() {
 	/* ----- slick-slider ----- */
 
 	$('.slider__take-care').slick({
-		autoplay: true,
-		autoplaySpeed: 4000,
+		// autoplay: true,
+		// autoplaySpeed: 4000,
 		arrows: false,
 		dots: true,
 		pauseOnFocus: false,
@@ -24,7 +24,30 @@ $(document).ready(function() {
 		pauseOnHover: false,
 		speed: 1000,
 		slidesToShow: 4,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 979,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 799,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 639,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
 	});
 
 	$('.carusel__licenses').slick({
@@ -36,7 +59,30 @@ $(document).ready(function() {
 		pauseOnHover: false,
 		speed: 1000,
 		slidesToShow: 4,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 979,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 799,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 639,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
 	});
 
 /* ===== CUSTOM CODE: ===== */

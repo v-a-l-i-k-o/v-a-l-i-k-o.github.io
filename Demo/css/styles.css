@@ -857,7 +857,8 @@ header {
 
 .logo {
   width: 22.7rem;
-  height: 7.4rem; }
+  height: 7.4rem;
+  display: inline-block; }
 
 .logo-box_desc {
   padding: 0 .7rem;
@@ -1357,9 +1358,6 @@ nav {
   margin-bottom: 4rem;
   text-align: center; }
 
-.spec-person {
-  width: 32.4rem; }
-
 .spec-person_avatar {
   margin-bottom: 1.5rem; }
 
@@ -1609,5 +1607,435 @@ footer {
 
 /* ===== MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
 /* ----- DESKTOP VERSION ----- */
+@media screen and (max-width: 1140px) {
+  html {
+    font-size: 50%; }
+  .contacts_24-7 {
+    margin-top: 2rem; }
+  .we-suggest_brand {
+    width: auto;
+    height: auto; } }
+
 /* ----- TABLET VERSION ----- */
+@media screen and (max-width: 979px) {
+  html {
+    font-size: 62.5%; }
+  .desktop-only {
+    display: none !important; }
+  /* ===== HEADER ===== */
+  header {
+    padding: .5rem 0; }
+    header .container {
+      line-height: 7.4rem; }
+    header .sprite {
+      margin-top: -.8rem;
+      vertical-align: middle; }
+  .logo-box {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 33.33333%;
+    *width: 33.28125%; }
+  .contacts {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 33.33333%;
+    *width: 33.28125%;
+    text-align: center; }
+  .contacts_wrap {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 100%;
+    *width: 99.94792%;
+    vertical-align: middle; }
+  nav {
+    display: none; }
+  /* ----- SECTION choose-nurse ----- */
+  .nurse-item {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 50%;
+    *width: 49.94792%;
+    padding: 1.5rem; }
+  /* ----- SECTION selection ----- */
+  .selection-form {
+    top: 50%;
+    left: 65%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  /* ----- SECTION prices ----- */
+  .price-list_cell1 {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 50%;
+    *width: 49.94792%; }
+  .price-list_cell2 {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 37.5%;
+    *width: 37.44792%; }
+  .price-list_cell3 {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 12.5%;
+    *width: 12.44792%; }
+  /* ----- SECTION achievements ----- */
+  .achievements-list {
+    margin: 0 auto;
+    max-width: 64rem; }
+  .achievements_item {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 50%;
+    *width: 49.94792%;
+    margin-bottom: 3rem; }
+  /* ----- SECTION our-spec ----- */
+  .spec-list_item {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 49.16667%;
+    *width: 49.11458%; }
+  .spec-list {
+    margin: 0 auto; }
+  .spec-person {
+    padding: 0 1.5rem;
+    margin-bottom: 3rem; }
+  /* ----- SECTION reviews ----- */
+  .carusel__reviews {
+    max-width: 68rem; }
+  /* ----- SECTION licenses ----- */
+  .carusel__licenses {
+    max-width: 68rem; }
+  /* ----- SECTION your-questions ----- */
+  .call-to-us {
+    left: 40%; }
+  /* ----- SECTION map ----- */
+  .consult-form {
+    width: 50%;
+    padding: 0 3rem; }
+  /* ===== FOOTER ===== */
+  .nurse-bottom-list {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 49.16667%;
+    *width: 49.11458%;
+    float: none;
+    margin-bottom: 3rem;
+    padding: 0 2rem; }
+  .our-location {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 49.16667%;
+    *width: 49.11458%;
+    float: none;
+    padding: 0 2rem; }
+  .callback {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 49.16667%;
+    *width: 49.11458%;
+    float: none;
+    text-align: left;
+    padding: 0 2rem; } }
+
 /* ----- MOBILE VERSION ----- */
+@media screen and (max-width: 799px) {
+  /* ===== HEADER ===== */
+  .logo-box {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 33.33333%;
+    *width: 33.28125%; }
+  .contacts {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 50%;
+    *width: 49.94792%; }
+  /* ----- SECTION why-we ----- */
+  .we-suggest_item {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 50%;
+    *width: 49.94792%;
+    margin-bottom: 3rem; }
+  /* ----- SECTION selection ----- */
+  .selection-form {
+    left: 60%; }
+  /* ----- SECTION prices ----- */
+  .price-list_cell1 {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 50%;
+    *width: 49.94792%; }
+  .price-list_cell2 {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 33.33333%;
+    *width: 33.28125%; }
+  .price-list_cell3 {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 16.66667%;
+    *width: 16.61458%; }
+  /* ----- SECTION reviews ----- */
+  .carusel__reviews {
+    max-width: 50rem; }
+  /* ----- SECTION licenses ----- */
+  .carusel__licenses {
+    max-width: 50rem; }
+  /* ----- SECTION your-questions ----- */
+  .call-to-us {
+    left: 30%; }
+  /* ----- SECTION map ----- */
+  .consult-form {
+    width: 55%;
+    padding: 0 1rem; } }
+
+@media screen and (max-width: 639px) {
+  html {
+    font-size: 50%; }
+  /* ===== HEADER ===== */
+  .logo-box {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 41.66667%;
+    *width: 41.61458%; }
+  .contacts {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 41.66667%;
+    *width: 41.61458%; }
+  /* ----- SECTION choose-nurse ----- */
+  .nurse-item {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 100%;
+    *width: 99.94792%;
+    padding: 1.5rem; }
+  /* ----- SECTION selection ----- */
+  .selection-form {
+    left: 50%; }
+  /* ----- SECTION prices ----- */
+  .price-list_cell1 {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 50%;
+    *width: 49.94792%; }
+  .price-list_cell2 {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 25%;
+    *width: 24.94792%; }
+  .price-list_cell3 {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 25%;
+    *width: 24.94792%; }
+  /* ----- SECTION our-spec ----- */
+  .spec-list_item {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 100%;
+    *width: 99.94792%; }
+  .spec-list {
+    margin: 0 auto; }
+  .spec-person {
+    padding: 0 1.5rem;
+    margin-bottom: 3rem; }
+  /* ----- SECTION reviews ----- */
+  .carusel__reviews {
+    max-width: 44rem; }
+  /* ----- SECTION licenses ----- */
+  .carusel__licenses {
+    max-width: 44rem; }
+  /* ----- SECTION your-questions ----- */
+  .call-to-us {
+    left: 25%; }
+  /* ----- SECTION map ----- */
+  .consult-form {
+    width: 59%;
+    padding: 0 1rem; } }
+
+@media screen and (max-width: 479px) {
+  /* ===== HEADER ===== */
+  .contacts {
+    display: none; }
+  /* ----- SECTION why-we ----- */
+  .we-suggest_item {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 100%;
+    *width: 99.94792%; }
+  /* ----- SECTION selection ----- */
+  .selection-form {
+    left: 50%; }
+  .selection-form_title {
+    font-size: 1.5em; }
+  /* ----- SECTION prices ----- */
+  .price-list_cell {
+    font-size: 1.4em; }
+  .price-list_cell1 {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 50%;
+    *width: 49.94792%; }
+  .price-list_cell2 {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 25%;
+    *width: 24.94792%; }
+  .price-list_cell3 {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 25%;
+    *width: 24.94792%; }
+  /* ----- SECTION achievements ----- */
+  .achievements_item {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding: 0 0%;
+    width: 100%;
+    *width: 99.94792%; }
+  /* ----- SECTION call-nurse ----- */
+  .contact-us {
+    width: 32rem;
+    padding: 1rem;
+    margin-left: 0;
+    margin: 0 auto;
+    text-align: center; }
+  /* ----- SECTION reviews ----- */
+  .carusel__reviews {
+    max-width: 29rem; }
+  /* ----- SECTION licenses ----- */
+  .carusel__licenses {
+    max-width: 29rem; }
+  /* ----- SECTION your-questions ----- */
+  .call-to-us {
+    left: 0;
+    width: auto;
+    margin: 0 auto;
+    display: block; }
+  .call-to-us_link, .call-to-us_title {
+    font-size: 3em; }
+  /* ----- SECTION map ----- */
+  .consult-form {
+    display: none; }
+  /* ===== FOOTER ===== */
+  .nurse-bottom-list {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 100%;
+    *width: 99.94792%;
+    padding: 0 1rem; }
+  .our-location {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 100%;
+    *width: 99.94792%;
+    padding: 0 1rem;
+    margin-bottom: 3rem; }
+  .callback {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0%;
+    width: 100%;
+    *width: 99.94792%;
+    padding: 0 1rem;
+    margin-bottom: 3rem; } }
