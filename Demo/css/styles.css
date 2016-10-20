@@ -1544,6 +1544,7 @@ nav {
   background-image: url("../img/icons/arrow__l.png"); }
 
 .inits {
+  margin-top: 1rem;
   line-height: 2.4rem;
   font-size: 1.6em;
   font-weight: 300;
