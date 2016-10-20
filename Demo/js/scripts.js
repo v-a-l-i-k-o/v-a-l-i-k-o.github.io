@@ -95,6 +95,39 @@ $(document).ready(function() {
 		removeClasses: true
 	});
 
+	/* ----- bpopup ----- */
+
+	$('.js-popup').on('click', function(e) {
+		e.preventDefault();
+		$('.form__popup').bPopup();
+	});
+
+	/* ----- magnific-popup ----- */
+
+	$('.carusel__reviews').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: true,
+		showCloseBtn: false,
+		zoom: {
+			enabled: true,
+			duration: 300,
+			easing: 'ease-in-out'
+		}
+	});
+
+	$('.carusel__licenses').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: true,
+		showCloseBtn: false,
+		zoom: {
+			enabled: true,
+			duration: 300,
+			easing: 'ease-in-out'
+		}
+	});
+
 /* ===== CUSTOM CODE: ===== */
   
 	/* ----- description of your code ----- */
