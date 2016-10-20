@@ -1509,7 +1509,7 @@ nav {
 
 /* ----- SECTION reviews ----- */
 .reviews {
-  height: 40.3rem;
+  padding-bottom: 6rem;
   background-color: #f7f7f7; }
 
 .carusel__reviews {
