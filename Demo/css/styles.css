@@ -1559,10 +1559,14 @@ nav {
 
 .slide__licenses {
   display: inline-block;
+  height: 31.5rem;
   padding: 0 1.5rem;
   text-align: center; }
   .slide__licenses a {
+    height: 100%;
     display: inline-block; }
+  .slide__licenses img {
+    height: 100%; }
 
 /* ----- SECTION your-questions ----- */
 .your-questions {
