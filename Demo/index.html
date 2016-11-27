@@ -50,10 +50,10 @@
         </div>
         <ul class="menu desktop" id="menu">
           <li class="menu_item current"><a class="menu_link" href="#">Главная</a></li>
-          <li class="menu_item"><a class="menu_link" href="#">iPhone</a></li>
-          <li class="menu_item"><a class="menu_link" href="#">iPad</a></li>
+          <li class="menu_item"><a class="menu_link" href="#price-info">iPhone</a></li>
+          <li class="menu_item"><a class="menu_link" href="#price-info">iPad</a></li>
           <li class="menu_item"><a class="menu_link" href="#">Вопрос-Ответ</a></li>
-          <li class="menu_item"><a class="menu_link" href="#">Контакты</a></li>
+          <li class="menu_item"><a class="menu_link" href="#our-location">Контакты</a></li>
         </ul>
       </div>
     </nav>
@@ -113,58 +113,58 @@
       </div>
     </section>
 
-    <section class="price-info purple-bg">
+    <section id="price-info" class="price-info purple-bg">
       <div class="container">
         <h2 class="title title__2">Узнайте стоимость ремонта</h2>
         <p class="subtitle">Выберите свою модель</p>
         <div class="price-list clearfix">
-          <div class="price-item">
+          <div class="price-item price-item_iphone">
             <div class="price-item_core price-item_core__iphone">
               <a href="#" class="hexagon">
                 <span class="price-item_model">iPhone</span>
               </a>
             </div>
-            <div class="price-item_petal price-item_petal__0"><a href="#" class="hexagon">
+            <div class="price-item_petal price-item_petal__0"><a href="#" class="hexagon" data-name="iphone 4/4s">
               <span class="price-item_model">iPhone 4/4s</span>
             </a></div>
-            <div class="price-item_petal price-item_petal__60"><a href="#" class="hexagon">
+            <div class="price-item_petal price-item_petal__60"><a href="#" class="hexagon" data-name="iphone 5">
               <span class="price-item_model">iPhone 5</span>
             </a></div>
-            <div class="price-item_petal price-item_petal__120"><a href="#" class="hexagon">
+            <div class="price-item_petal price-item_petal__120"><a href="#" class="hexagon" data-name="iphone 5c/5s">
               <span class="price-item_model">iPhone 5c/5s</span>
             </a></div>
-            <div class="price-item_petal price-item_petal__180"><a href="#" class="hexagon">
+            <div class="price-item_petal price-item_petal__180"><a href="#" class="hexagon" data-name="iphone 6">
               <span class="price-item_model">iPhone 6</span>
             </a></div>
-            <div class="price-item_petal price-item_petal__240"><a href="#" class="hexagon">
+            <div class="price-item_petal price-item_petal__240"><a href="#" class="hexagon" data-name="iphone 6 plus">
               <span class="price-item_model">iPhone 6 Plus</span>
             </a></div>
-            <div class="price-item_petal price-item_petal__300"><a href="#" class="hexagon">
+            <div class="price-item_petal price-item_petal__300"><a href="#" class="hexagon" data-name="iphone 3/3gs">
               <span class="price-item_model">iPhone 3/3gs</span>
             </a></div>
           </div>
-          <div class="price-item">
+          <div class="price-item price-item_ipad">
             <div class="price-item_core price-item_core__ipad">
               <a href="#" class="hexagon">
                 <span class="price-item_model">iPad</span>
               </a>
             </div>
-            <div class="price-item_petal price-item_petal__0"><a href="#" class="hexagon">
+            <div class="price-item_petal price-item_petal__0"><a href="#" class="hexagon" data-name="ipad mini 2">
               <span class="price-item_model">iPad mini 2</span>
             </a></div>
-            <div class="price-item_petal price-item_petal__60"><a href="#" class="hexagon">
+            <div class="price-item_petal price-item_petal__60"><a href="#" class="hexagon" data-name="ipad 2">
               <span class="price-item_model">iPad 2</span>
             </a></div>
-            <div class="price-item_petal price-item_petal__120"><a href="#" class="hexagon">
+            <div class="price-item_petal price-item_petal__120"><a href="#" class="hexagon" data-name="ipad 3">
               <span class="price-item_model">iPad 3</span>
             </a></div>
-            <div class="price-item_petal price-item_petal__180"><a href="#" class="hexagon">
+            <div class="price-item_petal price-item_petal__180"><a href="#" class="hexagon" data-name="ipad 4">
               <span class="price-item_model">iPad 4</span>
             </a></div>
-            <div class="price-item_petal price-item_petal__240"><a href="#" class="hexagon">
+            <div class="price-item_petal price-item_petal__240"><a href="#" class="hexagon" data-name="ipad air">
               <span class="price-item_model">iPad Air</span>
             </a></div>
-            <div class="price-item_petal price-item_petal__300"><a href="#" class="hexagon">
+            <div class="price-item_petal price-item_petal__300"><a href="#" class="hexagon" data-name="ipad mini">
               <span class="price-item_model">iPad mini</span>
             </a></div>
           </div>
@@ -353,7 +353,7 @@
       </div>
     </section>
 
-    <section class="our-location purple-bg">
+    <section id="our-location" class="our-location purple-bg">
       <div class="container">
         <h2 class="title title__2">Найти нас</h2>
         <div class="tabs">
@@ -395,7 +395,123 @@
       <div class="map" id="map"></div>
     </footer>
 
+    <div class="modal-prices modal-prices_iphone">
+      <span class="b-close">
+        <img src="img/icons/close.png" alt="X">
+      </span>
+      <h4 class="modal-prices_title">Стоимость услуг по ремонту <span class="modal-price_model">iPhone 3/3gs</span></h4>
+      <table class="modal-prices_table" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td class="modal-prices_label">Диагностика</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Восстановление ПО iPhone</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Восстановление после влаги</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена дисплея + стекло</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена шлейфа кнопки Home</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена шлейфа кнопки Вкл/Выкл</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена шлейфа кнопки регулировки громкости</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена шлейфа гнезда зарядки</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена слухового динамика</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена полифанического динамика</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замен вибромотора</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена камеры</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена задней крышки</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена микрофона</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена аккумулятора (оригинал)</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+      </table>
+    </div>
     
+    <div class="modal-prices modal-prices_ipad">
+      <span class="b-close">
+        <img src="img/icons/close.png" alt="X">
+      </span>
+      <h4 class="modal-prices_title">Стоимость услуг по ремонту <span class="modal-price_model">iPhone 3/3gs</span></h4>
+      <table class="modal-prices_table" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td class="modal-prices_label">Диагностика</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена сенсорного стекла на копию</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена сенсорного стекла на ОРИГИНАЛ </td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена экрана LCD Display</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена шлейфа кнопки Вкл/Выкл</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Замена лотка для сим-карты</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Ремонт разъема синхронизации/зарядки </td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Правка корпуса</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Ремонт после попадания влаги</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+        <tr>
+          <td class="modal-prices_label">Компонентный ремонт материнской платы</td>
+          <td class="modal-prices_cost"></td>
+        </tr>
+      </table>
+    </div>
     
 
 <!-- scripts -->

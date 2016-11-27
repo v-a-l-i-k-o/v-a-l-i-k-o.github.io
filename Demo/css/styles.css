@@ -600,7 +600,7 @@ body {
   color: #fff;
   list-style: none;
   overflow: hidden;
-  font-size: .875em;
+  font-size: 1.3em;
   background-color: #2c233e; }
   .slicknav_nav ul {
     top: 0;
@@ -1578,11 +1578,42 @@ footer {
 
 /* ===== FOOTER ===== */
 /* ===== MODALS ===== */
-.modal {
-  padding-right: 0 !important; }
+.modal-prices {
+  display: none; }
 
-.modal-open {
-  padding-right: 0 !important; }
+.b-close {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem; }
+
+.modal-prices {
+  width: 69.1rem;
+  position: relative;
+  padding: 2.5rem 4.5rem;
+  border-radius: 1rem;
+  background-color: white; }
+  .modal-prices_title {
+    margin-bottom: 3rem;
+    font-size: 2.4em;
+    font-weight: 500;
+    text-align: center;
+    color: #584159; }
+  .modal-prices_table tr {
+    font-size: 1.8em;
+    font-weight: 400; }
+    .modal-prices_table tr:nth-child(odd) {
+      color: #39283a; }
+    .modal-prices_table tr:nth-child(even) {
+      color: #fff;
+      background-color: #aa9eaa; }
+  .modal-prices_table td {
+    padding: .5rem 1rem;
+    text-align: left;
+    border: none; }
+  .modal-prices_cost {
+    width: 18%;
+    font-weight: 500; }
 
 /* ===== MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
 /* ----- DESKTOP VERSION ----- */
@@ -1607,10 +1638,6 @@ footer {
     display: inline-block !important; }
   .js .slicknav_menu {
     display: block; }
-    .js .slicknav_menu .menu_item.current:before {
-      display: none; }
-    .js .slicknav_menu .menu_item.current {
-      background-color: transparent; }
   .title__2 {
     font-size: 3em; }
   .subtitle {
@@ -1786,7 +1813,18 @@ footer {
 @media screen and (max-width: 640px) {
   /* SECTION .about-us */
   .description_txt {
-    width: 100%; } }
+    width: 100%; }
+  /* ===== MODALS ===== */
+  .modal-prices {
+    width: 49rem;
+    padding: 2rem 1.5rem 0; }
+    .modal-prices_title {
+      margin-bottom: 2rem;
+      font-size: 2em; }
+    .modal-prices_table tr {
+      font-size: 1.6em; }
+    .modal-prices_cost {
+      width: 18%; } }
 
 @media screen and (max-width: 479px) {
   html {
