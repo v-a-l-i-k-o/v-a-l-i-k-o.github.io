@@ -78,7 +78,91 @@ $(document).ready(function() {
 		}
 	});
 
-	
+	/* ----- tabs ----- */
+
+	var center;
+
+	(function(s) {
+		var n;
+		s(".js-tabControls").on("click", ".tabs_city:not(.active)", function() {
+			center = $(this).data('coords'); // для ymaps
+			n = s(this).parents(".js-tabBox");
+			s(this).dmtabs(n);
+			setCenter(center);
+		});
+
+		s.fn.dmtabs = function(n) {
+			s(this).addClass("active").siblings().removeClass("active");
+			n.find(".js-tabContent").eq(s(this).index())
+					.show(1, function() {
+						s(this).addClass("openTabContent")
+					})
+					.siblings(".js-tabContent").hide(1, function() {
+				s(this).removeClass("openTabContent")
+			})
+		}
+	})(jQuery);
 
 // -------------------------------------------------------------------------------------
 });
+
+/* ----- yandex map ----- */
+
+var myMap;
+
+// Дождёмся загрузки API и готовности DOM.
+ymaps.ready(init);
+
+function init () {
+	// Создание экземпляра карты и его привязка к контейнеру с
+	// заданным id ("map").
+	myMap = new ymaps.Map('map', {
+		// При инициализации карты обязательно нужно указать
+		// её центр и коэффициент масштабирования.
+		center:[53.20853762235738,44.96182099999998], // Пенза
+		zoom:12
+	});
+	// Создаем метки с помощью вспомогательного класса.
+	var myPlacemark1 = new ymaps.Placemark([53.20853762235738,44.96182099999998], {
+		// Свойства.
+		// Содержимое иконки, балуна и хинта.
+		hintContent: 'г.Пенза, ул. Красноармейская,д.1а'
+	}, {
+		// Опции.
+		// Стандартная фиолетовая иконка.
+		preset: 'twirl#redDotIcon'
+	});
+
+	// Создаем метку с помощью вспомогательного класса.
+	var myPlacemark2 = new ymaps.Placemark([54.32224257028735,48.40162250000001], {
+		// Свойства.
+		// Содержимое иконки, балуна и хинта.
+		hintContent: 'г.Ульяновск, ул. Красноармейская,д.1а'
+	}, {
+		// Опции.
+		// Стандартная фиолетовая иконка.
+		preset: 'twirl#redDotIcon'
+	});
+
+	// Создаем метку с помощью вспомогательного класса.
+	var myPlacemark3 = new ymaps.Placemark([54.17818007041486,45.18199799999995], {
+		// Свойства.
+		// Содержимое иконки, балуна и хинта.
+		hintContent: 'г.Саранск, ул. Красноармейская,д.1а'
+	}, {
+		// Опции.
+		// Стандартная фиолетовая иконка.
+		preset: 'twirl#redDotIcon'
+	});
+
+	// Добавляем все метки на карту.
+	myMap.geoObjects
+			.add(myPlacemark1)
+			.add(myPlacemark2)
+			.add(myPlacemark3);
+}
+// Устанавливаем центр
+function setCenter (coords) {
+	myMap.setCenter(coords);
+}
+
