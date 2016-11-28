@@ -19,21 +19,21 @@
           <p class="our-contacts_address">
             <i class="icon icon-loc"></i>Ульяновск ул. Красноармейская 1а
           </p>
-          <a href="#" class="our-contacts_link-location">Смотреть на карте</a>
+          <a href="#map" class="our-contacts_link-location" data-coords="[54.32224257028735,48.40162250000001]">Смотреть на карте</a>
           <div><a href="tel:+79297969666" class="our-contacts_link-phone"><i class="icon icon-phone"></i>+7 (929) 796-96-66</a></div>
         </div>
         <div class="our-contacts our-contacts__2">
           <p class="our-contacts_address">
             <i class="icon icon-loc"></i>Пенза ул. Красноармейская 1а
           </p>
-          <a href="#" class="our-contacts_link-location">Смотреть на карте</a>
+          <a href="#map" class="our-contacts_link-location" data-coords="[53.20853762235738,44.96182099999998]">Смотреть на карте</a>
           <div><a href="tel:+79297969666" class="our-contacts_link-phone"><i class="icon icon-phone"></i>+7 (929) 796-96-66</a></div>
         </div>
         <div class="our-contacts our-contacts__3">
           <p class="our-contacts_address">
             <i class="icon icon-loc"></i>Саранск ул. Красноармейская 1а
           </p>
-          <a href="#" class="our-contacts_link-location">Смотреть на карте</a>
+          <a href="#map" class="our-contacts_link-location" data-coords="[54.17818007041486,45.18199799999995]">Смотреть на карте</a>
           <div><a href="tel:+79297969666" class="our-contacts_link-phone"><i class="icon icon-phone"></i>+7 (929) 796-96-66</a></div>
         </div>
       </div>
@@ -64,7 +64,7 @@
           <h1 class="title title__1">Мы чиним технику Apple</h1>
           <p class="claim_txt">Быстрый и качественный ремонт любой сложности</p>
           <p class="claim_txt">В наличии все запчасти для ремонта</p>
-          <a href="#" class="btn btn__prices">Посмотреть цены</a>
+          <a href="#price-info" class="btn btn__prices">Посмотреть цены</a>
         </div>
       </div>
     </section>
@@ -224,7 +224,7 @@
       <div class="container">
         <h2 class="title title__2">Получить консультацию</h2>
         <p class="subtitle">Проконсультируйтесь с нашими специалистами</p>
-        <form class="form form__consult">
+        <form class="form form__consult" action="form.php" method="post">
           <div class="form-group form-group__name">
             <input type="text" class="form-control form-control__name" id="inputName" name="name" placeholder="Ваше имя">
           </div>
@@ -395,11 +395,11 @@
       <div class="map" id="map"></div>
     </footer>
 
-    <div class="modal-prices modal-prices_iphone">
+    <div class="modal modal-prices modal-prices_iphone">
       <span class="b-close">
         <img src="img/icons/close.png" alt="X">
       </span>
-      <h4 class="modal-prices_title">Стоимость услуг по ремонту <span class="modal-price_model">iPhone 3/3gs</span></h4>
+      <h4 class="modal_title">Стоимость услуг по ремонту <span class="modal-price_model">iPhone 3/3gs</span></h4>
       <table class="modal-prices_table" border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
           <td class="modal-prices_label">Диагностика</td>
@@ -464,11 +464,11 @@
       </table>
     </div>
     
-    <div class="modal-prices modal-prices_ipad">
+    <div class="modal modal-prices modal-prices_ipad">
       <span class="b-close">
         <img src="img/icons/close.png" alt="X">
       </span>
-      <h4 class="modal-prices_title">Стоимость услуг по ремонту <span class="modal-price_model">iPhone 3/3gs</span></h4>
+      <h4 class="modal_title">Стоимость услуг по ремонту <span class="modal-price_model">iPhone 3/3gs</span></h4>
       <table class="modal-prices_table" border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
           <td class="modal-prices_label">Диагностика</td>
@@ -511,6 +511,13 @@
           <td class="modal-prices_cost"></td>
         </tr>
       </table>
+    </div>
+    
+    <div class="modal modal-thanks">
+      <span class="b-close">
+        <img src="img/icons/close.png" alt="X">
+      </span>
+      <h4 class="modal_title">Спасибо!</h4>
     </div>
     
 
