@@ -122,6 +122,7 @@ function init () {
 		center:[53.20853762235738,44.96182099999998], // Пенза
 		zoom:12
 	});
+
 	// Создаем метки с помощью вспомогательного класса.
 	var myPlacemark1 = new ymaps.Placemark([53.20853762235738,44.96182099999998], {
 		// Свойства.
@@ -160,7 +161,11 @@ function init () {
 			.add(myPlacemark1)
 			.add(myPlacemark2)
 			.add(myPlacemark3);
+
+	// Добавляем zoom.
+	myMap.controls.add('smallZoomControl', { left: 5, top: 100 });
 }
+
 // Устанавливаем центр
 function setCenter (coords) {
 	myMap.setCenter(coords);
