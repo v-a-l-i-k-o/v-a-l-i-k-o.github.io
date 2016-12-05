@@ -33,6 +33,7 @@ $('form').on('click', '.input-group-addon', function(event) {
 $('.form-pass').on('click', '.btn__submit', function(event) {
 	event.preventDefault();
 	window.location = 'inner.html';
+	$(this).closest('form').hide().prev('a').show();
 });
 
 // -------------------------------------------------------------------------------------
