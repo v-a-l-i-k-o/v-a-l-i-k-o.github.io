@@ -3,9 +3,11 @@ $(document).ready(function() {
   
 /* ===== INITIALIZATION OF THE PLUGINS: ===== */
 
-	/* ----- name of the plugin ----- */
+	/* ----- selectric ----- */
 
-
+	$('select').selectric({
+		maxHeight: 200
+	});
 
 /* ===== CUSTOM CODE: ===== */
   
