@@ -9,6 +9,27 @@ $(document).ready(function() {
 		maxHeight: 200
 	});
 
+	/* ----- slick ----- */
+
+	$('.single-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.multiple-slider'
+	});
+
+	$('.multiple-slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		centerMode: true,
+		centerPadding: '0',
+		focusOnSelect: true,
+		asNavFor: '.single-slider'
+	});
+
 /* ===== CUSTOM CODE: ===== */
   
 	/* ----- accordion ----- */
