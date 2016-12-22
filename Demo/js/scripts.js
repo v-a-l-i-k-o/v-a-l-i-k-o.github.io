@@ -5,7 +5,11 @@ $(document).ready(function() {
 
 	/* ----- selectric ----- */
 
-	$('select').selectric({
+	$('.filter select').selectric({
+		maxHeight: 200
+	});
+
+	$('.form select').selectric({
 		maxHeight: 200
 	});
 
@@ -30,7 +34,26 @@ $(document).ready(function() {
 		asNavFor: '.single-slider'
 	});
 
-/* ===== CUSTOM CODE: ===== */
+	/* ----- icheckbox ----- */
+
+	$('input').iCheck();
+
+	$('input').iCheck();
+
+	/* ----- bpopup ----- */
+
+	$('body').on('click', 'a.btn.__order, .btn.__feast-request', function(event) {
+		event.preventDefault();
+		$('.modal').bPopup({
+			speed: 450,
+			opacity: .9,
+			modalClose: true,
+			modalColor: '#fff',
+			transition: 'slideDown'
+		});
+	});
+
+	/* ===== CUSTOM CODE: ===== */
   
 	/* ----- accordion ----- */
 

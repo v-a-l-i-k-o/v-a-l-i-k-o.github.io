@@ -15,7 +15,7 @@
     <header>
       <div class="container">
         <div class="wrapper-bg __header clearfix">
-          <div class="logo"><a href="#"><img src="img/icons/logo-catalog.png" alt="Ради Радости"></a></div>
+          <div class="logo"><a href="index.html"><img src="img/icons/logo-catalog.png" alt="Ради Радости"></a></div>
           <div class="callback __header">
             <a class="callback_phone" href="tel: +79130000000">+7 913 000 0000</a>
             <a href="#" class="callback_request">Заказать звонок</a>
@@ -222,7 +222,10 @@
                   <div class="price"><i class="value">1350</i> руб.</div>
                 </div>
               </div>
-              <div class="total-price">Итого: <i class="value">800</i> <i class="small">руб.</i></div>
+              <div class="total-price">Итого: <i class="value">0</i> <i class="small">руб.</i></div>
+              <div class="get-order">
+                <a href="#" class="btn __order">Оформить заказ</a>
+              </div>
             </div>
           </div>
         </div>
@@ -249,7 +252,70 @@
       </div>
     </footer>
 
-    
+    <div class="modal">
+      <div class="modal_title">Оформить заказ</div>
+      <div class="modal_form">
+        <form class="form __order clearfix">
+          <div class="form-group __left">
+            <input type="text" class="form-control" id="name" placeholder="Ваше имя">
+            <input type="text" class="form-control" id="surname" placeholder="Ваша Фамилия">
+            <select name="city" id="city">
+              <option value="1">Город</option>
+              <option value="2">Город</option>
+              <option value="3">Город</option>
+            </select>
+            <select name="street" id="street">
+              <option value="1">Улица</option>
+              <option value="2">Улица</option>
+              <option value="3">Улица</option>
+            </select>
+          </div>
+          <div class="form-group __right">
+            <input type="text" class="form-control" id="mail" placeholder="Ваш E-mail">
+            <input type="text" class="form-control" id="phone" placeholder="+7 (9..)...-..-..">
+            <select name="part" id="part">
+              <option value="1">Район</option>
+              <option value="2">Район</option>
+              <option value="3">Район</option>
+            </select>
+            <select name="house" id="house">
+              <option value="1">Квартира/Дом/Корпус</option>
+              <option value="2">Квартира/Дом/Корпус</option>
+              <option value="3">Квартира/Дом/Корпус</option>
+            </select>
+          </div>
+          <div class="form-group __left">
+            <div class="radio">
+              <label>
+                <input type="radio" name="delivery" value="Доставка">
+                Доставка
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="delivery" value="Самовывоз">
+                Самовывоз
+              </label>
+            </div>
+          </div>
+          <div class="form-group __right">
+            <div class="radio">
+              <label>
+                <input type="radio" name="payment" value="Visa">
+                Visa / MasterCart
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="payment" value="Наличные">
+                Наличные
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn __order">Заказать</button>
+        </form>
+      </div>
+    </div>
     
 
 <!-- scripts -->
