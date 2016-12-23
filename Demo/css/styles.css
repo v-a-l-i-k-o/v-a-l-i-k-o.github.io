@@ -590,7 +590,7 @@ body {
         margin: auto;
         width: 1.8rem;
         height: 1.4rem;
-        background-size: auto;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-image: url("../img/icons/select-arrow.png"); }
@@ -702,6 +702,24 @@ body {
       opacity: 1; }
     .filter .selectric-items .selectric-group li {
       padding-left: 25px; }
+
+@media screen and (max-width: 768px) {
+  .filter {
+    padding: 2rem;
+    /* Items box */ }
+    .filter .selectric .label {
+      font-size: 2.6rem;
+      line-height: 5rem;
+      height: 5rem; }
+    .filter .selectric .button {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 2rem;
+      height: 5rem; }
+    .filter .selectric-items ul, .filter .selectric-items li {
+      font-size: 2rem; } }
 
 /* ===== SLICK-SLIDER ===== */
 .slick-slider {
@@ -2236,22 +2254,27 @@ button.__order {
     margin: 0 auto;
     display: block; }
   /* SECTION .choose-us */
-  .advantages_brand {
-    display: none; }
-  .advantages_list {
-    *display: inline;
-    position: relative;
-    vertical-align: top;
-    display: inline-block;
-    padding-left: 0%;
-    padding-right: 0%;
-    width: 100%;
-    *width: 99.94792%;
-    display: block;
-    text-align: center; }
-  .advantages_item + .advantages_item {
-    margin-top: 2.5rem;
-    line-height: 1.3; }
+  .advantages {
+    padding: 0 2rem; }
+    .advantages_brand {
+      display: none; }
+    .advantages_list {
+      *display: inline;
+      position: relative;
+      vertical-align: top;
+      display: inline-block;
+      padding-left: 0%;
+      padding-right: 0%;
+      width: 100%;
+      *width: 99.94792%;
+      display: block;
+      text-align: center; }
+    .advantages_item {
+      padding: 0 0 4rem;
+      border-bottom: 3px solid #29b6cf; }
+      .advantages_item + .advantages_item {
+        margin-top: 4rem;
+        line-height: 1.3; }
   /* ===== MODALS ===== */
   .modal {
     width: 100%;
@@ -2269,6 +2292,16 @@ button.__order {
   button.__order {
     margin-left: 1.5rem; } }
 
+@media screen and (max-width: 450px) {
+  .select-wrap {
+    width: 100%; }
+    .select-wrap_inner.__left {
+      float: none;
+      display: block; }
+    .select-wrap_inner.__right {
+      float: none;
+      display: block; } }
+
 @media screen and (max-width: 360px) {
   /* PAGE .catalog */
   .catalog .scenario-item, .product .scenario-item {
@@ -2279,10 +2312,4 @@ button.__order {
     padding-left: 0%;
     padding-right: 0%;
     width: 100%;
-    *width: 99.94792%; }
-  .select-wrap {
-    width: 100%; }
-    .select-wrap_inner.__left {
-      float: none; }
-    .select-wrap_inner.__right {
-      float: none; } }
+    *width: 99.94792%; } }
