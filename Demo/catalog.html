@@ -37,26 +37,38 @@
         <div class="wrapper-bg">
           <h3 class="title __h3">Выберите свой Праздник - Квест!</h3>
           <div class="filter">
-            <select name="theme" id="theme">
-              <option value="1">По теме</option>
-              <option value="2">По теме</option>
-              <option value="3">По теме</option>
-            </select>
-            <select name="category" id="category">
-              <option value="1">По категориям</option>
-              <option value="2">По категориям</option>
-              <option value="3">По категориям</option>
-            </select>
-            <select name="age" id="age">
-              <option value="1">По возрасту</option>
-              <option value="2">По возрасту</option>
-              <option value="3">По возрасту</option>
-            </select>
-            <select name="suggest" id="suggest">
-              <option value="1">Рекомендуем</option>
-              <option value="2">Рекомендуем</option>
-              <option value="3">Рекомендуем</option>
-            </select>
+            <div class="select-wrap clearfix">
+              <div class="select-wrap_inner __left">
+                <select name="theme" id="theme">
+                  <option value="1">По теме</option>
+                  <option value="2">По теме</option>
+                  <option value="3">По теме</option>
+                </select>
+              </div>
+              <div class="select-wrap_inner __right">
+                <select name="category" id="category">
+                  <option value="1">По категориям</option>
+                  <option value="2">По категориям</option>
+                  <option value="3">По категориям</option>
+                </select>
+              </div>
+            </div>
+            <div class="select-wrap clearfix">
+              <div class="select-wrap_inner __left">
+                <select name="age" id="age">
+                  <option value="1">По возрасту</option>
+                  <option value="2">По возрасту</option>
+                  <option value="3">По возрасту</option>
+                </select>
+              </div>
+              <div class="select-wrap_inner __right">
+                <select name="suggest" id="suggest">
+                  <option value="1">Рекомендуем</option>
+                  <option value="2">Рекомендуем</option>
+                  <option value="3">Рекомендуем</option>
+                </select>
+              </div>
+            </div>
           </div>
           <div class="scenario-list clearfix">
             <div class="scenario-item">
@@ -236,30 +248,14 @@
           <div class="form-group __left">
             <input type="text" class="form-control" id="name" placeholder="Ваше имя">
             <input type="text" class="form-control" id="surname" placeholder="Ваша Фамилия">
-            <select name="city" id="city">
-              <option value="1">Город</option>
-              <option value="2">Город</option>
-              <option value="3">Город</option>
-            </select>
-            <select name="street" id="street">
-              <option value="1">Улица</option>
-              <option value="2">Улица</option>
-              <option value="3">Улица</option>
-            </select>
+            <input type="text" class="form-control" id="sity" placeholder="Город">
+            <input type="text" class="form-control" id="street" placeholder="Улица">
           </div>
           <div class="form-group __right">
             <input type="text" class="form-control" id="mail" placeholder="Ваш E-mail">
             <input type="text" class="form-control" id="phone" placeholder="+7 (9..)...-..-..">
-            <select name="part" id="part">
-              <option value="1">Район</option>
-              <option value="2">Район</option>
-              <option value="3">Район</option>
-            </select>
-            <select name="house" id="house">
-              <option value="1">Квартира/Дом/Корпус</option>
-              <option value="2">Квартира/Дом/Корпус</option>
-              <option value="3">Квартира/Дом/Корпус</option>
-            </select>
+            <input type="text" class="form-control" id="region" placeholder="Район">
+            <input type="text" class="form-control" id="house" placeholder="Квартира/Дом/Корпус">
           </div>
           <div class="form-group __left">
             <div class="radio">
