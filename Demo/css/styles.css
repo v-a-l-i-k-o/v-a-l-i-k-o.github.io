@@ -566,20 +566,20 @@ body {
       text-overflow: ellipsis;
       padding-right: 3.8rem;
       font-size: 2.1rem;
-      line-height: 38px;
+      line-height: 3.8rem;
       color: #464646;
-      height: 38px; }
+      height: 3.8rem; }
     .filter .selectric .button {
       display: block;
       position: absolute;
       right: 0;
       top: 0;
       width: 2rem;
-      height: 38px;
+      height: 3.8rem;
       color: #464646;
       text-align: center;
       font: 0/0 a;
-      *font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial; }
+      *font: 20px/3.8rem Lucida Sans Unicode, Arial Unicode MS, Arial; }
       .filter .selectric .button:after {
         content: " ";
         position: absolute;
@@ -712,7 +712,7 @@ body {
   .form .selectric-responsive {
     width: 100%; }
   .form .selectric {
-    border: 1px dotted #282828;
+    border: 1px solid #ccc;
     background: #fff;
     position: relative;
     text-align: left; }
@@ -725,8 +725,8 @@ body {
       padding-left: 2rem;
       padding-right: 3rem;
       color: #464646;
-      height: 4.6rem;
-      line-height: 4.6rem; }
+      height: 4rem;
+      line-height: 4rem; }
     .form .selectric .button {
       display: block;
       position: absolute;
@@ -737,7 +737,7 @@ body {
       color: #464646;
       text-align: center;
       font: 0/0 a;
-      *font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial; }
+      *font: 20px/3.8rem Lucida Sans Unicode, Arial Unicode MS, Arial; }
       .form .selectric .button:after {
         content: " ";
         position: absolute;
@@ -1128,6 +1128,8 @@ header {
 
 .logo {
   float: left;
+  width: 19rem;
+  height: auto;
   margin-left: 10rem;
   z-index: 2; }
 
@@ -1307,7 +1309,6 @@ header {
   min-height: 60rem;
   padding-top: 4rem;
   background-position: 100% 0;
-  background-size: auto;
   background-image: url("../img/bg/follow-scenario-bg3.png"); }
 
 .title.__h3 {
@@ -1339,6 +1340,7 @@ header {
   margin: 3rem auto 0; }
 
 .scenario-item {
+  min-height: 27rem;
   float: left;
   *display: inline;
   position: relative;
@@ -1414,7 +1416,6 @@ header {
   max-width: 112rem;
   min-height: 67.6rem;
   margin: 0 auto;
-  background-size: auto;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-image: url("../img/bg/follow-scenario-bg4.png"); }
@@ -1784,10 +1785,15 @@ header {
   text-transform: none;
   color: white;
   border: none;
+  background-size: contain;
   text-shadow: 0.1rem 0.17rem 0.5rem rgba(0, 1, 1, 0.87);
   background-image: url("../img/bg/btn__order-bg.png"); }
 
 /* SLIDER */
+.single-slider {
+  width: 43.3rem;
+  display: inline-block; }
+
 .single-slide_content {
   width: 43.3rem;
   height: 43.3rem;
@@ -1818,7 +1824,7 @@ header {
   left: -3rem;
   width: 2.4rem;
   height: 2.6rem;
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-image: url("../img/icons/arrow-prev.png"); }
@@ -1827,7 +1833,7 @@ header {
   right: -3rem;
   width: 2.4rem;
   height: 2.6rem;
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-image: url("../img/icons/arrow-next.png"); }
@@ -1848,8 +1854,8 @@ header {
   border: none;
   cursor: pointer; }
 
-.icheckbox {
-  background-size: auto;
+.icheckbox, .iradio {
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-image: url("../img/bg/icheck.png"); }
@@ -1918,7 +1924,7 @@ footer {
   display: none;
   padding-top: 2rem;
   text-align: center;
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-image: url("../img/bg/form-bg.png"); }
@@ -1951,19 +1957,19 @@ footer {
   .form-control::-webkit-input-placeholder {
     color: #000;
     opacity: 1;
-    font-size: 18px; }
+    font-size: 1.8rem; }
   .form-control:-moz-placeholder {
     color: #000;
     opacity: 1;
-    font-size: 18px; }
+    font-size: 1.8rem; }
   .form-control::-moz-placeholder {
     color: #000;
     opacity: 1;
-    font-size: 18px; }
+    font-size: 1.8rem; }
   .form-control:-ms-input-placeholder {
     color: #000;
     opacity: 1;
-    font-size: 18px; }
+    font-size: 1.8rem; }
 
 .radio {
   text-align: left;
@@ -1976,5 +1982,416 @@ button.__order {
 
 /* ===== MADIA QUERIES FOR RESPONSIVE DESIGN ===== */
 /* ----- DESKTOP VERSION ----- */
+@media screen and (max-width: 1290px) {
+  html {
+    font-size: 55%; } }
+
+@media screen and (max-width: 1140px) {
+  html {
+    font-size: 50%; }
+  .callback {
+    width: 26.6rem;
+    padding-left: 6.5rem;
+    background-size: contain; } }
+
+@media screen and (max-width: 1040px) {
+  html {
+    font-size: 43%; } }
+
 /* ----- TABLET VERSION ----- */
+@media screen and (max-width: 900px) {
+  /* ===== HEADER ===== */
+  header {
+    min-height: 55rem;
+    padding-top: 1.5rem; }
+  .wrapper-bg.__first {
+    min-height: 58rem;
+    background-position: 50% 90%; }
+  .logo {
+    width: 16rem;
+    margin-left: 2rem; }
+  .callback.__header {
+    margin-right: 2rem; }
+  /* PAGE .catalog */
+  .catalog header, .product header {
+    min-height: 15.9rem; }
+  .catalog .wrapper-bg.__header, .product .wrapper-bg.__header {
+    padding: 1.5rem 2rem; }
+  .catalog .logo, .product .logo {
+    margin-left: 0; }
+  .menu {
+    right: -1rem; }
+  /* SECTION .organize */
+  .organize .title.__h2 {
+    margin-bottom: 1rem; }
+  .wrapper-bg.__second {
+    padding-top: 3rem;
+    min-height: auto;
+    background-position: 50% 0; }
+  .we-suggest.__step2 {
+    margin-top: 2rem; }
+  .we-suggest_txt + .we-suggest_txt {
+    margin-top: 1rem; }
+  .we-suggest_get {
+    margin: .5rem auto 0; }
+  .we-suggest_claim {
+    width: 55%;
+    font-size: 2.6em;
+    line-height: 3rem; }
+  /* SECTION .scenario */
+  .wrapper-bg.__three {
+    min-height: auto;
+    background: none; }
+  .scenario-list {
+    max-width: 60rem; }
+  .scenario-item {
+    margin-bottom: 2rem;
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 50%;
+    *width: 49.94792%; }
+  /* SECTION .why-we */
+  .why-we {
+    padding-top: 4rem;
+    margin-bottom: 7rem; }
+    .why-we .title.__h2 {
+      margin-bottom: 5rem; }
+  .wrapper-bg.__four {
+    min-height: auto; }
+  .toDo {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 50%;
+    *width: 49.94792%; }
+    .toDo_list {
+      padding-left: 2rem;
+      padding-right: 1rem; }
+    .toDo_title {
+      padding-left: 8rem;
+      margin-bottom: 2rem; }
+    .toDo_feast {
+      background-size: contain; }
+    .toDo_item {
+      padding-left: 7rem; }
+      .toDo_item + .toDo_item {
+        margin-top: 3rem; }
+  .feast-order {
+    margin-top: 2rem; }
+    .feast-order_claim {
+      font-size: 2.6em;
+      line-height: 1.4; }
+  /* SECTION .choose-us */
+  .advantages_brand {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 37.5%;
+    *width: 37.44792%; }
+  .advantages_list {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 62.5%;
+    *width: 62.44792%;
+    padding-left: 5rem;
+    padding-right: 2rem; }
+  .advantages_item + .advantages_item {
+    margin-top: 2rem; }
+  /* Page .catalog */
+  /* SECTION .scenario */
+  .catalog .scenario-list, .product .scenario-list {
+    max-width: 85rem; }
+  .catalog .scenario-item, .product .scenario-item {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 32.5%;
+    *width: 32.44792%;
+    margin: 3.5rem 0;
+    float: none; }
+  .catalog .btn.__more-scenario, .product .btn.__more-scenario {
+    margin: 0 auto;
+    display: block; }
+  .filter {
+    max-width: 102rem;
+    height: 5rem;
+    margin: 0 auto;
+    font-size: 2.1em;
+    font-weight: 400;
+    color: #464646;
+    border-radius: 2.5rem;
+    border: 0.6rem solid #2ab6cf; } }
+
+@media screen and (max-width: 809px) {
+  /* ===== HEADER ===== */
+  /* PAGE .catalog */
+  .catalog .menu, .product .menu {
+    position: absolute;
+    display: inline-block;
+    right: auto;
+    top: 6rem;
+    left: 26rem; } }
+
 /* ----- MOBILE VERSION ----- */
+@media screen and (max-width: 768px) {
+  /* PAGE .catalog */
+  .catalog .callback.__header, .product .callback.__header {
+    margin: 0;
+    position: absolute;
+    top: 1.5rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .catalog .menu, .product .menu {
+    display: none; }
+  .filter {
+    max-width: 102rem;
+    height: auto;
+    display: inline-block;
+    margin: 0 1.5rem; }
+  /* Page .product */
+  /* SECTION .product-item */
+  .product-item {
+    padding: 1rem 1rem 8rem; }
+  .product_gallery {
+    width: 100%; }
+  .product_content {
+    width: 100%;
+    text-align: left;
+    margin-top: 4rem; } }
+
+@media screen and (max-width: 599px) {
+  /* ===== HEADER ===== */
+  header {
+    min-height: 85rem;
+    background-image: url("../img/bg/header-bg_mobile.png"); }
+  .wrapper-bg.__first {
+    min-height: 85rem;
+    width: 95%;
+    margin: 0 auto;
+    background-position: 50% 60%;
+    background-image: url("../img/bg/follow-scenario-bg_mobile.png"); }
+  .title.__h1 {
+    white-space: normal;
+    width: 55rem; }
+  /* SECTION .organize */
+  .wrapper-bg.__second {
+    background-image: none; }
+  .we-suggest_get {
+    margin: 2rem auto 0; }
+  .we-suggest_claim {
+    width: 50%;
+    font-size: 2.2em;
+    line-height: 3rem; }
+  /* SECTION .scenario */
+  .title.__h3:after {
+    right: -8rem;
+    width: 6rem;
+    height: 5.8rem;
+    -webkit-transform: translateY(-70%);
+    -ms-transform: translateY(-70%);
+    transform: translateY(-70%); }
+  /* SECTION .why-we */
+  .wrapper-bg.__four {
+    background: none; }
+  .toDo {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 50%;
+    *width: 49.94792%; }
+    .toDo_list {
+      padding-left: 1rem; }
+    .toDo_item + .toDo_item {
+      margin-top: 3rem; }
+    .toDo_feast {
+      margin-left: 1rem;
+      font-size: 3.5em; }
+  .feast-order {
+    margin-top: 3rem; }
+    .feast-order_claim {
+      font-size: 2.2em;
+      line-height: 1.4; }
+  .btn.__feast-request {
+    margin-left: 1rem;
+    margin-top: -1rem; }
+  /* SECTION .choose-us */
+  .advantages_brand {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 33.33333%;
+    *width: 33.28125%;
+    padding-left: 1rem; }
+  .advantages_list {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 66.66667%;
+    *width: 66.61458%;
+    padding-left: 2rem;
+    padding-right: 1rem; }
+  .advantages_item + .advantages_item {
+    margin-top: 1rem;
+    font-size: 2em;
+    line-height: 1.1; }
+  /* Page .catalog */
+  /* SECTION .scenario */
+  .catalog .scenario-list, .product .scenario-list {
+    max-width: 65rem; }
+  .catalog .scenario-item, .product .scenario-item {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 49.16667%;
+    *width: 49.11458%;
+    margin: 2rem 0; }
+  /* ===== MODALS ===== */
+  .modal {
+    width: 60rem;
+    height: 46rem;
+    padding-top: 1rem; }
+    .modal_title {
+      margin-bottom: 3rem; }
+    .modal_form {
+      width: 46rem; }
+  .form-group {
+    width: 22rem;
+    margin-bottom: 0; }
+  .form-control {
+    width: 100%;
+    height: 4rem; }
+  .radio {
+    margin-bottom: 1rem; }
+  button.__order {
+    margin-left: 1.5rem; } }
+
+@media screen and (max-width: 479px) {
+  /* ===== HEADER ===== */
+  header {
+    min-height: 70rem; }
+  .wrapper-bg.__first {
+    min-height: 70rem; }
+  /* PAGE .catalog */
+  .catalog .callback.__header, .product .callback.__header {
+    display: none; }
+  .catalog .scenario-item, .product .scenario-item {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 100%;
+    *width: 99.94792%; }
+  /* SECTION .organize */
+  .we-suggest {
+    padding-top: 6rem; }
+    .we-suggest_claim {
+      width: 100%;
+      text-align: center; }
+  .btn.__download {
+    margin-left: 0;
+    left: 40%; }
+  .btn.__choose {
+    margin-left: 0;
+    left: 40%; }
+  /* SECTION .scenario */
+  .scenario_txt {
+    padding: 0 .5rem; }
+  .title.__h3:after {
+    display: none; }
+  /* SECTION .why-we */
+  .toDo {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 100%;
+    *width: 99.94792%;
+    margin-bottom: 5rem; }
+    .toDo_list {
+      padding-left: 2rem; }
+  .feast-order {
+    margin-top: 0; }
+    .feast-order_claim {
+      width: 100%;
+      font-size: 2.2em;
+      margin-bottom: 2rem;
+      line-height: 1.4;
+      text-align: center; }
+  .btn.__feast-request {
+    margin: 0 auto;
+    display: block; }
+  /* SECTION .choose-us */
+  .advantages_brand {
+    float: left;
+    *display: inline;
+    position: relative;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 33.33333%;
+    *width: 33.28125%;
+    margin: 0 3rem 3rem 0; }
+  .advantages_list {
+    *display: inline;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 100%;
+    *width: 99.94792%;
+    display: block; }
+  .advantages_item + .advantages_item {
+    margin-top: 2.5rem;
+    line-height: 1.3; }
+  /* ===== MODALS ===== */
+  .modal {
+    width: 100%;
+    padding-top: 2rem; }
+    .modal_form {
+      width: 45rem; }
+  .form-group {
+    width: 22rem;
+    margin-bottom: 0; }
+  .form-control {
+    width: 100%;
+    height: 4rem; }
+  .radio {
+    margin-bottom: .5rem; }
+  button.__order {
+    margin-left: 1.5rem; } }

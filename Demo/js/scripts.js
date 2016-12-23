@@ -46,7 +46,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		$('.modal').bPopup({
 			speed: 450,
-			opacity: .9,
+			opacity: .95,
 			modalClose: true,
 			modalColor: '#fff',
 			transition: 'slideDown'
@@ -86,6 +86,51 @@ $(document).ready(function() {
 			e.preventDefault();
 		});
 	};
+
+	/* ----- calc sum ----- */
+
+	function calcTotalSum(base) {
+		var sum = 0,
+				checkedElems = base.find('input:checked');
+		if (checkedElems.length) {
+			checkedElems.each(function(indx, element) {
+				sum += +$(element).attr('value');
+			});
+			return sum;
+		}
+		return sum;
+	};
+
+	$('.product_content input:checkbox').on('ifChanged', function(event){
+		if ($(this).hasClass('total-decor')) {
+			var decorElems = $('.product_content').find('.part-decor');
+			if ($(this).is(':checked')) {
+				decorElems.each(function (indx, element) {
+					$(element).iCheck('check');
+				});
+			} else {
+				decorElems.each(function (indx, element) {
+					$(element).iCheck('uncheck');
+				});
+			}
+		};
+
+		if ($(this).hasClass('total-set')) {
+			var checkboxElems = $('.product_content').find('input:checkbox');
+			if ($(this).is(':checked')) {
+				checkboxElems.each(function (indx, element) {
+					$(element).iCheck('check');
+				});
+			} else {
+				checkboxElems.each(function (indx, element) {
+					$(element).iCheck('uncheck');
+				});
+			}
+		};
+
+		var totalSum = calcTotalSum($('.product_content'));
+		$('.total-price .value').html(totalSum);
+	});
 
 // -------------------------------------------------------------------------------------
 });
