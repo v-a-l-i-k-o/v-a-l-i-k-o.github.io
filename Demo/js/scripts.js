@@ -53,6 +53,32 @@ $(document).ready(function() {
 		});
 	});
 
+	/* ----- fancybox ----- */
+
+	$('.fancybox').fancybox({
+		padding : 0,
+		openEffect  : 'elastic',
+		closeBtn: false,
+		helpers:  {
+			overlay : {
+				css : {
+					'background' : 'rgba(255,255,255,0.8)'
+				}
+			}
+		}
+	});
+
+	/* ----- slicknav ----- */
+
+	$('.menu').slicknav({
+		label: '',
+		prependTo: '',
+		appendTo: 'header',
+		closeOnClick: true,
+		removeClasses: true
+	});
+
+
 	/* ===== CUSTOM CODE: ===== */
   
 	/* ----- accordion ----- */
