@@ -2007,7 +2007,7 @@ header {
 .get-order {
   text-align: right; }
 
-.btn.__order {
+.btn.__order, .btn.__callback {
   display: inline-block;
   width: 25.8rem;
   height: 6.9rem;
@@ -2022,6 +2022,9 @@ header {
   background-size: contain;
   text-shadow: 0.1rem 0.17rem 0.5rem rgba(0, 1, 1, 0.87);
   background-image: url("../img/bg/btn__order-bg-min.png"); }
+
+.btn.__callback {
+  margin-top: 4rem; }
 
 /* SLIDER */
 .single-slider {
@@ -2155,15 +2158,31 @@ footer {
 
 /* ===== MODALS ===== */
 .modal {
-  width: 80rem;
-  height: 63rem;
   display: none;
   padding-top: 2rem;
   text-align: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-image: url("../img/bg/form-bg-min.png"); }
+  background-position: 50% 50%; }
+  .modal.__order {
+    width: 80rem;
+    height: 63rem;
+    background-image: url("../img/bg/form-bg-min.png"); }
+  .modal.__callback, .modal.__thanks {
+    width: 80rem;
+    height: 35rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url("../img/bg/form-callback-bg.png"); }
+  .modal.__thanks {
+    width: 50rem;
+    height: 20rem;
+    padding: 0 3rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url("../img/bg/form-callback-bg.png"); }
   .modal_title {
     margin-bottom: 7.5rem;
     font-size: 2.4em;
@@ -2174,6 +2193,8 @@ footer {
   .modal_form {
     width: 63rem;
     margin: 0 auto; }
+  .modal_thanks-txt {
+    font-size: 2em; }
 
 .form-group {
   width: 29.5rem;
@@ -2533,14 +2554,18 @@ button.__order {
     *width: 49.11458%;
     margin: 2rem 0; }
   /* ===== MODALS ===== */
-  .modal {
+  .modal.__order {
     width: 60rem;
-    height: 46rem;
+    height: auto;
     padding-top: 1rem; }
-    .modal_title {
-      margin-bottom: 3rem; }
-    .modal_form {
-      width: 46rem; }
+  .modal.__callback {
+    width: 60rem;
+    height: auto;
+    padding-top: 1rem; }
+  .modal_title {
+    margin-bottom: 3rem; }
+  .modal_form {
+    width: 46rem; }
   .form-group {
     width: 22rem;
     margin-bottom: 0; }
@@ -2666,4 +2691,10 @@ button.__order {
     padding-left: 0%;
     padding-right: 0%;
     width: 100%;
-    *width: 99.94792%; } }
+    *width: 99.94792%; }
+  .modal.__order {
+    width: 50rem;
+    height: auto; }
+  .modal.__callback {
+    width: 50rem;
+    height: auto; } }

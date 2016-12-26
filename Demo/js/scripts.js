@@ -9,10 +9,6 @@ $(document).ready(function() {
 		maxHeight: 200
 	});
 
-	$('.form select').selectric({
-		maxHeight: 200
-	});
-
 	/* ----- slick ----- */
 
 	$('.single-slider').slick({
@@ -38,13 +34,24 @@ $(document).ready(function() {
 
 	$('input').iCheck();
 
-	$('input').iCheck();
-
 	/* ----- bpopup ----- */
+
+	var modal;
 
 	$('body').on('click', 'a.btn.__order, .btn.__feast-request', function(event) {
 		event.preventDefault();
-		$('.modal').bPopup({
+		modal = $('.modal.__order').bPopup({
+			speed: 450,
+			opacity: .95,
+			modalClose: true,
+			modalColor: '#fff',
+			transition: 'slideDown'
+		});
+	});
+
+	$('.callback_request').on('click', function(event) {
+		event.preventDefault();
+		modal = $('.modal.__callback').bPopup({
 			speed: 450,
 			opacity: .95,
 			modalClose: true,
@@ -156,6 +163,19 @@ $(document).ready(function() {
 
 		var totalSum = calcTotalSum($('.product_content'));
 		$('.total-price .value').html(totalSum);
+	});
+
+	$('form').submit(function(){ // пeрeхвaтывaeм всe при сoбытии oтпрaвки
+		modal.close();
+
+		var modalThanks = $('.modal.__thanks').bPopup({
+			speed: 450,
+			opacity: .95,
+			modalClose: true,
+			modalColor: '#fff',
+			transition: 'slideDown'
+		});
+		return false; // отключаем стандартное действие елемента
 	});
 
 // -------------------------------------------------------------------------------------
