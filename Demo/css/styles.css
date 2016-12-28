@@ -2039,12 +2039,10 @@ header {
   height: 43.3rem;
   margin: 0 auto;
   overflow: hidden;
-  border-radius: 50%;
   border: .4rem solid #2ab6cf; }
   .single-slide_content img {
     width: 100%;
-    height: auto;
-    border-radius: 50%; }
+    height: auto; }
 
 .multiple-slider {
   width: 36rem;
