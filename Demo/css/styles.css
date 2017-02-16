@@ -956,6 +956,10 @@ html, body {
   padding: 10px 15px;
   cursor: pointer; }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  html, body {
+    font-family: Arial; } }
+
 /* ===== FOOTER ===== */
 /* ===== MODALS ===== */
 .modal {
