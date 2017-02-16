@@ -5,9 +5,7 @@ $(document).ready(function() {
 
 	/* ----- selectric ----- */
 
-  $('select').selectric({
-    maxHeight: 200
-  });
+  $('select').selectric();
 
 /* ===== CUSTOM CODE: ===== */
 
