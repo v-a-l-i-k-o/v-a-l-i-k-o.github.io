@@ -994,7 +994,8 @@ html, body {
     font-weight: 400; }
   .btn__order {
     height: 5rem;
-    font-size: 2em; }
+    font-size: 2em;
+    padding: 0; }
   .content {
     *display: inline;
     position: relative;
