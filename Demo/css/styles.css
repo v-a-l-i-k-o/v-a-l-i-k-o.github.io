@@ -883,17 +883,7 @@ html, body {
   text-align: center; }
 
 .title__1 {
-  color: #008f90;
-  font-size: 5vw;
-  font-weight: 700;
-  text-shadow: -4px -4px 0px #fff, 4px -4px 0px #fff, -4px  4px 0px #fff, 4px  4px 0px #fff; }
-
-.title__2 {
-  color: #ff8400;
-  font-size: 3.1vw;
-  font-weight: 700;
-  line-height: 3.2vw;
-  text-shadow: -4px -4px 0px #fff, 4px -4px 0px #fff, -4px  4px 0px #fff, 4px  4px 0px #fff; }
+  padding: 0 1.5rem; }
 
 .wrapper-for-bottom {
   position: absolute;
@@ -995,6 +985,7 @@ html, body {
     *width: 99.94792%;
     padding: 1% 3% 2%; }
   .form_title {
+    margin-top: 3%;
     margin-bottom: 4%;
     font-size: 2.6em; }
   .divider {
@@ -1022,13 +1013,6 @@ html, body {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-image: url("../img/bg/root-container-bg-mob.jpg"); }
-  .title__1 {
-    font-size: 7vw;
-    text-shadow: -3px -3px 2px #fff, 3px -3px 2px #fff, -3px  3px 2px #fff, 3px  3px 2px #fff; }
-  .title__2 {
-    font-size: 4.5vw;
-    line-height: 5vw;
-    text-shadow: -3px -3px 2px #fff, 3px -3px 2px #fff, -3px  3px 2px #fff, 3px  3px 2px #fff; }
   .wrapper-for-bottom {
     bottom: 8rem; }
   .suggestion_item {
@@ -1061,7 +1045,9 @@ html, body {
   .wrapper-for-bottom {
     bottom: 9rem; }
   .content {
-    min-height: 43rem; } }
+    min-height: 43rem; }
+  .selectric-items li {
+    padding: 17px 15px; } }
 
 @media screen and (max-width: 420px) {
   .content {
